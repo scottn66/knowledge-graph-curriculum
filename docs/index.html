@@ -176,8 +176,8 @@
   <div class="links">
     <a href="https://github.com/scottn66/knowledge-graph-curriculum">GitHub</a>
     <a href="./surfing_curriculum.txt">Curriculum (text)</a>
-    <a href="../theory/MATHEMATICAL_FOUNDATIONS.md">Theory</a>
-    <a href="../theory/From_Cycles_to_Curvature.docx">Explainer (docx)</a>
+    <a href="https://github.com/scottn66/knowledge-graph-curriculum/blob/main/theory/MATHEMATICAL_FOUNDATIONS.md">Theory</a>
+    <a href="https://github.com/scottn66/knowledge-graph-curriculum/raw/main/theory/From_Cycles_to_Curvature.docx">Explainer (docx)</a>
   </div>
 </header>
 
@@ -235,7 +235,7 @@ let state = { topic: 'surfing', model: 'disk', minPpr: 0, graphData: null };
 async function loadSVG() {
   const container = document.getElementById('viz-container');
   container.innerHTML = '<div style="color:var(--muted);">Loading...</div>';
-  const svgPath = `../assets/${state.topic}_${state.model}.svg`;
+  const svgPath = `./assets/${state.topic}_${state.model}.svg`;
   try {
     const resp = await fetch(svgPath);
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -249,7 +249,7 @@ async function loadSVG() {
 
 async function loadGraphData() {
   try {
-    const resp = await fetch(`../data/poincare_art_data_${state.topic}.json`);
+    const resp = await fetch(`./data/poincare_art_data_${state.topic}.json`);
     if (!resp.ok) throw new Error();
     state.graphData = await resp.json();
     updateStats();
