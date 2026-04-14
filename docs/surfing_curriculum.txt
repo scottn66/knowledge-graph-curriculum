@@ -1,0 +1,217 @@
+Graph: 146 nodes, 236 directed edges
+Avg out-degree: 1.6
+
+═══ SCC ANALYSIS ═══
+Total SCCs found: 77
+  Singleton SCCs (size 1): 70
+  Multi-node SCCs (size > 1): 7
+  Largest SCC: 63 nodes
+    SCC-0: [Surfing at the Olympics, Marine conservation, Surfer's ear, Surf industry, Hypothermia, Wetsuit, Offshore wind, Sea surface temperature + 55 more]
+    SCC-1: [Cloudbreak, Mentawai Islands, Uluwatu (surf spot)]
+    SCC-2: [Beaufort scale, Wave height]
+    SCC-3: [Localism (surfing), Surfing subculture]
+    SCC-4: [Coastal management, Beach erosion]
+
+═══ CONDENSATION DAG ═══
+Super-nodes: 77
+DAG edges: 80
+Compression: 146 nodes → 77 super-nodes (47.3% reduction)
+
+═══ TOPOLOGICAL LEVELS ═══
+Maximum depth: 5
+  Level 0: 21 nodes
+  Level 1: 9 nodes
+  Level 2: 63 nodes
+  Level 3: 31 nodes
+  Level 4: 17 nodes
+  Level 5: 5 nodes
+
+═══ READING CURRICULUM (Depth ≤ 3) ═══
+CurriculumScore(v) = PPR(v) / (1 + level(v))
+
+──────────────────────────────────────────────────────────────────────
+LEVEL 0: BASIS CONCEPTS (no prerequisites)
+──────────────────────────────────────────────────────────────────────
+Rank  CurrScore  PPR        Deg   SCC   Domain             Concept
+───── ───────── ───────── ──── ──── ───────────────── ──────────────────────────────
+1     0.007074   0.007074   1           geography          Jeffreys Bay
+2     0.003181   0.003181   2           weather_climate    Tropical cyclone
+3     0.002966   0.002966   2           oceanography       Tide
+4     0.002890   0.002890   2           surf_culture       Surf photography
+5     0.002865   0.002865   2           surf_culture       Aloha spirit
+6     0.002711   0.002711   2           environment        Sustainable surfing
+7     0.002382   0.002382   4     [2]   core_surfing       Paddle out
+8     0.001592   0.001592   1           geography          Trestles (surfing)
+9     0.001573   0.001573   1           geography          Bells Beach
+10    0.001420   0.001420   1           board_design       Hydrofoil
+11    0.000918   0.000918   2     [2]   physiology         Shoulder (anatomy)
+12    0.000912   0.000912   1           geography          Byron Bay
+13    0.000802   0.000802   1           board_design       Traction pad
+14    0.000456   0.000456   2           environment        Shark
+15    0.000068   0.000068   1           competition        Bethany Hamilton
+16    0.000000   0.000000   2     [3]   geography          Uluwatu (surf spot)
+17    0.000000   0.000000   0           geography          Hossegor
+18    0.000000   0.000000   4     [3]   geography          Mentawai Islands
+19    0.000000   0.000000   2     [3]   geography          Cloudbreak
+20    0.000000   0.000000   1           physiology         Skin cancer
+21    0.000000   0.000000   1           environment        Jellyfish
+
+──────────────────────────────────────────────────────────────────────
+LEVEL 1: FIRST-ORDER (requires level 0)
+──────────────────────────────────────────────────────────────────────
+Rank  CurrScore  PPR        Deg   SCC   Domain             Concept
+───── ───────── ───────── ──── ──── ───────────────── ──────────────────────────────
+1     0.001651   0.003302   2           core_surfing       Duck dive
+2     0.001155   0.002310   2           geography          Gold Coast (Australia)
+3     0.000638   0.001275   1           weather_climate    Storm surge
+4     0.000608   0.001217   1           oceanography       Tidal range
+5     0.000434   0.000868   2           core_surfing       Lineup (surfing)
+6     0.000166   0.000331   4     [2]   environment        Shark attack
+7     0.000065   0.000130   2     [2]   environment        Shark net
+8     0.000000   0.000000   1           physiology         Sunscreen
+9     0.000000   0.000000   1           environment        Stingray
+
+──────────────────────────────────────────────────────────────────────
+LEVEL 2: SECOND-ORDER (requires levels 0-1)
+──────────────────────────────────────────────────────────────────────
+Rank  CurrScore  PPR        Deg   SCC   Domain             Concept
+───── ───────── ───────── ──── ──── ───────────────── ──────────────────────────────
+1     0.091428   0.274284   32    [63]  core_surfing       Surfing
+2     0.008426   0.025279   13    [63]  surf_culture       Surf culture
+3     0.008113   0.024338   14    [63]  board_design       Surfboard
+4     0.007989   0.023967   6     [63]  competition        Surf forecasting
+5     0.007855   0.023565   7     [63]  core_surfing       Wipeout
+6     0.007707   0.023121   6     [63]  oceanography       Rip current
+7     0.007642   0.022926   12    [63]  competition        World Surf League
+8     0.007636   0.022909   9     [63]  core_surfing       Surf break
+9     0.006875   0.020625   7     [63]  history            History of surfing
+10    0.006620   0.019860   8     [63]  geography          North Shore (Oahu)
+11    0.006210   0.018630   7     [63]  oceanography       Swell (ocean)
+12    0.006049   0.018146   7     [63]  geography          Pipeline (surf spot)
+13    0.005231   0.015694   6     [63]  physiology         Swimming
+14    0.005199   0.015598   6     [63]  competition        Duke Kahanamoku
+15    0.005191   0.015574   10    [63]  competition        Big wave surfing
+16    0.005134   0.015402   10    [63]  history            Ancient Hawaii
+17    0.004819   0.014457   5     [63]  competition        Kelly Slater
+18    0.004675   0.014025   2     [63]  physiology         Surfer's ear
+19    0.004326   0.012977   5     [63]  oceanography       Ocean surface wave
+20    0.003691   0.011073   5     [63]  environment        Marine conservation
+21    0.003691   0.011072   3     [63]  competition        Surfing at the Olympics
+22    0.003619   0.010856   4     [63]  board_design       Longboard (surfing)
+23    0.003589   0.010767   4     [63]  board_design       Shortboard
+24    0.003573   0.010718   5     [63]  physiology         Drowning
+25    0.003556   0.010667   5     [63]  core_surfing       Wetsuit
+  ... and 38 more at this level
+
+──────────────────────────────────────────────────────────────────────
+LEVEL 3: THIRD-ORDER (requires levels 0-2)
+──────────────────────────────────────────────────────────────────────
+Rank  CurrScore  PPR        Deg   SCC   Domain             Concept
+───── ───────── ───────── ──── ──── ───────────────── ──────────────────────────────
+1     0.003458   0.013830   5           oceanography       Breaking wave
+2     0.001401   0.005604   4           board_design       Surfboard fin
+3     0.001237   0.004949   3           physiology         Lifeguard
+4     0.001024   0.004094   4           surf_culture       Surf film
+5     0.000824   0.003297   1           weather_climate    Buoy
+6     0.000821   0.003282   1           weather_climate    Marine weather forecasting
+7     0.000811   0.003245   1           weather_climate    NOAA
+8     0.000791   0.003164   1           oceanography       Undertow (water waves)
+9     0.000767   0.003066   2           history            Tom Blake (surfer)
+10    0.000752   0.003007   1           competition        2020 Summer Olympics
+11    0.000712   0.002847   4     [2]   surf_culture       Surfing subculture
+12    0.000651   0.002602   2           environment        Ocean pollution
+13    0.000555   0.002220   2           board_design       Fish (surfboard)
+14    0.000543   0.002172   2           environment        Surfrider Foundation
+15    0.000542   0.002168   1           oceanography       Wave period
+16    0.000527   0.002110   1           oceanography       Significant wave height
+17    0.000509   0.002036   2           board_design       Wax (surfing)
+18    0.000478   0.001913   2           geography          Mavericks (California)
+19    0.000451   0.001803   2           history            Polynesians
+20    0.000394   0.001577   1           surf_culture       Surf slang
+21    0.000391   0.001563   1           competition        Championship Tour (surfing)
+22    0.000382   0.001528   1           competition        Stephanie Gilmore
+23    0.000378   0.001514   3     [2]   surf_culture       Localism (surfing)
+24    0.000289   0.001158   1           history            Miki Dora
+25    0.000278   0.001110   1           history            Greg Noll
+  ... and 6 more at this level
+
+═══ SCC SEMANTIC INTERPRETATION ═══
+
+Multi-node SCCs (mutually referencing concept clusters):
+  SCC-0 (size 63, level 2):
+    Domains: board_design, competition, core_surfing, environment, geography, history, oceanography, physiology, surf_culture, weather_climate
+    Avg PPR: 0.013297
+    Members: Surfing at the Olympics, Marine conservation, Surfer's ear, Surf industry, Hypothermia, Wetsuit, Offshore wind, Sea surface temperature, El Niño–Southern Oscillation, Ocean current, Trade winds, Wind wave
+             + 51 more
+    Interpretation: These concepts define each other mutually —
+                    neither is prerequisite to the others.
+
+  SCC-1 (size 3, level 0):
+    Domains: geography
+    Avg PPR: 0.000000
+    Members: Cloudbreak, Mentawai Islands, Uluwatu (surf spot)
+    Interpretation: These concepts define each other mutually —
+                    neither is prerequisite to the others.
+
+  SCC-2 (size 2, level 4):
+    Domains: oceanography
+    Avg PPR: 0.004429
+    Members: Beaufort scale, Wave height
+    Interpretation: These concepts define each other mutually —
+                    neither is prerequisite to the others.
+
+  SCC-3 (size 2, level 3):
+    Domains: surf_culture
+    Avg PPR: 0.002181
+    Members: Localism (surfing), Surfing subculture
+    Interpretation: These concepts define each other mutually —
+                    neither is prerequisite to the others.
+
+  SCC-4 (size 2, level 4):
+    Domains: environment
+    Avg PPR: 0.001166
+    Members: Coastal management, Beach erosion
+    Interpretation: These concepts define each other mutually —
+                    neither is prerequisite to the others.
+
+  SCC-5 (size 2, level 0):
+    Domains: core_surfing, physiology
+    Avg PPR: 0.001650
+    Members: Shoulder (anatomy), Paddle out
+    Interpretation: These concepts define each other mutually —
+                    neither is prerequisite to the others.
+
+  SCC-6 (size 2, level 1):
+    Domains: environment
+    Avg PPR: 0.000231
+    Members: Shark net, Shark attack
+    Interpretation: These concepts define each other mutually —
+                    neither is prerequisite to the others.
+
+═══ GATEWAY NODES (Cut Vertices) ═══
+Nodes whose removal disconnects portions of the graph:
+
+  Level 2 | PPR 0.274284 | Deg 32  | core_surfing       | Surfing
+  Level 2 | PPR 0.025279 | Deg 13  | surf_culture       | Surf culture
+  Level 2 | PPR 0.024338 | Deg 14  | board_design       | Surfboard
+  Level 2 | PPR 0.023967 | Deg 6   | competition        | Surf forecasting
+  Level 2 | PPR 0.023121 | Deg 6   | oceanography       | Rip current
+  Level 2 | PPR 0.022926 | Deg 12  | competition        | World Surf League
+  Level 2 | PPR 0.022909 | Deg 9   | core_surfing       | Surf break
+  Level 2 | PPR 0.018630 | Deg 7   | oceanography       | Swell (ocean)
+  Level 2 | PPR 0.015574 | Deg 10  | competition        | Big wave surfing
+  Level 2 | PPR 0.015402 | Deg 10  | history            | Ancient Hawaii
+  Level 2 | PPR 0.012977 | Deg 5   | oceanography       | Ocean surface wave
+  Level 2 | PPR 0.011073 | Deg 5   | environment        | Marine conservation
+  Level 2 | PPR 0.011072 | Deg 3   | competition        | Surfing at the Olympics
+  Level 2 | PPR 0.010615 | Deg 5   | core_surfing       | Wave riding
+  Level 2 | PPR 0.008385 | Deg 7   | oceanography       | Coral reef
+
+Total gateway nodes: 42
+
+═══ DEPTH-3 SUMMARY ═══
+Nodes at depth ≤ 3: 124 / 146 (84.9%)
+PPR coverage at depth ≤ 3: 0.9602 / 1.0000 (96.0%)
+Domains represented: 10
+Multi-node SCCs: 7 (containing 76 nodes)
+Gateway nodes: 42 (critical for graph connectivity)

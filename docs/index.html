@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Knowledge Graph Curriculum · Hyperbolic Visualization</title>
+<style>
+  :root {
+    --bg: #0a0e27;
+    --panel: #111839;
+    --ink: #e6ecff;
+    --muted: #8892b8;
+    --accent: #00d4ff;
+    --accent2: #ff6b6b;
+    --border: #1e2a5a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  header {
+    padding: 28px 40px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  header .sub { color: var(--muted); font-size: 14px; }
+  header .links { margin-top: 12px; font-size: 13px; }
+  header .links a {
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 18px;
+  }
+  header .links a:hover { text-decoration: underline; }
+
+  .controls {
+    display: flex;
+    gap: 24px;
+    padding: 16px 40px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .control-group { display: flex; gap: 8px; align-items: center; }
+  .control-group label { font-size: 13px; color: var(--muted); }
+  select, button {
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  button:hover, select:hover { border-color: var(--accent); }
+  button.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 0;
+    min-height: calc(100vh - 180px);
+  }
+  #viz-container {
+    position: relative;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+  }
+  #viz-container svg {
+    max-width: 100%;
+    max-height: calc(100vh - 220px);
+    width: auto;
+    height: auto;
+  }
+  .kg-node { cursor: pointer; transition: opacity 0.2s, r 0.15s; }
+  .kg-node:hover { stroke: #fff; stroke-width: 2px; }
+  .kg-node.dimmed { opacity: 0.12 !important; }
+  .kg-edge.dimmed { opacity: 0.05 !important; }
+
+  aside {
+    background: var(--panel);
+    border-left: 1px solid var(--border);
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100vh - 180px);
+  }
+  aside h3 {
+    margin: 0 0 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+  }
+  #info-panel .concept {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  #info-panel .domain-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+  }
+  #info-panel .stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  #info-panel .stat-row .key { color: var(--muted); }
+  #info-panel .stat-row .val { font-family: "SF Mono", Consolas, monospace; color: var(--accent); }
+  #info-panel .placeholder {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 13px;
+  }
+  .legend {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    padding: 4px 0;
+    cursor: pointer;
+    color: var(--ink);
+  }
+  .legend-item.dimmed { opacity: 0.4; }
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .stats-summary {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 12px;
+  }
+  .stats-summary .row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 3px 0;
+    color: var(--muted);
+  }
+  .stats-summary .row span:last-child { color: var(--ink); font-family: monospace; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Knowledge Graph Curriculum · Hyperbolic Views</h1>
+  <div class="sub">SCC condensation → topological sort → PPR-weighted reading order, rendered in the Poincaré disk and half-plane.</div>
+  <div class="links">
+    <a href="https://github.com/scottn66/knowledge-graph-curriculum">GitHub</a>
+    <a href="./surfing_curriculum.txt">Curriculum (text)</a>
+    <a href="../theory/MATHEMATICAL_FOUNDATIONS.md">Theory</a>
+    <a href="../theory/From_Cycles_to_Curvature.docx">Explainer (docx)</a>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="control-group">
+    <label>Topic:</label>
+    <button data-topic="surfing" class="active">Surfing</button>
+    <button data-topic="cogsci">Cognitive Science</button>
+  </div>
+  <div class="control-group">
+    <label>Model:</label>
+    <button data-model="disk" class="active">Poincaré Disk</button>
+    <button data-model="halfplane">Half-Plane</button>
+  </div>
+  <div class="control-group">
+    <label>Min PPR:</label>
+    <input type="range" id="ppr-filter" min="0" max="100" value="0" style="width: 120px;">
+    <span id="ppr-value" style="font-size:12px;color:var(--muted);font-family:monospace;">0</span>
+  </div>
+</div>
+
+<main>
+  <div id="viz-container">
+    <div style="color:var(--muted);">Loading...</div>
+  </div>
+  <aside>
+    <div class="stats-summary" id="stats-summary"></div>
+    <h3>Concept Detail</h3>
+    <div id="info-panel">
+      <div class="placeholder">Hover over a node to see concept metadata.</div>
+    </div>
+    <div class="legend" id="legend"></div>
+  </aside>
+</main>
+
+<script>
+const DOMAIN_COLORS = {
+  surfing: {
+    core_surfing:    '#00d4ff',
+    surf_culture:    '#ff6b6b',
+    oceanography:    '#1e90ff',
+    board_design:    '#ffd700',
+    competition:     '#ff8c42',
+    geography:       '#96f7a0',
+    weather_climate: '#c0c0ff',
+    physiology:      '#ff9ff3',
+    history:         '#d4a574',
+    environment:     '#7fffd4',
+  },
+  cogsci: {}
+};
+
+let state = { topic: 'surfing', model: 'disk', minPpr: 0, graphData: null };
+
+async function loadSVG() {
+  const container = document.getElementById('viz-container');
+  container.innerHTML = '<div style="color:var(--muted);">Loading...</div>';
+  const svgPath = `../assets/${state.topic}_${state.model}.svg`;
+  try {
+    const resp = await fetch(svgPath);
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    container.innerHTML = await resp.text();
+    attachHandlers();
+    applyFilter();
+  } catch (e) {
+    container.innerHTML = `<div style="color:var(--accent2);">Could not load ${svgPath}<br><small>${e.message}</small></div>`;
+  }
+}
+
+async function loadGraphData() {
+  try {
+    const resp = await fetch(`../data/poincare_art_data_${state.topic}.json`);
+    if (!resp.ok) throw new Error();
+    state.graphData = await resp.json();
+    updateStats();
+    updateLegend();
+  } catch (e) {
+    state.graphData = null;
+  }
+}
+
+function updateStats() {
+  const el = document.getElementById('stats-summary');
+  if (!state.graphData) { el.innerHTML = ''; return; }
+  const { nodes, edges } = state.graphData;
+  const domains = new Set(nodes.map(n => n.domain));
+  const pprs = nodes.map(n => n.ppr || 0);
+  el.innerHTML = `
+    <div class="row"><span>Nodes</span><span>${nodes.length}</span></div>
+    <div class="row"><span>Edges</span><span>${edges.length}</span></div>
+    <div class="row"><span>Domains</span><span>${domains.size}</span></div>
+    <div class="row"><span>Max PPR</span><span>${Math.max(...pprs).toFixed(4)}</span></div>
+  `;
+}
+
+function updateLegend() {
+  const el = document.getElementById('legend');
+  if (!state.graphData) { el.innerHTML = ''; return; }
+  const palette = DOMAIN_COLORS[state.topic] || {};
+  const domains = [...new Set(state.graphData.nodes.map(n => n.domain))].sort();
+  el.innerHTML = '<h3>Domains</h3>' + domains.map(d => {
+    const c = palette[d] || '#888';
+    return `<div class="legend-item" data-domain="${d}">
+      <span class="legend-dot" style="background:${c};"></span>
+      <span>${d.replace(/_/g, ' ')}</span>
+    </div>`;
+  }).join('');
+  el.querySelectorAll('.legend-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('dimmed');
+      applyFilter();
+    });
+  });
+}
+
+function attachHandlers() {
+  document.querySelectorAll('.kg-node').forEach(node => {
+    node.addEventListener('mouseenter', () => showInfo(node));
+    node.addEventListener('mouseleave', hideInfo);
+  });
+}
+
+function showInfo(node) {
+  const name = node.getAttribute('data-name') || '?';
+  const domain = node.getAttribute('data-domain') || '?';
+  const ppr = parseFloat(node.getAttribute('data-ppr') || 0);
+  const degree = node.getAttribute('data-degree') || '?';
+  const palette = DOMAIN_COLORS[state.topic] || {};
+  const color = palette[domain] || '#888';
+  document.getElementById('info-panel').innerHTML = `
+    <div class="concept">${name}</div>
+    <div class="domain-badge" style="background:${color};color:#000;">${domain.replace(/_/g,' ')}</div>
+    <div class="stat-row"><span class="key">Personalized PageRank</span><span class="val">${ppr.toFixed(6)}</span></div>
+    <div class="stat-row"><span class="key">Degree</span><span class="val">${degree}</span></div>
+  `;
+}
+function hideInfo() {
+  document.getElementById('info-panel').innerHTML =
+    '<div class="placeholder">Hover over a node to see concept metadata.</div>';
+}
+
+function applyFilter() {
+  const dimmedDomains = new Set(
+    [...document.querySelectorAll('.legend-item.dimmed')].map(el => el.getAttribute('data-domain'))
+  );
+  const pprThreshold = state.minPpr;
+  document.querySelectorAll('.kg-node').forEach(node => {
+    const d = node.getAttribute('data-domain');
+    const p = parseFloat(node.getAttribute('data-ppr') || 0);
+    const hide = dimmedDomains.has(d) || p < pprThreshold;
+    node.classList.toggle('dimmed', hide);
+  });
+}
+
+document.querySelectorAll('[data-topic]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-topic]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.topic = btn.getAttribute('data-topic');
+    loadGraphData().then(loadSVG);
+  });
+});
+document.querySelectorAll('[data-model]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-model]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.model = btn.getAttribute('data-model');
+    loadSVG();
+  });
+});
+document.getElementById('ppr-filter').addEventListener('input', (e) => {
+  const v = parseInt(e.target.value);
+  if (!state.graphData) return;
+  const maxPpr = Math.max(...state.graphData.nodes.map(n => n.ppr || 0));
+  state.minPpr = (v / 100) * maxPpr;
+  document.getElementById('ppr-value').textContent = state.minPpr.toFixed(4);
+  applyFilter();
+});
+
+loadGraphData().then(loadSVG);
+</script>
+</body>
+</html>

@@ -1,0 +1,2410 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "name": "Surfing",
+      "domain": "core_surfing",
+      "x": 0.04868,
+      "y": -0.0114,
+      "r": 0.05,
+      "ppr": 0.274284,
+      "degree": 32
+    },
+    {
+      "id": 2,
+      "name": "Surf break",
+      "domain": "core_surfing",
+      "x": 0.30418,
+      "y": -0.06055,
+      "r": 0.3102,
+      "ppr": 0.022909,
+      "degree": 9
+    },
+    {
+      "id": 3,
+      "name": "Wave riding",
+      "domain": "core_surfing",
+      "x": 0.38588,
+      "y": -0.06157,
+      "r": 0.3908,
+      "ppr": 0.010615,
+      "degree": 5
+    },
+    {
+      "id": 4,
+      "name": "Paddle out",
+      "domain": "core_surfing",
+      "x": 0.53784,
+      "y": 0.10157,
+      "r": 0.5474,
+      "ppr": 0.002382,
+      "degree": 4
+    },
+    {
+      "id": 5,
+      "name": "Pop-up (surfing)",
+      "domain": "core_surfing",
+      "x": 0.56282,
+      "y": 0.12336,
+      "r": 0.5762,
+      "ppr": 0.001809,
+      "degree": 3
+    },
+    {
+      "id": 6,
+      "name": "Duck dive",
+      "domain": "core_surfing",
+      "x": 0.51114,
+      "y": 0.04509,
+      "r": 0.5131,
+      "ppr": 0.003302,
+      "degree": 2
+    },
+    {
+      "id": 7,
+      "name": "Tube riding",
+      "domain": "core_surfing",
+      "x": 0.47673,
+      "y": 0.00317,
+      "r": 0.4767,
+      "ppr": 0.004673,
+      "degree": 3
+    },
+    {
+      "id": 8,
+      "name": "Cutback",
+      "domain": "core_surfing",
+      "x": 0.50119,
+      "y": -0.00319,
+      "r": 0.5012,
+      "ppr": 0.0037,
+      "degree": 4
+    },
+    {
+      "id": 9,
+      "name": "Bottom turn",
+      "domain": "core_surfing",
+      "x": 0.46521,
+      "y": -0.03996,
+      "r": 0.4669,
+      "ppr": 0.005132,
+      "degree": 5
+    },
+    {
+      "id": 10,
+      "name": "Aerial (surfing)",
+      "domain": "core_surfing",
+      "x": 0.49123,
+      "y": 0.003,
+      "r": 0.4912,
+      "ppr": 0.004069,
+      "degree": 3
+    },
+    {
+      "id": 11,
+      "name": "Floater (surfing)",
+      "domain": "core_surfing",
+      "x": 0.6166,
+      "y": 0.13911,
+      "r": 0.6321,
+      "ppr": 0.001061,
+      "degree": 1
+    },
+    {
+      "id": 12,
+      "name": "Carving (surfing)",
+      "domain": "core_surfing",
+      "x": 0.5877,
+      "y": 0.11245,
+      "r": 0.5984,
+      "ppr": 0.001464,
+      "degree": 2
+    },
+    {
+      "id": 13,
+      "name": "Wipeout",
+      "domain": "core_surfing",
+      "x": 0.29526,
+      "y": -0.08477,
+      "r": 0.3072,
+      "ppr": 0.023565,
+      "degree": 7
+    },
+    {
+      "id": 14,
+      "name": "Lineup (surfing)",
+      "domain": "core_surfing",
+      "x": 0.6374,
+      "y": 0.14249,
+      "r": 0.6531,
+      "ppr": 0.000868,
+      "degree": 2
+    },
+    {
+      "id": 15,
+      "name": "Surf leash",
+      "domain": "core_surfing",
+      "x": 0.49129,
+      "y": 0.00109,
+      "r": 0.4913,
+      "ppr": 0.004067,
+      "degree": 2
+    },
+    {
+      "id": 16,
+      "name": "Wetsuit",
+      "domain": "core_surfing",
+      "x": 0.38336,
+      "y": -0.07299,
+      "r": 0.3903,
+      "ppr": 0.010667,
+      "degree": 5
+    },
+    {
+      "id": 17,
+      "name": "Surf culture",
+      "domain": "surf_culture",
+      "x": 0.27931,
+      "y": 0.10902,
+      "r": 0.2998,
+      "ppr": 0.025279,
+      "degree": 13
+    },
+    {
+      "id": 18,
+      "name": "Surf music",
+      "domain": "surf_culture",
+      "x": 0.42953,
+      "y": 0.18652,
+      "r": 0.4683,
+      "ppr": 0.005066,
+      "degree": 5
+    },
+    {
+      "id": 19,
+      "name": "The Beach Boys",
+      "domain": "surf_culture",
+      "x": 0.45283,
+      "y": 0.47768,
+      "r": 0.6582,
+      "ppr": 0.000827,
+      "degree": 1
+    },
+    {
+      "id": 20,
+      "name": "Dick Dale",
+      "domain": "surf_culture",
+      "x": 0.48014,
+      "y": 0.34352,
+      "r": 0.5904,
+      "ppr": 0.00158,
+      "degree": 2
+    },
+    {
+      "id": 21,
+      "name": "Surf film",
+      "domain": "surf_culture",
+      "x": 0.4585,
+      "y": 0.17455,
+      "r": 0.4906,
+      "ppr": 0.004094,
+      "degree": 4
+    },
+    {
+      "id": 22,
+      "name": "The Endless Summer",
+      "domain": "surf_culture",
+      "x": 0.43016,
+      "y": 0.50124,
+      "r": 0.6605,
+      "ppr": 0.000809,
+      "degree": 1
+    },
+    {
+      "id": 23,
+      "name": "Point Break (1991 film)",
+      "domain": "surf_culture",
+      "x": 0.43436,
+      "y": 0.49236,
+      "r": 0.6566,
+      "ppr": 0.00084,
+      "degree": 1
+    },
+    {
+      "id": 24,
+      "name": "Surf art",
+      "domain": "surf_culture",
+      "x": 0.46364,
+      "y": 0.23234,
+      "r": 0.5186,
+      "ppr": 0.003134,
+      "degree": 2
+    },
+    {
+      "id": 25,
+      "name": "Surf photography",
+      "domain": "surf_culture",
+      "x": 0.45792,
+      "y": 0.26103,
+      "r": 0.5271,
+      "ppr": 0.00289,
+      "degree": 2
+    },
+    {
+      "id": 26,
+      "name": "Surfing subculture",
+      "domain": "surf_culture",
+      "x": 0.41861,
+      "y": 0.32288,
+      "r": 0.5287,
+      "ppr": 0.002847,
+      "degree": 4
+    },
+    {
+      "id": 27,
+      "name": "Localism (surfing)",
+      "domain": "surf_culture",
+      "x": 0.39853,
+      "y": 0.4416,
+      "r": 0.5948,
+      "ppr": 0.001514,
+      "degree": 3
+    },
+    {
+      "id": 28,
+      "name": "Soul surfer",
+      "domain": "surf_culture",
+      "x": 0.4112,
+      "y": 0.56056,
+      "r": 0.6952,
+      "ppr": 0.000581,
+      "degree": 1
+    },
+    {
+      "id": 29,
+      "name": "Surf slang",
+      "domain": "surf_culture",
+      "x": 0.44793,
+      "y": 0.38487,
+      "r": 0.5906,
+      "ppr": 0.001577,
+      "degree": 1
+    },
+    {
+      "id": 30,
+      "name": "Aloha spirit",
+      "domain": "surf_culture",
+      "x": 0.44722,
+      "y": 0.28068,
+      "r": 0.528,
+      "ppr": 0.002865,
+      "degree": 2
+    },
+    {
+      "id": 31,
+      "name": "Tiki culture",
+      "domain": "surf_culture",
+      "x": 0.44285,
+      "y": 0.27407,
+      "r": 0.5208,
+      "ppr": 0.003069,
+      "degree": 2
+    },
+    {
+      "id": 32,
+      "name": "Ocean surface wave",
+      "domain": "oceanography",
+      "x": 0.15902,
+      "y": 0.33376,
+      "r": 0.3697,
+      "ppr": 0.012977,
+      "degree": 5
+    },
+    {
+      "id": 33,
+      "name": "Swell (ocean)",
+      "domain": "oceanography",
+      "x": 0.17814,
+      "y": 0.27995,
+      "r": 0.3318,
+      "ppr": 0.01863,
+      "degree": 7
+    },
+    {
+      "id": 34,
+      "name": "Wave height",
+      "domain": "oceanography",
+      "x": 0.21038,
+      "y": 0.39147,
+      "r": 0.4444,
+      "ppr": 0.006361,
+      "degree": 4
+    },
+    {
+      "id": 35,
+      "name": "Wave period",
+      "domain": "oceanography",
+      "x": 0.10109,
+      "y": 0.54797,
+      "r": 0.5572,
+      "ppr": 0.002168,
+      "degree": 1
+    },
+    {
+      "id": 36,
+      "name": "Significant wave height",
+      "domain": "oceanography",
+      "x": 0.09106,
+      "y": 0.55261,
+      "r": 0.5601,
+      "ppr": 0.00211,
+      "degree": 1
+    },
+    {
+      "id": 37,
+      "name": "Breaking wave",
+      "domain": "oceanography",
+      "x": 0.16578,
+      "y": 0.32298,
+      "r": 0.363,
+      "ppr": 0.01383,
+      "degree": 5
+    },
+    {
+      "id": 38,
+      "name": "Rip current",
+      "domain": "oceanography",
+      "x": 0.18104,
+      "y": 0.25064,
+      "r": 0.3092,
+      "ppr": 0.023121,
+      "degree": 6
+    },
+    {
+      "id": 39,
+      "name": "Tide",
+      "domain": "oceanography",
+      "x": 0.15294,
+      "y": 0.50157,
+      "r": 0.5244,
+      "ppr": 0.002966,
+      "degree": 2
+    },
+    {
+      "id": 40,
+      "name": "Tidal range",
+      "domain": "oceanography",
+      "x": -0.01435,
+      "y": 0.61756,
+      "r": 0.6177,
+      "ppr": 0.001217,
+      "degree": 1
+    },
+    {
+      "id": 41,
+      "name": "Bathymetry",
+      "domain": "oceanography",
+      "x": 0.17274,
+      "y": 0.42601,
+      "r": 0.4597,
+      "ppr": 0.005498,
+      "degree": 3
+    },
+    {
+      "id": 42,
+      "name": "Continental shelf",
+      "domain": "oceanography",
+      "x": 0.08769,
+      "y": 0.5894,
+      "r": 0.5959,
+      "ppr": 0.001499,
+      "degree": 1
+    },
+    {
+      "id": 43,
+      "name": "Kelp forest",
+      "domain": "oceanography",
+      "x": 0.06197,
+      "y": 0.57431,
+      "r": 0.5776,
+      "ppr": 0.001784,
+      "degree": 3
+    },
+    {
+      "id": 44,
+      "name": "Coral reef",
+      "domain": "oceanography",
+      "x": 0.18243,
+      "y": 0.37328,
+      "r": 0.4155,
+      "ppr": 0.008385,
+      "degree": 7
+    },
+    {
+      "id": 45,
+      "name": "Ocean current",
+      "domain": "oceanography",
+      "x": 0.05842,
+      "y": 0.60157,
+      "r": 0.6044,
+      "ppr": 0.001382,
+      "degree": 4
+    },
+    {
+      "id": 46,
+      "name": "Undertow (water waves)",
+      "domain": "oceanography",
+      "x": 0.1654,
+      "y": 0.49046,
+      "r": 0.5176,
+      "ppr": 0.003164,
+      "degree": 1
+    },
+    {
+      "id": 47,
+      "name": "Fetch (geography)",
+      "domain": "oceanography",
+      "x": 0.18331,
+      "y": 0.44896,
+      "r": 0.4849,
+      "ppr": 0.004321,
+      "degree": 2
+    },
+    {
+      "id": 48,
+      "name": "Beaufort scale",
+      "domain": "oceanography",
+      "x": 0.14006,
+      "y": 0.52402,
+      "r": 0.5424,
+      "ppr": 0.002497,
+      "degree": 2
+    },
+    {
+      "id": 49,
+      "name": "Surfboard",
+      "domain": "board_design",
+      "x": -0.00565,
+      "y": 0.30376,
+      "r": 0.3038,
+      "ppr": 0.024338,
+      "degree": 14
+    },
+    {
+      "id": 50,
+      "name": "Longboard (surfing)",
+      "domain": "board_design",
+      "x": -0.02453,
+      "y": 0.38763,
+      "r": 0.3884,
+      "ppr": 0.010856,
+      "degree": 4
+    },
+    {
+      "id": 51,
+      "name": "Shortboard",
+      "domain": "board_design",
+      "x": -0.01324,
+      "y": 0.38905,
+      "r": 0.3893,
+      "ppr": 0.010767,
+      "degree": 4
+    },
+    {
+      "id": 52,
+      "name": "Fish (surfboard)",
+      "domain": "board_design",
+      "x": -0.15793,
+      "y": 0.53178,
+      "r": 0.5547,
+      "ppr": 0.00222,
+      "degree": 2
+    },
+    {
+      "id": 53,
+      "name": "Gun (surfboard)",
+      "domain": "board_design",
+      "x": -0.12083,
+      "y": 0.47832,
+      "r": 0.4933,
+      "ppr": 0.003988,
+      "degree": 3
+    },
+    {
+      "id": 54,
+      "name": "Foam board (surfing)",
+      "domain": "board_design",
+      "x": -0.15045,
+      "y": 0.51083,
+      "r": 0.5325,
+      "ppr": 0.002744,
+      "degree": 2
+    },
+    {
+      "id": 55,
+      "name": "Surfboard shaping",
+      "domain": "board_design",
+      "x": -0.07576,
+      "y": 0.48117,
+      "r": 0.4871,
+      "ppr": 0.004233,
+      "degree": 5
+    },
+    {
+      "id": 56,
+      "name": "Surfboard fin",
+      "domain": "board_design",
+      "x": -0.0465,
+      "y": 0.45533,
+      "r": 0.4577,
+      "ppr": 0.005604,
+      "degree": 4
+    },
+    {
+      "id": 57,
+      "name": "Thruster (surfboard)",
+      "domain": "board_design",
+      "x": -0.14426,
+      "y": 0.49538,
+      "r": 0.516,
+      "ppr": 0.003214,
+      "degree": 2
+    },
+    {
+      "id": 58,
+      "name": "Twin fin",
+      "domain": "board_design",
+      "x": -0.18784,
+      "y": 0.53077,
+      "r": 0.563,
+      "ppr": 0.002051,
+      "degree": 2
+    },
+    {
+      "id": 59,
+      "name": "Polyurethane foam",
+      "domain": "board_design",
+      "x": -0.38392,
+      "y": 0.56253,
+      "r": 0.6811,
+      "ppr": 0.000665,
+      "degree": 1
+    },
+    {
+      "id": 60,
+      "name": "Epoxy",
+      "domain": "board_design",
+      "x": -0.34036,
+      "y": 0.58214,
+      "r": 0.6743,
+      "ppr": 0.000709,
+      "degree": 1
+    },
+    {
+      "id": 61,
+      "name": "Fiberglass",
+      "domain": "board_design",
+      "x": -0.39257,
+      "y": 0.55423,
+      "r": 0.6792,
+      "ppr": 0.000677,
+      "degree": 1
+    },
+    {
+      "id": 62,
+      "name": "Wax (surfing)",
+      "domain": "board_design",
+      "x": -0.23915,
+      "y": 0.51056,
+      "r": 0.5638,
+      "ppr": 0.002036,
+      "degree": 2
+    },
+    {
+      "id": 63,
+      "name": "Traction pad",
+      "domain": "board_design",
+      "x": -0.27465,
+      "y": 0.6017,
+      "r": 0.6614,
+      "ppr": 0.000802,
+      "degree": 1
+    },
+    {
+      "id": 64,
+      "name": "Hydrofoil",
+      "domain": "board_design",
+      "x": -0.2657,
+      "y": 0.5397,
+      "r": 0.6016,
+      "ppr": 0.00142,
+      "degree": 1
+    },
+    {
+      "id": 65,
+      "name": "World Surf League",
+      "domain": "competition",
+      "x": -0.19255,
+      "y": 0.24305,
+      "r": 0.3101,
+      "ppr": 0.022926,
+      "degree": 12
+    },
+    {
+      "id": 66,
+      "name": "Championship Tour (surfing)",
+      "domain": "competition",
+      "x": -0.54838,
+      "y": 0.2217,
+      "r": 0.5915,
+      "ppr": 0.001563,
+      "degree": 1
+    },
+    {
+      "id": 67,
+      "name": "Big wave surfing",
+      "domain": "competition",
+      "x": -0.25607,
+      "y": 0.23947,
+      "r": 0.3506,
+      "ppr": 0.015574,
+      "degree": 10
+    },
+    {
+      "id": 68,
+      "name": "Eddie Aikau",
+      "domain": "competition",
+      "x": -0.35569,
+      "y": 0.29855,
+      "r": 0.4644,
+      "ppr": 0.005258,
+      "degree": 3
+    },
+    {
+      "id": 69,
+      "name": "Kelly Slater",
+      "domain": "competition",
+      "x": -0.24653,
+      "y": 0.26013,
+      "r": 0.3584,
+      "ppr": 0.014457,
+      "degree": 5
+    },
+    {
+      "id": 70,
+      "name": "Laird Hamilton",
+      "domain": "competition",
+      "x": -0.49557,
+      "y": 0.25899,
+      "r": 0.5592,
+      "ppr": 0.002128,
+      "degree": 2
+    },
+    {
+      "id": 71,
+      "name": "Stephanie Gilmore",
+      "domain": "competition",
+      "x": -0.55421,
+      "y": 0.2134,
+      "r": 0.5939,
+      "ppr": 0.001528,
+      "degree": 1
+    },
+    {
+      "id": 72,
+      "name": "John John Florence",
+      "domain": "competition",
+      "x": -0.40501,
+      "y": 0.27465,
+      "r": 0.4894,
+      "ppr": 0.004143,
+      "degree": 3
+    },
+    {
+      "id": 73,
+      "name": "Bethany Hamilton",
+      "domain": "competition",
+      "x": -0.8455,
+      "y": 0.36267,
+      "r": 0.92,
+      "ppr": 6.8e-05,
+      "degree": 1
+    },
+    {
+      "id": 74,
+      "name": "Duke Kahanamoku",
+      "domain": "competition",
+      "x": -0.24613,
+      "y": 0.24944,
+      "r": 0.3504,
+      "ppr": 0.015598,
+      "degree": 6
+    },
+    {
+      "id": 75,
+      "name": "Tow-in surfing",
+      "domain": "competition",
+      "x": -0.41762,
+      "y": 0.29565,
+      "r": 0.5117,
+      "ppr": 0.003348,
+      "degree": 3
+    },
+    {
+      "id": 76,
+      "name": "Surfing at the Olympics",
+      "domain": "competition",
+      "x": -0.29305,
+      "y": 0.25176,
+      "r": 0.3863,
+      "ppr": 0.011072,
+      "degree": 3
+    },
+    {
+      "id": 77,
+      "name": "2020 Summer Olympics",
+      "domain": "competition",
+      "x": -0.44506,
+      "y": 0.27457,
+      "r": 0.5229,
+      "ppr": 0.003007,
+      "degree": 1
+    },
+    {
+      "id": 78,
+      "name": "Surf forecasting",
+      "domain": "competition",
+      "x": -0.18197,
+      "y": 0.24529,
+      "r": 0.3054,
+      "ppr": 0.023967,
+      "degree": 6
+    },
+    {
+      "id": 79,
+      "name": "Judging (surfing)",
+      "domain": "competition",
+      "x": -0.4487,
+      "y": 0.2687,
+      "r": 0.523,
+      "ppr": 0.003005,
+      "degree": 2
+    },
+    {
+      "id": 80,
+      "name": "Pipeline (surf spot)",
+      "domain": "geography",
+      "x": -0.32592,
+      "y": 0.07562,
+      "r": 0.3346,
+      "ppr": 0.018146,
+      "degree": 7
+    },
+    {
+      "id": 81,
+      "name": "Teahupo'o",
+      "domain": "geography",
+      "x": -0.5075,
+      "y": 0.05496,
+      "r": 0.5105,
+      "ppr": 0.003387,
+      "degree": 3
+    },
+    {
+      "id": 82,
+      "name": "Mavericks (California)",
+      "domain": "geography",
+      "x": -0.5695,
+      "y": 0.03078,
+      "r": 0.5703,
+      "ppr": 0.001913,
+      "degree": 2
+    },
+    {
+      "id": 83,
+      "name": "Nazar\u00e9 (waves)",
+      "domain": "geography",
+      "x": -0.53767,
+      "y": 0.07741,
+      "r": 0.5432,
+      "ppr": 0.002478,
+      "degree": 2
+    },
+    {
+      "id": 84,
+      "name": "Jeffreys Bay",
+      "domain": "geography",
+      "x": -0.41633,
+      "y": 0.12005,
+      "r": 0.4333,
+      "ppr": 0.007074,
+      "degree": 1
+    },
+    {
+      "id": 85,
+      "name": "Bells Beach",
+      "domain": "geography",
+      "x": -0.58994,
+      "y": -0.03249,
+      "r": 0.5908,
+      "ppr": 0.001573,
+      "degree": 1
+    },
+    {
+      "id": 86,
+      "name": "Uluwatu (surf spot)",
+      "domain": "geography",
+      "x": -0.90589,
+      "y": -0.16052,
+      "r": 0.92,
+      "ppr": 0.0,
+      "degree": 2
+    },
+    {
+      "id": 87,
+      "name": "Gold Coast (Australia)",
+      "domain": "geography",
+      "x": -0.54889,
+      "y": 0.0429,
+      "r": 0.5506,
+      "ppr": 0.00231,
+      "degree": 2
+    },
+    {
+      "id": 88,
+      "name": "North Shore (Oahu)",
+      "domain": "geography",
+      "x": -0.31075,
+      "y": 0.09559,
+      "r": 0.3251,
+      "ppr": 0.01986,
+      "degree": 8
+    },
+    {
+      "id": 89,
+      "name": "Santa Cruz, California",
+      "domain": "geography",
+      "x": -0.66181,
+      "y": -0.09396,
+      "r": 0.6684,
+      "ppr": 0.00075,
+      "degree": 1
+    },
+    {
+      "id": 90,
+      "name": "Byron Bay",
+      "domain": "geography",
+      "x": -0.64671,
+      "y": -0.04014,
+      "r": 0.648,
+      "ppr": 0.000912,
+      "degree": 1
+    },
+    {
+      "id": 91,
+      "name": "Hossegor",
+      "domain": "geography",
+      "x": -0.8899,
+      "y": -0.23342,
+      "r": 0.92,
+      "ppr": 0.0,
+      "degree": 0
+    },
+    {
+      "id": 92,
+      "name": "Mentawai Islands",
+      "domain": "geography",
+      "x": -0.89366,
+      "y": -0.21859,
+      "r": 0.92,
+      "ppr": 0.0,
+      "degree": 4
+    },
+    {
+      "id": 93,
+      "name": "Cloudbreak",
+      "domain": "geography",
+      "x": -0.88747,
+      "y": -0.24249,
+      "r": 0.92,
+      "ppr": 0.0,
+      "degree": 2
+    },
+    {
+      "id": 94,
+      "name": "Trestles (surfing)",
+      "domain": "geography",
+      "x": -0.58921,
+      "y": 0.02072,
+      "r": 0.5896,
+      "ppr": 0.001592,
+      "degree": 1
+    },
+    {
+      "id": 95,
+      "name": "Wind wave",
+      "domain": "weather_climate",
+      "x": -0.44657,
+      "y": -0.15436,
+      "r": 0.4725,
+      "ppr": 0.004866,
+      "degree": 5
+    },
+    {
+      "id": 96,
+      "name": "Trade winds",
+      "domain": "weather_climate",
+      "x": -0.43906,
+      "y": -0.34682,
+      "r": 0.5595,
+      "ppr": 0.002121,
+      "degree": 4
+    },
+    {
+      "id": 97,
+      "name": "Tropical cyclone",
+      "domain": "weather_climate",
+      "x": -0.403,
+      "y": -0.32391,
+      "r": 0.517,
+      "ppr": 0.003181,
+      "degree": 2
+    },
+    {
+      "id": 98,
+      "name": "El Ni\u00f1o\u2013Southern Oscillation",
+      "domain": "weather_climate",
+      "x": -0.40498,
+      "y": -0.45248,
+      "r": 0.6072,
+      "ppr": 0.001345,
+      "degree": 4
+    },
+    {
+      "id": 99,
+      "name": "Storm surge",
+      "domain": "weather_climate",
+      "x": -0.3584,
+      "y": -0.49712,
+      "r": 0.6128,
+      "ppr": 0.001275,
+      "degree": 1
+    },
+    {
+      "id": 100,
+      "name": "Offshore wind",
+      "domain": "weather_climate",
+      "x": -0.46487,
+      "y": -0.20024,
+      "r": 0.5062,
+      "ppr": 0.003529,
+      "degree": 3
+    },
+    {
+      "id": 101,
+      "name": "Sea surface temperature",
+      "domain": "weather_climate",
+      "x": -0.42337,
+      "y": -0.4152,
+      "r": 0.593,
+      "ppr": 0.001541,
+      "degree": 3
+    },
+    {
+      "id": 102,
+      "name": "Marine weather forecasting",
+      "domain": "weather_climate",
+      "x": -0.43437,
+      "y": -0.27437,
+      "r": 0.5138,
+      "ppr": 0.003282,
+      "degree": 1
+    },
+    {
+      "id": 103,
+      "name": "Buoy",
+      "domain": "weather_climate",
+      "x": -0.47305,
+      "y": -0.19922,
+      "r": 0.5133,
+      "ppr": 0.003297,
+      "degree": 1
+    },
+    {
+      "id": 104,
+      "name": "NOAA",
+      "domain": "weather_climate",
+      "x": -0.44121,
+      "y": -0.26553,
+      "r": 0.515,
+      "ppr": 0.003245,
+      "degree": 1
+    },
+    {
+      "id": 105,
+      "name": "Swimming",
+      "domain": "physiology",
+      "x": -0.19487,
+      "y": -0.29048,
+      "r": 0.3498,
+      "ppr": 0.015694,
+      "degree": 6
+    },
+    {
+      "id": 106,
+      "name": "Drowning",
+      "domain": "physiology",
+      "x": -0.18632,
+      "y": -0.34233,
+      "r": 0.3898,
+      "ppr": 0.010718,
+      "degree": 5
+    },
+    {
+      "id": 107,
+      "name": "Hypothermia",
+      "domain": "physiology",
+      "x": -0.21661,
+      "y": -0.44751,
+      "r": 0.4972,
+      "ppr": 0.003845,
+      "degree": 3
+    },
+    {
+      "id": 108,
+      "name": "Surfer's ear",
+      "domain": "physiology",
+      "x": -0.18723,
+      "y": -0.30932,
+      "r": 0.3616,
+      "ppr": 0.014025,
+      "degree": 2
+    },
+    {
+      "id": 109,
+      "name": "Balance (ability)",
+      "domain": "physiology",
+      "x": -0.11548,
+      "y": -0.65314,
+      "r": 0.6633,
+      "ppr": 0.000788,
+      "degree": 3
+    },
+    {
+      "id": 110,
+      "name": "Proprioception",
+      "domain": "physiology",
+      "x": -0.05999,
+      "y": -0.80846,
+      "r": 0.8107,
+      "ppr": 0.000193,
+      "degree": 1
+    },
+    {
+      "id": 111,
+      "name": "Core stability",
+      "domain": "physiology",
+      "x": -0.09112,
+      "y": -0.79614,
+      "r": 0.8013,
+      "ppr": 0.000211,
+      "degree": 1
+    },
+    {
+      "id": 112,
+      "name": "Shoulder (anatomy)",
+      "domain": "physiology",
+      "x": -0.12644,
+      "y": -0.6348,
+      "r": 0.6473,
+      "ppr": 0.000918,
+      "degree": 2
+    },
+    {
+      "id": 113,
+      "name": "Water safety",
+      "domain": "physiology",
+      "x": -0.17672,
+      "y": -0.35997,
+      "r": 0.401,
+      "ppr": 0.009626,
+      "degree": 4
+    },
+    {
+      "id": 114,
+      "name": "Lifeguard",
+      "domain": "physiology",
+      "x": -0.179,
+      "y": -0.43537,
+      "r": 0.4707,
+      "ppr": 0.004949,
+      "degree": 3
+    },
+    {
+      "id": 115,
+      "name": "Surf lifesaving",
+      "domain": "physiology",
+      "x": -0.14205,
+      "y": -0.53406,
+      "r": 0.5526,
+      "ppr": 0.002265,
+      "degree": 2
+    },
+    {
+      "id": 116,
+      "name": "CPR",
+      "domain": "physiology",
+      "x": -0.16291,
+      "y": -0.51399,
+      "r": 0.5392,
+      "ppr": 0.002575,
+      "degree": 2
+    },
+    {
+      "id": 117,
+      "name": "Skin cancer",
+      "domain": "physiology",
+      "x": -0.07446,
+      "y": -0.91698,
+      "r": 0.92,
+      "ppr": 0.0,
+      "degree": 1
+    },
+    {
+      "id": 118,
+      "name": "Sunscreen",
+      "domain": "physiology",
+      "x": -0.03978,
+      "y": -0.91914,
+      "r": 0.92,
+      "ppr": 0.0,
+      "degree": 1
+    },
+    {
+      "id": 119,
+      "name": "History of surfing",
+      "domain": "history",
+      "x": 0.01388,
+      "y": -0.32086,
+      "r": 0.3212,
+      "ppr": 0.020625,
+      "degree": 7
+    },
+    {
+      "id": 120,
+      "name": "Ancient Hawaii",
+      "domain": "history",
+      "x": 0.02599,
+      "y": -0.3508,
+      "r": 0.3518,
+      "ppr": 0.015402,
+      "degree": 10
+    },
+    {
+      "id": 121,
+      "name": "Polynesians",
+      "domain": "history",
+      "x": 0.22347,
+      "y": -0.53146,
+      "r": 0.5765,
+      "ppr": 0.001803,
+      "degree": 2
+    },
+    {
+      "id": 122,
+      "name": "James Cook",
+      "domain": "history",
+      "x": 0.39296,
+      "y": -0.54144,
+      "r": 0.669,
+      "ppr": 0.000746,
+      "degree": 1
+    },
+    {
+      "id": 123,
+      "name": "Tom Blake (surfer)",
+      "domain": "history",
+      "x": 0.12845,
+      "y": -0.50481,
+      "r": 0.5209,
+      "ppr": 0.003066,
+      "degree": 2
+    },
+    {
+      "id": 124,
+      "name": "Miki Dora",
+      "domain": "history",
+      "x": 0.20689,
+      "y": -0.58757,
+      "r": 0.6229,
+      "ppr": 0.001158,
+      "degree": 1
+    },
+    {
+      "id": 125,
+      "name": "Greg Noll",
+      "domain": "history",
+      "x": 0.23074,
+      "y": -0.58339,
+      "r": 0.6274,
+      "ppr": 0.00111,
+      "degree": 1
+    },
+    {
+      "id": 126,
+      "name": "California surf boom",
+      "domain": "history",
+      "x": 0.10962,
+      "y": -0.44253,
+      "r": 0.4559,
+      "ppr": 0.005701,
+      "degree": 4
+    },
+    {
+      "id": 127,
+      "name": "Surf industry",
+      "domain": "history",
+      "x": 0.08396,
+      "y": -0.43048,
+      "r": 0.4386,
+      "ppr": 0.006725,
+      "degree": 6
+    },
+    {
+      "id": 128,
+      "name": "Quiksilver",
+      "domain": "history",
+      "x": 0.31737,
+      "y": -0.56811,
+      "r": 0.6507,
+      "ppr": 0.000888,
+      "degree": 1
+    },
+    {
+      "id": 129,
+      "name": "Billabong (company)",
+      "domain": "history",
+      "x": 0.33763,
+      "y": -0.55064,
+      "r": 0.6459,
+      "ppr": 0.00093,
+      "degree": 1
+    },
+    {
+      "id": 130,
+      "name": "Rip Curl",
+      "domain": "history",
+      "x": 0.28366,
+      "y": -0.58155,
+      "r": 0.647,
+      "ppr": 0.00092,
+      "degree": 1
+    },
+    {
+      "id": 131,
+      "name": "Hawaiian sovereignty movement",
+      "domain": "history",
+      "x": 0.15587,
+      "y": -0.51511,
+      "r": 0.5382,
+      "ppr": 0.0026,
+      "degree": 2
+    },
+    {
+      "id": 132,
+      "name": "Waikiki",
+      "domain": "history",
+      "x": 0.06522,
+      "y": -0.43356,
+      "r": 0.4384,
+      "ppr": 0.006735,
+      "degree": 4
+    },
+    {
+      "id": 133,
+      "name": "Marine conservation",
+      "domain": "environment",
+      "x": 0.23191,
+      "y": -0.30899,
+      "r": 0.3863,
+      "ppr": 0.011073,
+      "degree": 5
+    },
+    {
+      "id": 134,
+      "name": "Ocean pollution",
+      "domain": "environment",
+      "x": 0.36967,
+      "y": -0.39101,
+      "r": 0.5381,
+      "ppr": 0.002602,
+      "degree": 2
+    },
+    {
+      "id": 135,
+      "name": "Plastic pollution",
+      "domain": "environment",
+      "x": 0.52739,
+      "y": -0.35114,
+      "r": 0.6336,
+      "ppr": 0.001046,
+      "degree": 1
+    },
+    {
+      "id": 136,
+      "name": "Surfrider Foundation",
+      "domain": "environment",
+      "x": 0.37062,
+      "y": -0.41583,
+      "r": 0.557,
+      "ppr": 0.002172,
+      "degree": 2
+    },
+    {
+      "id": 137,
+      "name": "Beach erosion",
+      "domain": "environment",
+      "x": 0.44235,
+      "y": -0.39842,
+      "r": 0.5953,
+      "ppr": 0.001507,
+      "degree": 3
+    },
+    {
+      "id": 138,
+      "name": "Coastal management",
+      "domain": "environment",
+      "x": 0.55651,
+      "y": -0.35195,
+      "r": 0.6585,
+      "ppr": 0.000825,
+      "degree": 2
+    },
+    {
+      "id": 139,
+      "name": "Artificial reef",
+      "domain": "environment",
+      "x": 0.28523,
+      "y": -0.35474,
+      "r": 0.4552,
+      "ppr": 0.00574,
+      "degree": 4
+    },
+    {
+      "id": 140,
+      "name": "Shark",
+      "domain": "environment",
+      "x": 0.62174,
+      "y": -0.36427,
+      "r": 0.7206,
+      "ppr": 0.000456,
+      "degree": 2
+    },
+    {
+      "id": 141,
+      "name": "Shark attack",
+      "domain": "environment",
+      "x": 0.65794,
+      "y": -0.36862,
+      "r": 0.7542,
+      "ppr": 0.000331,
+      "degree": 4
+    },
+    {
+      "id": 142,
+      "name": "Shark net",
+      "domain": "environment",
+      "x": 0.77131,
+      "y": -0.36214,
+      "r": 0.8521,
+      "ppr": 0.00013,
+      "degree": 2
+    },
+    {
+      "id": 143,
+      "name": "Jellyfish",
+      "domain": "environment",
+      "x": 0.84872,
+      "y": -0.35506,
+      "r": 0.92,
+      "ppr": 0.0,
+      "degree": 1
+    },
+    {
+      "id": 144,
+      "name": "Stingray",
+      "domain": "environment",
+      "x": 0.8541,
+      "y": -0.34193,
+      "r": 0.92,
+      "ppr": 0.0,
+      "degree": 1
+    },
+    {
+      "id": 145,
+      "name": "Ecosystem",
+      "domain": "environment",
+      "x": 0.43827,
+      "y": -0.34957,
+      "r": 0.5606,
+      "ppr": 0.002099,
+      "degree": 4
+    },
+    {
+      "id": 146,
+      "name": "Sustainable surfing",
+      "domain": "environment",
+      "x": 0.36632,
+      "y": -0.38826,
+      "r": 0.5338,
+      "ppr": 0.002711,
+      "degree": 2
+    }
+  ],
+  "edges": [
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 2,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 3
+    },
+    {
+      "source": 1,
+      "target": 49
+    },
+    {
+      "source": 1,
+      "target": 32
+    },
+    {
+      "source": 1,
+      "target": 17
+    },
+    {
+      "source": 17,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 119
+    },
+    {
+      "source": 119,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 65
+    },
+    {
+      "source": 1,
+      "target": 80
+    },
+    {
+      "source": 1,
+      "target": 105
+    },
+    {
+      "source": 1,
+      "target": 16
+    },
+    {
+      "source": 1,
+      "target": 67
+    },
+    {
+      "source": 1,
+      "target": 74
+    },
+    {
+      "source": 1,
+      "target": 69
+    },
+    {
+      "source": 1,
+      "target": 88
+    },
+    {
+      "source": 1,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 37
+    },
+    {
+      "source": 1,
+      "target": 38
+    },
+    {
+      "source": 38,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 33
+    },
+    {
+      "source": 1,
+      "target": 50
+    },
+    {
+      "source": 1,
+      "target": 51
+    },
+    {
+      "source": 2,
+      "target": 37
+    },
+    {
+      "source": 2,
+      "target": 41
+    },
+    {
+      "source": 2,
+      "target": 44
+    },
+    {
+      "source": 44,
+      "target": 2
+    },
+    {
+      "source": 3,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 3
+    },
+    {
+      "source": 3,
+      "target": 7
+    },
+    {
+      "source": 3,
+      "target": 8
+    },
+    {
+      "source": 4,
+      "target": 6
+    },
+    {
+      "source": 4,
+      "target": 14
+    },
+    {
+      "source": 5,
+      "target": 109
+    },
+    {
+      "source": 5,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 5
+    },
+    {
+      "source": 7,
+      "target": 80
+    },
+    {
+      "source": 7,
+      "target": 81
+    },
+    {
+      "source": 8,
+      "target": 12
+    },
+    {
+      "source": 12,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 9
+    },
+    {
+      "source": 10,
+      "target": 11
+    },
+    {
+      "source": 10,
+      "target": 72
+    },
+    {
+      "source": 13,
+      "target": 38
+    },
+    {
+      "source": 13,
+      "target": 106
+    },
+    {
+      "source": 106,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 15
+    },
+    {
+      "source": 6,
+      "target": 13
+    },
+    {
+      "source": 32,
+      "target": 33
+    },
+    {
+      "source": 32,
+      "target": 34
+    },
+    {
+      "source": 32,
+      "target": 35
+    },
+    {
+      "source": 32,
+      "target": 95
+    },
+    {
+      "source": 33,
+      "target": 47
+    },
+    {
+      "source": 47,
+      "target": 33
+    },
+    {
+      "source": 33,
+      "target": 36
+    },
+    {
+      "source": 33,
+      "target": 78
+    },
+    {
+      "source": 37,
+      "target": 34
+    },
+    {
+      "source": 37,
+      "target": 41
+    },
+    {
+      "source": 38,
+      "target": 46
+    },
+    {
+      "source": 38,
+      "target": 113
+    },
+    {
+      "source": 113,
+      "target": 38
+    },
+    {
+      "source": 39,
+      "target": 40
+    },
+    {
+      "source": 39,
+      "target": 2
+    },
+    {
+      "source": 41,
+      "target": 42
+    },
+    {
+      "source": 44,
+      "target": 43
+    },
+    {
+      "source": 45,
+      "target": 98
+    },
+    {
+      "source": 98,
+      "target": 45
+    },
+    {
+      "source": 45,
+      "target": 96
+    },
+    {
+      "source": 96,
+      "target": 45
+    },
+    {
+      "source": 34,
+      "target": 48
+    },
+    {
+      "source": 48,
+      "target": 34
+    },
+    {
+      "source": 49,
+      "target": 50
+    },
+    {
+      "source": 50,
+      "target": 49
+    },
+    {
+      "source": 49,
+      "target": 51
+    },
+    {
+      "source": 49,
+      "target": 52
+    },
+    {
+      "source": 49,
+      "target": 53
+    },
+    {
+      "source": 53,
+      "target": 49
+    },
+    {
+      "source": 49,
+      "target": 55
+    },
+    {
+      "source": 49,
+      "target": 56
+    },
+    {
+      "source": 49,
+      "target": 62
+    },
+    {
+      "source": 49,
+      "target": 54
+    },
+    {
+      "source": 54,
+      "target": 49
+    },
+    {
+      "source": 50,
+      "target": 56
+    },
+    {
+      "source": 51,
+      "target": 57
+    },
+    {
+      "source": 51,
+      "target": 10
+    },
+    {
+      "source": 52,
+      "target": 58
+    },
+    {
+      "source": 53,
+      "target": 67
+    },
+    {
+      "source": 55,
+      "target": 59
+    },
+    {
+      "source": 55,
+      "target": 60
+    },
+    {
+      "source": 55,
+      "target": 61
+    },
+    {
+      "source": 56,
+      "target": 57
+    },
+    {
+      "source": 56,
+      "target": 58
+    },
+    {
+      "source": 64,
+      "target": 49
+    },
+    {
+      "source": 63,
+      "target": 62
+    },
+    {
+      "source": 65,
+      "target": 66
+    },
+    {
+      "source": 65,
+      "target": 69
+    },
+    {
+      "source": 65,
+      "target": 71
+    },
+    {
+      "source": 65,
+      "target": 72
+    },
+    {
+      "source": 72,
+      "target": 65
+    },
+    {
+      "source": 65,
+      "target": 79
+    },
+    {
+      "source": 79,
+      "target": 65
+    },
+    {
+      "source": 67,
+      "target": 75
+    },
+    {
+      "source": 75,
+      "target": 67
+    },
+    {
+      "source": 67,
+      "target": 70
+    },
+    {
+      "source": 67,
+      "target": 68
+    },
+    {
+      "source": 67,
+      "target": 83
+    },
+    {
+      "source": 67,
+      "target": 82
+    },
+    {
+      "source": 67,
+      "target": 81
+    },
+    {
+      "source": 69,
+      "target": 80
+    },
+    {
+      "source": 69,
+      "target": 88
+    },
+    {
+      "source": 88,
+      "target": 69
+    },
+    {
+      "source": 74,
+      "target": 120
+    },
+    {
+      "source": 74,
+      "target": 132
+    },
+    {
+      "source": 74,
+      "target": 105
+    },
+    {
+      "source": 76,
+      "target": 77
+    },
+    {
+      "source": 76,
+      "target": 65
+    },
+    {
+      "source": 73,
+      "target": 141
+    },
+    {
+      "source": 68,
+      "target": 88
+    },
+    {
+      "source": 70,
+      "target": 75
+    },
+    {
+      "source": 78,
+      "target": 103
+    },
+    {
+      "source": 80,
+      "target": 88
+    },
+    {
+      "source": 88,
+      "target": 80
+    },
+    {
+      "source": 80,
+      "target": 37
+    },
+    {
+      "source": 81,
+      "target": 44
+    },
+    {
+      "source": 82,
+      "target": 89
+    },
+    {
+      "source": 83,
+      "target": 67
+    },
+    {
+      "source": 84,
+      "target": 1
+    },
+    {
+      "source": 85,
+      "target": 65
+    },
+    {
+      "source": 87,
+      "target": 65
+    },
+    {
+      "source": 88,
+      "target": 120
+    },
+    {
+      "source": 88,
+      "target": 68
+    },
+    {
+      "source": 86,
+      "target": 92
+    },
+    {
+      "source": 92,
+      "target": 86
+    },
+    {
+      "source": 90,
+      "target": 87
+    },
+    {
+      "source": 93,
+      "target": 92
+    },
+    {
+      "source": 92,
+      "target": 93
+    },
+    {
+      "source": 94,
+      "target": 65
+    },
+    {
+      "source": 78,
+      "target": 102
+    },
+    {
+      "source": 78,
+      "target": 104
+    },
+    {
+      "source": 95,
+      "target": 96
+    },
+    {
+      "source": 96,
+      "target": 95
+    },
+    {
+      "source": 95,
+      "target": 100
+    },
+    {
+      "source": 100,
+      "target": 95
+    },
+    {
+      "source": 97,
+      "target": 99
+    },
+    {
+      "source": 97,
+      "target": 33
+    },
+    {
+      "source": 98,
+      "target": 101
+    },
+    {
+      "source": 101,
+      "target": 98
+    },
+    {
+      "source": 100,
+      "target": 2
+    },
+    {
+      "source": 105,
+      "target": 106
+    },
+    {
+      "source": 106,
+      "target": 105
+    },
+    {
+      "source": 105,
+      "target": 113
+    },
+    {
+      "source": 105,
+      "target": 114
+    },
+    {
+      "source": 106,
+      "target": 116
+    },
+    {
+      "source": 107,
+      "target": 16
+    },
+    {
+      "source": 107,
+      "target": 101
+    },
+    {
+      "source": 108,
+      "target": 1
+    },
+    {
+      "source": 1,
+      "target": 108
+    },
+    {
+      "source": 109,
+      "target": 110
+    },
+    {
+      "source": 109,
+      "target": 111
+    },
+    {
+      "source": 113,
+      "target": 114
+    },
+    {
+      "source": 114,
+      "target": 115
+    },
+    {
+      "source": 115,
+      "target": 116
+    },
+    {
+      "source": 117,
+      "target": 118
+    },
+    {
+      "source": 112,
+      "target": 4
+    },
+    {
+      "source": 4,
+      "target": 112
+    },
+    {
+      "source": 119,
+      "target": 120
+    },
+    {
+      "source": 120,
+      "target": 119
+    },
+    {
+      "source": 119,
+      "target": 74
+    },
+    {
+      "source": 119,
+      "target": 123
+    },
+    {
+      "source": 119,
+      "target": 126
+    },
+    {
+      "source": 120,
+      "target": 121
+    },
+    {
+      "source": 120,
+      "target": 131
+    },
+    {
+      "source": 131,
+      "target": 120
+    },
+    {
+      "source": 121,
+      "target": 122
+    },
+    {
+      "source": 123,
+      "target": 55
+    },
+    {
+      "source": 126,
+      "target": 17
+    },
+    {
+      "source": 126,
+      "target": 124
+    },
+    {
+      "source": 126,
+      "target": 125
+    },
+    {
+      "source": 127,
+      "target": 128
+    },
+    {
+      "source": 127,
+      "target": 129
+    },
+    {
+      "source": 127,
+      "target": 130
+    },
+    {
+      "source": 132,
+      "target": 120
+    },
+    {
+      "source": 120,
+      "target": 132
+    },
+    {
+      "source": 132,
+      "target": 74
+    },
+    {
+      "source": 17,
+      "target": 18
+    },
+    {
+      "source": 18,
+      "target": 17
+    },
+    {
+      "source": 17,
+      "target": 21
+    },
+    {
+      "source": 17,
+      "target": 24
+    },
+    {
+      "source": 24,
+      "target": 17
+    },
+    {
+      "source": 17,
+      "target": 26
+    },
+    {
+      "source": 17,
+      "target": 29
+    },
+    {
+      "source": 18,
+      "target": 19
+    },
+    {
+      "source": 18,
+      "target": 20
+    },
+    {
+      "source": 20,
+      "target": 18
+    },
+    {
+      "source": 21,
+      "target": 22
+    },
+    {
+      "source": 21,
+      "target": 23
+    },
+    {
+      "source": 25,
+      "target": 21
+    },
+    {
+      "source": 25,
+      "target": 80
+    },
+    {
+      "source": 26,
+      "target": 27
+    },
+    {
+      "source": 27,
+      "target": 26
+    },
+    {
+      "source": 26,
+      "target": 28
+    },
+    {
+      "source": 30,
+      "target": 120
+    },
+    {
+      "source": 30,
+      "target": 17
+    },
+    {
+      "source": 31,
+      "target": 17
+    },
+    {
+      "source": 17,
+      "target": 31
+    },
+    {
+      "source": 133,
+      "target": 134
+    },
+    {
+      "source": 133,
+      "target": 136
+    },
+    {
+      "source": 133,
+      "target": 139
+    },
+    {
+      "source": 134,
+      "target": 135
+    },
+    {
+      "source": 136,
+      "target": 137
+    },
+    {
+      "source": 137,
+      "target": 138
+    },
+    {
+      "source": 138,
+      "target": 137
+    },
+    {
+      "source": 139,
+      "target": 2
+    },
+    {
+      "source": 139,
+      "target": 44
+    },
+    {
+      "source": 44,
+      "target": 139
+    },
+    {
+      "source": 140,
+      "target": 141
+    },
+    {
+      "source": 141,
+      "target": 142
+    },
+    {
+      "source": 142,
+      "target": 141
+    },
+    {
+      "source": 140,
+      "target": 145
+    },
+    {
+      "source": 143,
+      "target": 144
+    },
+    {
+      "source": 146,
+      "target": 133
+    },
+    {
+      "source": 146,
+      "target": 127
+    },
+    {
+      "source": 145,
+      "target": 43
+    },
+    {
+      "source": 43,
+      "target": 145
+    },
+    {
+      "source": 145,
+      "target": 44
+    },
+    {
+      "source": 16,
+      "target": 107
+    },
+    {
+      "source": 16,
+      "target": 127
+    },
+    {
+      "source": 127,
+      "target": 16
+    },
+    {
+      "source": 15,
+      "target": 49
+    },
+    {
+      "source": 14,
+      "target": 27
+    },
+    {
+      "source": 1,
+      "target": 133
+    },
+    {
+      "source": 1,
+      "target": 76
+    },
+    {
+      "source": 1,
+      "target": 78
+    },
+    {
+      "source": 78,
+      "target": 1
+    }
+  ]
+}
