@@ -54,3 +54,10 @@ Knowledge graphs have **exponentially growing neighborhoods** (each concept bran
 ## License
 
 MIT.
+
+## Lane
+
+This repo is the **public method lane**: a topic-agnostic demonstration of SCC → condensation
+→ topological levels → Personalized PageRank for curriculum ordering, plus the design notes in
+`theory/`. It holds only synthetic or public data. Other projects may reuse the method by
+copying it with attribution.
