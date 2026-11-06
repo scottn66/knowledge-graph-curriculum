@@ -10,14 +10,16 @@ Implements Sections 9.1–9.5 of MATHEMATICAL_FOUNDATIONS.md:
   5. Output up to depth 3
 """
 
-import json, math
+import json, math, os
 from collections import defaultdict
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 # ═══════════════════════════════════════════════════════════════
 # 1. Load the surfing knowledge graph
 # ═══════════════════════════════════════════════════════════════
 
-with open('/sessions/charming-exciting-cori/poincare_art_data_surfing.json') as f:
+with open(os.path.join(ROOT, "data", "poincare_art_data_surfing.json")) as f:
     data = json.load(f)
 
 nodes = data['nodes']

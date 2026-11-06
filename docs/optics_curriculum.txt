@@ -1,0 +1,162 @@
+Curriculum for Optics
+depth 2 · fanout 15 · max 150
+nodes 150 · edges 229 · SCCs 139 (2 multi, largest 9) · max level 3
+CurriculumScore(v) = PPR(v) / (1 + level(v))
+
+LEVEL 0 (4 articles)
+   1  0.388217  0.388217  out 15  SCC(4)  Optics
+   2  0.023529  0.023529  out 4   SCC(4)  Physical optics
+   3  0.022529  0.022529  out 15  SCC(4)  Ray (optics)
+   4  0.022116  0.022116  out 15  SCC(4)  Geometrical optics
+
+LEVEL 1 (17 articles)
+   1  0.010524  0.021048  out 15   Photodetector
+   2  0.010437  0.020873  out 15   Classical electromagnetism
+   3  0.010413  0.020825  out 15   Optical instrument
+   4  0.003537  0.007074  out 0    Diffraction
+   5  0.000677  0.001355  out 0    Wavefront
+   6  0.000651  0.001302  out 0    Interface (matter)
+   7  0.000651  0.001302  out 0    Maxwell's equations
+   8  0.000638  0.001275  out 0    Homogeneity (physics)
+   9  0.000627  0.001254  out 0    Image
+  10  0.000624  0.001249  out 0    Line (geometry)
+  11  0.000616  0.001233  out 0    Abstract and concrete
+  12  0.000606  0.001212  out 0    Light field
+  13  0.000601  0.001201  out 0    Geometry
+  14  0.000595  0.001190  out 0    Curve
+  15  0.000579  0.001159  out 0    Optical aberration
+  16  0.000561  0.001122  out 0    Optical medium
+  17  0.000548  0.001095  out 0    Phase (waves)
+
+LEVEL 2 (47 articles)
+   1  0.011076  0.033228  out 15  SCC(9)  Electromagnetic radiation
+   2  0.010097  0.030291  out 15  SCC(9)  Physics
+   3  0.009944  0.029831  out 15  SCC(9)  Light
+   4  0.009019  0.027058  out 15  SCC(9)  Microwave
+   5  0.008847  0.026540  out 15  SCC(9)  Infrared
+   6  0.008714  0.026143  out 15  SCC(9)  X-ray
+   7  0.008432  0.025296  out 15  SCC(9)  Ultraviolet
+   8  0.007885  0.023656  out 15  SCC(9)  Radio wave
+   9  0.007698  0.023095  out 15  SCC(9)  Matter
+  10  0.002820  0.008460  out 0    Wave interference
+  11  0.000681  0.002042  out 0    Refractive index
+  12  0.000425  0.001275  out 0    Golay cell
+  13  0.000414  0.001243  out 0    History of optics
+  14  0.000404  0.001212  out 0    Binoculars
+  15  0.000404  0.001212  out 0    Quantum mechanics
+  16  0.000404  0.001212  out 0    Telescope
+  17  0.000400  0.001201  out 0    Nanotechnology
+  18  0.000399  0.001196  out 0    Photoelectric effect
+  19  0.000395  0.001185  out 0    Camera
+  20  0.000395  0.001185  out 0    Solar cell
+  21  0.000393  0.001180  out 0    Phonon
+  22  0.000392  0.001175  out 0    Interferometry
+  23  0.000388  0.001164  out 0    Albert Einstein
+  24  0.000388  0.001164  out 0    Rotating line camera
+  25  0.000383  0.001148  out 0    Valence and conduction bands
+  26  0.000379  0.001138  out 0    Periscope
+  27  0.000377  0.001132  out 0    Quantum field theory
+  28  0.000376  0.001127  out 0    Pinhole camera
+  29  0.000374  0.001122  out 0    Classical mechanics
+  30  0.000372  0.001116  out 0    Photomultiplier tube
+  31  0.000370  0.001111  out 0    Classical field theory
+  32  0.000370  0.001111  out 0    Michael Faraday
+  33  0.000369  0.001106  out 0    Camera obscura
+  34  0.000369  0.001106  out 0    Quantum electrodynamics
+  35  0.000367  0.001101  out 0    Field (physics)
+  36  0.000365  0.001095  out 0    Electromagnetism
+  37  0.000360  0.001079  out 0    Field strength
+  38  0.000360  0.001079  out 0    Image sensor
+  39  0.000358  0.001074  out 0    Antonie van Leeuwenhoek
+  40  0.000358  0.001074  out 0    Electric charge
+  41  0.000358  0.001074  out 0    Photodiode
+  42  0.000349  0.001048  out 0    Heinrich Hertz
+  43  0.000349  0.001048  out 0    Polarization (waves)
+  44  0.000347  0.001042  out 0    Length scale
+  45  0.000347  0.001042  out 0    Quantum engineering
+  46  0.000342  0.001026  out 0    Microscope
+  47  0.000312  0.000937  out 0    Galileo Galilei
+
+LEVEL 3 (82 articles)
+   1  0.002786  0.011143  out 0    Wavelength
+   2  0.001907  0.007630  out 0    Frequency
+   3  0.001245  0.004979  out 0    Gamma ray
+   4  0.001140  0.004561  out 0    Wave
+   5  0.001079  0.004317  out 0    Hertz
+   6  0.001078  0.004312  out 0    Energy
+   7  0.001025  0.004101  out 0    Nanometre
+   8  0.000849  0.003397  out 0    Photon
+   9  0.000808  0.003233  out 0    Momentum
+  10  0.000782  0.003127  out 0    Wave–particle duality
+  11  0.000738  0.002952  out 0    Terahertz radiation
+  12  0.000706  0.002825  out 0    Electronvolt
+  13  0.000685  0.002741  out 0    Sunlight
+  14  0.000661  0.002645  out 0    Electromagnetic spectrum
+  15  0.000660  0.002640  out 0    Black-body radiation
+  16  0.000571  0.002286  out 0    Electric current
+  17  0.000484  0.001937  out 0    Electromagnetic field
+  18  0.000439  0.001757  out 0    Radiation pressure
+  19  0.000437  0.001746  out 0    Science
+  20  0.000433  0.001730  out 0    Chemistry
+  21  0.000433  0.001730  out 0    Radiant energy
+  22  0.000417  0.001667  out 0    Elementary particle
+  23  0.000415  0.001661  out 0    Intensity (physics)
+  24  0.000411  0.001646  out 0    Human eye
+  25  0.000407  0.001630  out 0    Natural philosophy
+  26  0.000407  0.001630  out 0    Physicist
+  27  0.000406  0.001624  out 0    Biology
+  28  0.000401  0.001603  out 0    Space
+  29  0.000399  0.001598  out 0    Time
+  30  0.000396  0.001582  out 0    Scientific Revolution
+  31  0.000386  0.001545  out 0    Academic discipline
+  32  0.000380  0.001519  out 0    Wilhelm Röntgen
+  33  0.000377  0.001508  out 0    Mathematics
+  34  0.000377  0.001508  out 0    Radio spectrum
+  35  0.000376  0.001503  out 0    Force
+  36  0.000376  0.001503  out 0    Motion
+  37  0.000373  0.001492  out 0    Radio
+  38  0.000372  0.001487  out 0    Medical diagnosis
+  39  0.000372  0.001487  out 0    Optical radiation
+  40  0.000369  0.001476  out 0    Far infrared
+  41  0.000368  0.001471  out 0    Radiography
+  42  0.000366  0.001466  out 0    C band (IEEE)
+  43  0.000366  0.001466  out 0    Visual perception
+  44  0.000364  0.001455  out 0    Mercury-vapor lamp
+  45  0.000362  0.001450  out 0    Extreme ultraviolet
+  46  0.000362  0.001450  out 0    Radio-frequency engineering
+  47  0.000361  0.001444  out 0    S band
+  48  0.000358  0.001434  out 0    Red
+  49  0.000357  0.001429  out 0    Astronomical radio source
+  50  0.000357  0.001429  out 0    Prefix
+  51  0.000356  0.001423  out 0    Chemical element
+  52  0.000351  0.001402  out 0    Bone fracture
+  53  0.000351  0.001402  out 0    Liquid
+  54  0.000347  0.001386  out 0    Spectral band
+  55  0.000340  0.001360  out 0    Picometre
+  56  0.000340  0.001360  out 0    Room temperature
+  57  0.000339  0.001355  out 0    Transmitter
+  58  0.000339  0.001355  out 0    Ultra high frequency
+  59  0.000337  0.001349  out 0    Cherenkov radiation
+  60  0.000337  0.001349  out 0    Super high frequency
+  61  0.000335  0.001339  out 0    Charged particle
+  62  0.000335  0.001339  out 0    Electric arc
+  63  0.000333  0.001333  out 0    Blacklight
+  64  0.000333  0.001333  out 0    Materials science
+  65  0.000333  0.001333  out 0    Outline of physical science
+  66  0.000332  0.001328  out 0    Speed of light
+  67  0.000331  0.001323  out 0    Gas
+  68  0.000331  0.001323  out 0    Tanning lamp
+  69  0.000329  0.001317  out 0    Radiation
+  70  0.000328  0.001312  out 0    List of particles
+  71  0.000323  0.001291  out 0    Mass
+  72  0.000323  0.001291  out 0    Massless particle
+  73  0.000311  0.001243  out 0    Atom
+  74  0.000311  0.001243  out 0    Lightning
+  75  0.000308  0.001233  out 0    Acceleration
+  76  0.000304  0.001217  out 0    Antenna (radio)
+  77  0.000304  0.001217  out 0    Invariant mass
+  78  0.000303  0.001212  out 0    Solid
+  79  0.000299  0.001196  out 0    Volume
+  80  0.000298  0.001190  out 0    Subatomic particle
+  81  0.000296  0.001185  out 0    State of matter
+  82  0.000294  0.001175  out 0    Heat

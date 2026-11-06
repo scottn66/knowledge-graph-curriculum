@@ -1,55 +1,58 @@
 # Knowledge Graph Curriculum
 
-Build a directed concept graph over any topic, then derive a **reading order** from it using classical graph theory: Tarjan's SCC → condensation DAG → topological levels → Personalized PageRank weighting. Visualize the result in the **Poincaré disk** and **upper half-plane** models of hyperbolic geometry.
+Seed any English Wikipedia article, crawl its outlink graph, and turn the cycles into a reading order.
 
-**Live demo:** https://scottn66.github.io/knowledge-graph-curriculum/
+The pipeline is generic. Optics is the worked example, captured from the live MediaWiki API on 2026-11-06.
 
-## What's in the box
+**Demo source:** `docs/` is the GitHub Pages root (`main` / `/docs`). The project URL https://scottn66.github.io/knowledge-graph-curriculum/ is not serving yet: Pages is not enabled on the repository.
 
-| Path | Purpose |
-|---|---|
-| `src/generate_surfing_data.py` | Build a 146-node concept graph over surfing (10 domains) + compute PPR via random walks |
-| `src/scc_surfing.py` | Iterative Tarjan's SCC → condensation → BFS topological levels → CurriculumScore ranking |
-| `src/render_surfing.py` | Render the graph in the Poincaré disk and half-plane (SVG with data-* attributes for interactivity) |
-| `src/hyperbolic_engine.py` | Low-level geometry: Möbius transforms, geodesic arcs, radial PPR mapping |
-| `data/poincare_art_data_*.json` | Generated graph data (nodes, edges, PPR, coordinates) |
-| `assets/*.svg` | Rendered visualizations |
-| `docs/index.html` | Interactive GitHub Pages demo |
-| `theory/MATHEMATICAL_FOUNDATIONS.md` | Full derivation (Sections 9-20: SCC, bandits, entropy, HMM, MDP, SARSA, Dyna, counterfactuals, hyperbolic geometry) |
-| `theory/From_Cycles_to_Curvature.docx` | Plain-language walkthrough of the full pipeline |
+## What actually runs
 
-## Pipeline
+| Piece | Where | State |
+|---|---|---|
+| Prose-order Wikipedia BFS | `src/kgc/wiki.py`, `docs/curriculum.js` | Live |
+| Iterative Tarjan SCC, condensation, longest-path levels | `src/kgc/graph.py`, `docs/curriculum.js` | Live |
+| Random-walk Personalized PageRank (α = 0.15, 9,000 walks, length 20) | same | Live |
+| CurriculumScore = PPR / (1 + level) | same | Live |
+| Sarkar tree embedding in the Poincaré disk, plus the half-plane map | `src/kgc/embed.py`, the demo | Live |
+| Obsidian vault | `src/kgc/vault.py` | Live |
+| Bandits, entropy, HMM/HHMM, SARSA, Dyna, counterfactuals | `theory/MATHEMATICAL_FOUNDATIONS.md` §10–19 | Not in this repo |
 
-1. **Graph construction** — nodes are concepts, directed edges are "refers to" relations. Domains partition nodes into angular sectors.
-2. **Personalized PageRank** — 50,000 random walks with α=0.15 restart probability give each node a stationary importance.
-3. **Tarjan's SCC (iterative)** — finds mutually-referencing concept clusters. For surfing: 77 SCCs, one giant SCC of 63 nodes (the interconnected core of surfing culture/practice/oceanography).
-4. **Condensation DAG** — collapse each SCC to a super-node. 47% compression on the surfing graph.
-5. **Topological level assignment** — BFS from sources (in-degree 0). Level ℓ(v) = length of longest path from any source.
-6. **CurriculumScore** — rank within each level by PPR(v) / (1 + ℓ(v)). High-PPR basis concepts come first.
-7. **Hyperbolic layout** — radial coordinate = f(PPR) (central concepts near the origin), angular coordinate = domain sector + within-domain rank. Geodesics rendered as circular arcs orthogonal to the boundary.
+An edge u → v means the Wikipedia page u links to v. Templates, citations, file links, and category links are dropped before the fanout cap, so the crawl follows the article prose rather than the navigation chrome. Level 0 components are sources of the condensation (nothing else in the crawl links into them). Read earlier levels first. Inside a level, a higher score comes first.
 
-## Results (surfing, depth ≤ 3)
+## Optics, from the live API
 
-- **146 nodes, 236 directed edges, 10 domains**
-- **77 SCCs** (70 singletons, 7 multi-node). Largest SCC: 63 nodes spanning surfing culture, oceanography, competition, and environment — these concepts define each other mutually.
-- **Max depth: 5.** 96% of total PPR mass sits at depth ≤ 3.
-- **Level 0 (basis, no prerequisites):** Jeffreys Bay, Tropical cyclone, Tide, Surf photography, ...
-- **42 gateway nodes** (articulation points) — removing any one fragments the graph.
+Defaults: depth 2, fanout 15, 150 articles.
 
-## Run locally
+- 150 articles, 229 directed links
+- 139 SCCs (137 singletons, 2 multi-article). Largest component: 9 (the electromagnetic-spectrum cluster). The Optics core is a component of 4: Optics, Physical optics, Ray (optics), Geometrical optics
+- Levels: 4 / 17 / 47 / 82. Deepest level 3
+- 14 gateways (undirected cut vertices)
+
+The vault is `optics-vault/`: one note per article, one note per multi-article component, `MOC — Optics.md`, and `Condensation DAG.md`.
+
+## Run
 
 ```bash
-pip install -r requirements.txt          # numpy, (no other hard deps)
-python src/generate_surfing_data.py      # → data/poincare_art_data_surfing.json
-python src/scc_surfing.py                # prints full curriculum
-python src/render_surfing.py             # → assets/surfing_{disk,halfplane}.svg
+python src/build_curriculum.py --seed Optics --depth 2 --fanout 15 --max-nodes 150 \
+  --vault optics-vault \
+  --web-json docs/data/optics_graph.json \
+  --curriculum-txt docs/optics_curriculum.txt
 ```
 
-Then open `docs/index.html` locally, or push to `gh-pages` and serve from `/docs`.
+Any other title works the same way. Omit `--vault` and the notes go to `vaults/<seed>-vault/`.
 
-## Why hyperbolic?
+```bash
+python src/build_curriculum.py --seed "Tide"
+python -m unittest discover -s tests -v
+node tests/curriculum.test.js
+```
 
-Knowledge graphs have **exponentially growing neighborhoods** (each concept branches into many sub-concepts, which branch further). Hyperbolic space also has exponential area growth — so a tree of concepts embeds with low distortion, where Euclidean layouts crowd the periphery. The Poincaré disk puts high-PPR "basis" concepts at the center and pushes specialized concepts to the boundary where there's room to see detail.
+No third-party Python packages. The web demo is static: open `docs/index.html` through a local server, or use the Pages site. The form crawls Wikipedia in the browser (`origin=*`). The saved Optics graph loads first, so the page does not call the API until you ask it to.
+
+## Legacy synthetic pictures
+
+`src/generate_surfing_data.py`, `src/scc_surfing.py`, and `src/render_surfing.py` build a hand-authored surfing graph and a polar plot (radius from PageRank, angle from a domain sector). Those SVGs are still in `assets/`. They are not a Wikipedia crawl, and the polar layout is not the Sarkar embedding used by the demo. `src/render_hyperbolic.py` draws the same kind of polar picture for the checked-in cognitive-science JSON.
 
 ## License
 

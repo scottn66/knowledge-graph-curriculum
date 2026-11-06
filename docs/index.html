@@ -3,361 +3,813 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Knowledge Graph Curriculum · Hyperbolic Visualization</title>
+<title>Knowledge Graph Curriculum</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230a0e27' stroke='%237ad7ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%237ad7ff'/%3E%3C/svg%3E">
 <style>
   :root {
     --bg: #0a0e27;
     --panel: #111839;
     --ink: #e6ecff;
-    --muted: #8892b8;
-    --accent: #00d4ff;
-    --accent2: #ff6b6b;
-    --border: #1e2a5a;
+    --muted: #9aa6d1;
+    --accent: #7ad7ff;
+    --accent-2: #ff8b8b;
+    --border: #24315f;
+    --focus: #7ad7ff;
   }
   * { box-sizing: border-box; }
+  html { color-scheme: dark; }
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
     background: var(--bg);
     color: var(--ink);
     line-height: 1.5;
+    font-size: 1rem;
   }
-  header {
-    padding: 28px 40px 20px;
-    border-bottom: 1px solid var(--border);
+  :focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
   }
-  header h1 {
-    margin: 0 0 6px;
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-  }
-  header .sub { color: var(--muted); font-size: 14px; }
-  header .links { margin-top: 12px; font-size: 13px; }
-  header .links a {
-    color: var(--accent);
-    text-decoration: none;
-    margin-right: 18px;
-  }
-  header .links a:hover { text-decoration: underline; }
-
+  a { color: var(--accent); }
+  header, .controls, form, fieldset, main, figure, aside { min-width: 0; max-width: 100%; }
+  header, .controls { padding: 1.25rem 1.5rem; }
+  header { border-bottom: 1px solid var(--border); }
+  h1 { margin: 0 0 0.25rem; font-size: 1.7rem; letter-spacing: -0.02em; }
+  header p { margin: 0; color: var(--muted); }
+  .links { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; }
   .controls {
-    display: flex;
-    gap: 24px;
-    padding: 16px 40px;
-    border-bottom: 1px solid var(--border);
     background: var(--panel);
-    align-items: center;
-    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
   }
-  .control-group { display: flex; gap: 8px; align-items: center; }
-  .control-group label { font-size: 13px; color: var(--muted); }
-  select, button {
-    background: var(--bg);
-    color: var(--ink);
+  form { margin: 0; }
+  fieldset {
     border: 1px solid var(--border);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 13px;
+    border-radius: 8px;
+    margin: 0 0 1rem;
+    padding: 0.75rem 1rem 1rem;
+  }
+  legend { padding: 0 0.35rem; color: var(--muted); }
+  .fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    gap: 0.75rem 1rem;
+    align-items: end;
+  }
+  label { display: block; margin-bottom: 0.25rem; }
+  .hint { margin: 0.25rem 0 0; color: var(--muted); font-size: 0.9rem; }
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    min-height: 48px;
+    font: inherit;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+  }
+  .choices { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; }
+  .choices label { margin: 0; min-height: 48px; display: inline-flex; align-items: center; gap: 0.4rem; }
+  button, .button {
+    min-height: 48px;
+    min-width: 48px;
+    font: inherit;
+    color: var(--bg);
+    background: var(--accent);
+    border: 0;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
   }
-  button:hover, select:hover { border-color: var(--accent); }
-  button.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-
+  button.secondary { background: transparent; color: var(--ink); border: 1px solid var(--border); }
+  button:disabled { opacity: 0.6; cursor: progress; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+  progress {
+    width: min(24rem, 100%);
+    height: 0.7rem;
+    accent-color: var(--accent);
+  }
+  #status { margin: 0.75rem 0 0; color: var(--muted); }
+  #error { color: var(--accent-2); }
+  .cli {
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 1rem;
+    background: var(--bg);
+    border-radius: 6px;
+    max-width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    color: var(--muted);
+    font-family: ui-monospace, "SF Mono", Consolas, monospace;
+    font-size: 0.85rem;
+  }
   main {
     display: grid;
-    grid-template-columns: 1fr 320px;
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 26rem);
     gap: 0;
-    min-height: calc(100vh - 180px);
+    align-items: start;
   }
-  #viz-container {
-    position: relative;
-    background: var(--bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    padding: 20px;
+  figure { margin: 0; padding: 1rem 1rem 1.5rem; }
+  #map {
+    width: 100%;
+    height: min(72vh, 820px);
+    background: #070b20;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    touch-action: none;
+    cursor: grab;
   }
-  #viz-container svg {
-    max-width: 100%;
-    max-height: calc(100vh - 220px);
-    width: auto;
-    height: auto;
-  }
-  .kg-node { cursor: pointer; transition: opacity 0.2s, r 0.15s; }
-  .kg-node:hover { stroke: #fff; stroke-width: 2px; }
-  .kg-node.dimmed { opacity: 0.12 !important; }
-  .kg-edge.dimmed { opacity: 0.05 !important; }
-
+  #map:active { cursor: grabbing; }
+  figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.9rem; }
+  .view-tools { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
   aside {
     background: var(--panel);
     border-left: 1px solid var(--border);
-    padding: 20px;
-    overflow-y: auto;
-    max-height: calc(100vh - 180px);
+    padding: 1rem 1rem 2rem;
+    max-height: calc(100vh - 8rem);
+    overflow: auto;
   }
-  aside h3 {
-    margin: 0 0 12px;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-  }
-  #info-panel .concept {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  #info-panel .domain-badge {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 14px;
-  }
-  #info-panel .stat-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 13px;
-  }
-  #info-panel .stat-row .key { color: var(--muted); }
-  #info-panel .stat-row .val { font-family: "SF Mono", Consolas, monospace; color: var(--accent); }
-  #info-panel .placeholder {
-    color: var(--muted);
-    font-style: italic;
-    font-size: 13px;
-  }
-  .legend {
-    margin-top: 24px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-  }
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
-    padding: 4px 0;
-    cursor: pointer;
+  aside h2 { margin: 0 0 0.75rem; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .stats { display: grid; grid-template-columns: 1fr auto; gap: 0.35rem 1rem; margin-bottom: 1rem; }
+  .stats dt { color: var(--muted); }
+  .stats dd { margin: 0; font-variant-numeric: tabular-nums; }
+  #detail { margin-bottom: 1rem; }
+  #detail h3 { margin: 0 0 0.35rem; font-size: 1.25rem; }
+  .level-list { list-style: none; margin: 0 0 1rem; padding: 0; }
+  .level-list h3 { margin: 0.75rem 0 0.35rem; font-size: 1rem; }
+  .concept-btn {
+    width: 100%;
+    text-align: start;
+    background: transparent;
     color: var(--ink);
+    border: 0;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.35rem 0.4rem;
   }
-  .legend-item.dimmed { opacity: 0.4; }
-  .legend-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    flex-shrink: 0;
+  .concept-btn[aria-current="true"] { background: #1b274f; }
+  .swatch { width: 0.75rem; height: 0.75rem; border-radius: 50%; }
+  .meta { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.85rem; }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
   }
-  .stats-summary {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 12px;
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+    aside { max-height: none; border-left: 0; border-top: 1px solid var(--border); }
+    #map { height: 70vh; }
+    header, .controls { padding-inline: 1rem; }
   }
-  .stats-summary .row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    padding: 3px 0;
-    color: var(--muted);
+  @media (pointer: coarse) {
+    input[type="text"], input[type="number"], button { min-height: 52px; }
   }
-  .stats-summary .row span:last-child { color: var(--ink); font-family: monospace; }
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
 <header>
-  <h1>Knowledge Graph Curriculum · Hyperbolic Views</h1>
-  <div class="sub">SCC condensation → topological sort → PPR-weighted reading order, rendered in the Poincaré disk and half-plane.</div>
+  <h1>Knowledge Graph Curriculum</h1>
+  <p>Wikipedia outlinks, strongly connected components, and a reading order in the Poincaré disk.</p>
   <div class="links">
     <a href="https://github.com/scottn66/knowledge-graph-curriculum">GitHub</a>
-    <a href="./surfing_curriculum.txt">Curriculum (text)</a>
+    <a href="./optics_curriculum.txt">Optics curriculum (text)</a>
     <a href="https://github.com/scottn66/knowledge-graph-curriculum/blob/main/theory/MATHEMATICAL_FOUNDATIONS.md">Theory</a>
-    <a href="https://github.com/scottn66/knowledge-graph-curriculum/raw/main/theory/From_Cycles_to_Curvature.docx">Explainer (docx)</a>
   </div>
 </header>
 
 <div class="controls">
-  <div class="control-group">
-    <label>Topic:</label>
-    <button data-topic="surfing" class="active">Surfing</button>
-    <button data-topic="cogsci">Cognitive Science</button>
-  </div>
-  <div class="control-group">
-    <label>Model:</label>
-    <button data-model="disk" class="active">Poincaré Disk</button>
-    <button data-model="halfplane">Half-Plane</button>
-  </div>
-  <div class="control-group">
-    <label>Min PPR:</label>
-    <input type="range" id="ppr-filter" min="0" max="100" value="0" style="width: 120px;">
-    <span id="ppr-value" style="font-size:12px;color:var(--muted);font-family:monospace;">0</span>
-  </div>
+  <form id="build-form" action="#curriculum" method="get">
+    <fieldset>
+      <legend>Crawl</legend>
+      <div class="fields">
+        <div>
+          <label for="seed">Seed article</label>
+          <input id="seed" name="seed" type="text" required maxlength="200" value="Optics" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-describedby="seed-hint">
+          <p id="seed-hint" class="hint">English Wikipedia title. The saved Optics crawl loads until you build another.</p>
+        </div>
+        <fieldset>
+          <legend>Depth</legend>
+          <div class="choices">
+            <label><input type="radio" name="depth" value="1"> 1</label>
+            <label><input type="radio" name="depth" value="2" checked> 2</label>
+            <label><input type="radio" name="depth" value="3"> 3</label>
+          </div>
+        </fieldset>
+        <div>
+          <label for="fanout">Fanout</label>
+          <input id="fanout" name="fanout" type="number" min="1" max="40" value="15" required inputmode="numeric">
+          <p class="hint">Prose outlinks kept from each article.</p>
+        </div>
+        <div>
+          <label for="max-nodes">Max articles</label>
+          <input id="max-nodes" name="max-nodes" type="number" min="5" max="200" value="150" required inputmode="numeric">
+        </div>
+      </div>
+      <div class="actions">
+        <button type="submit" id="build-btn">Build curriculum</button>
+        <button type="button" class="secondary" id="load-example">Show saved Optics crawl</button>
+      </div>
+      <p id="status"></p>
+      <p id="error" hidden></p>
+      <progress id="crawl-progress" hidden max="150" value="0">Crawl progress</progress>
+      <pre class="cli"><code id="cli-command"></code></pre>
+    </fieldset>
+  </form>
+  <p id="announce" class="visually-hidden" aria-live="polite"></p>
 </div>
 
-<main>
-  <div id="viz-container">
-    <div style="color:var(--muted);">Loading...</div>
-  </div>
-  <aside>
-    <div class="stats-summary" id="stats-summary"></div>
-    <h3>Concept Detail</h3>
-    <div id="info-panel">
-      <div class="placeholder">Hover over a node to see concept metadata.</div>
+<main id="curriculum">
+  <figure>
+    <svg id="map" role="img"></svg>
+    <figcaption id="caption">The disk is a Sarkar embedding of the crawl tree. Distance from the center is hyperbolic distance along that tree. Color is the topological level of the article's component. Curves are Wikipedia outlinks.</figcaption>
+    <div class="view-tools">
+      <fieldset>
+        <legend>Model</legend>
+        <div class="choices">
+          <label><input type="radio" name="model" value="disk" checked> Poincaré disk</label>
+          <label><input type="radio" name="model" value="half"> Half-plane</label>
+        </div>
+      </fieldset>
+      <button type="button" class="secondary" id="zoom-in">Zoom in</button>
+      <button type="button" class="secondary" id="zoom-out">Zoom out</button>
+      <button type="button" class="secondary" id="zoom-reset">Reset view</button>
     </div>
-    <div class="legend" id="legend"></div>
+    <fieldset id="level-filter">
+      <legend>Levels</legend>
+      <div class="choices" id="level-choices"></div>
+    </fieldset>
+  </figure>
+  <aside>
+    <h2>This crawl</h2>
+    <dl class="stats" id="stats"></dl>
+    <section id="detail">
+      <h2>Article</h2>
+      <p id="detail-empty">Choose an article from the map or the reading order.</p>
+    </section>
+    <h2>Reading order</h2>
+    <div id="order"></div>
   </aside>
 </main>
 
+<script src="./curriculum.js"></script>
 <script>
-const DOMAIN_COLORS = {
-  surfing: {
-    core_surfing:    '#00d4ff',
-    surf_culture:    '#ff6b6b',
-    oceanography:    '#1e90ff',
-    board_design:    '#ffd700',
-    competition:     '#ff8c42',
-    geography:       '#96f7a0',
-    weather_climate: '#c0c0ff',
-    physiology:      '#ff9ff3',
-    history:         '#d4a574',
-    environment:     '#7fffd4',
-  },
-  cogsci: {}
-};
+(function () {
+  const LEVEL_COLORS = ["#7ad7ff", "#ffd166", "#ff6b6b", "#7dffb3", "#d4b5ff", "#ffb36b", "#9ad1ff", "#ffc6e5"];
+  const NS = "http://www.w3.org/2000/svg";
+  const form = document.getElementById("build-form");
+  const statusEl = document.getElementById("status");
+  const errorEl = document.getElementById("error");
+  const announce = document.getElementById("announce");
+  const progress = document.getElementById("crawl-progress");
+  const map = document.getElementById("map");
+  const caption = document.getElementById("caption");
 
-let state = { topic: 'surfing', model: 'disk', minPpr: 0, graphData: null };
+  let doc = null;
+  let selected = null;
+  let model = "disk";
+  let view = { x: 0, y: 0, k: 1 };
+  let viewBox = "-1.25 -1.25 2.5 2.5";
+  let hidden = new Set();
+  let dragging = null;
 
-async function loadSVG() {
-  const container = document.getElementById('viz-container');
-  container.innerHTML = '<div style="color:var(--muted);">Loading...</div>';
-  const svgPath = `./assets/${state.topic}_${state.model}.svg`;
-  try {
-    const resp = await fetch(svgPath);
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    container.innerHTML = await resp.text();
-    attachHandlers();
-    applyFilter();
-  } catch (e) {
-    container.innerHTML = `<div style="color:var(--accent2);">Could not load ${svgPath}<br><small>${e.message}</small></div>`;
+  function color(level) {
+    return LEVEL_COLORS[level % LEVEL_COLORS.length];
   }
-}
 
-async function loadGraphData() {
-  try {
-    const resp = await fetch(`./data/poincare_art_data_${state.topic}.json`);
-    if (!resp.ok) throw new Error();
-    state.graphData = await resp.json();
-    updateStats();
-    updateLegend();
-  } catch (e) {
-    state.graphData = null;
+  function vaultPath(seed) {
+    if (seed.trim().toLowerCase() === "optics") return "optics-vault";
+    const slug = seed.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "seed";
+    return "vaults/" + slug + "-vault";
   }
-}
 
-function updateStats() {
-  const el = document.getElementById('stats-summary');
-  if (!state.graphData) { el.innerHTML = ''; return; }
-  const { nodes, edges } = state.graphData;
-  const domains = new Set(nodes.map(n => n.domain));
-  const pprs = nodes.map(n => n.ppr || 0);
-  el.innerHTML = `
-    <div class="row"><span>Nodes</span><span>${nodes.length}</span></div>
-    <div class="row"><span>Edges</span><span>${edges.length}</span></div>
-    <div class="row"><span>Domains</span><span>${domains.size}</span></div>
-    <div class="row"><span>Max PPR</span><span>${Math.max(...pprs).toFixed(4)}</span></div>
-  `;
-}
+  function updateCli() {
+    const data = new FormData(form);
+    const seed = String(data.get("seed") || "").trim() || "Optics";
+    const depth = data.get("depth") || "2";
+    const fanout = data.get("fanout") || "15";
+    const maxNodes = data.get("max-nodes") || "150";
+    const quoted = seed.replaceAll('"', "");
+    document.getElementById("cli-command").textContent =
+      "python src/build_curriculum.py --seed \"" + quoted + "\" --depth " + depth +
+      " --fanout " + fanout + " --max-nodes " + maxNodes + " --vault " + vaultPath(seed);
+  }
 
-function updateLegend() {
-  const el = document.getElementById('legend');
-  if (!state.graphData) { el.innerHTML = ''; return; }
-  const palette = DOMAIN_COLORS[state.topic] || {};
-  const domains = [...new Set(state.graphData.nodes.map(n => n.domain))].sort();
-  el.innerHTML = '<h3>Domains</h3>' + domains.map(d => {
-    const c = palette[d] || '#888';
-    return `<div class="legend-item" data-domain="${d}">
-      <span class="legend-dot" style="background:${c};"></span>
-      <span>${d.replace(/_/g, ' ')}</span>
-    </div>`;
-  }).join('');
-  el.querySelectorAll('.legend-item').forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('dimmed');
-      applyFilter();
+  function setError(message) {
+    if (!message) {
+      errorEl.hidden = true;
+      errorEl.textContent = "";
+      errorEl.removeAttribute("role");
+      return;
+    }
+    errorEl.hidden = false;
+    errorEl.textContent = message;
+    errorEl.setAttribute("role", "alert");
+    announce.textContent = message;
+  }
+
+  function paramsFromForm() {
+    const data = new FormData(form);
+    return {
+      seed: String(data.get("seed") || "").trim(),
+      depth: Number(data.get("depth")),
+      fanout: Number(data.get("fanout")),
+      maxNodes: Number(data.get("max-nodes")),
+    };
+  }
+
+  function fillForm(docParams, seed) {
+    document.getElementById("seed").value = seed;
+    const depth = String(docParams.depth ?? 2);
+    const radio = form.querySelector('input[name="depth"][value="' + depth + '"]');
+    if (radio) radio.checked = true;
+    document.getElementById("fanout").value = docParams.fanout ?? 15;
+    document.getElementById("max-nodes").value = docParams.max_nodes ?? docParams.maxNodes ?? 150;
+    updateCli();
+  }
+
+  function pointOf(node) {
+    if (model === "disk") return [node.x, -node.y];
+    const half = KGC.diskToHalfPlane(node.x, node.y);
+    return [half.x, half.y];
+  }
+
+  function fitViewBox() {
+    if (!doc) return;
+    if (model === "disk") {
+      viewBox = "-1.25 -1.25 2.5 2.5";
+      return;
+    }
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    for (const node of doc.nodes) {
+      const [x, y] = pointOf(node);
+      minX = Math.min(minX, x);
+      maxX = Math.max(maxX, x);
+      minY = Math.min(minY, y);
+      maxY = Math.max(maxY, y);
+    }
+    maxY = Math.max(maxY, 0.15);
+    const padX = (maxX - minX) * 0.08 || 0.4;
+    const padY = 0.35;
+    viewBox = (minX - padX) + " " + (minY - padY) + " " + (maxX - minX + padX * 2) + " " + (maxY - minY + padY * 2);
+  }
+
+  function radiusOf(node, maxPpr) {
+    const t = Math.sqrt((node.ppr || 0) / maxPpr);
+    if (model === "disk") return 0.012 + 0.04 * t;
+    const parts = viewBox.split(/\s+/).map(Number);
+    return parts[2] * (0.006 + 0.018 * t);
+  }
+
+  function labelSize() {
+    if (model === "disk") return 0.032;
+    return viewBox.split(/\s+/).map(Number)[2] * 0.018;
+  }
+
+  function renderMap() {
+    map.replaceChildren();
+    if (!doc) return;
+    fitViewBox();
+    map.setAttribute("viewBox", viewBox);
+    const title = document.createElementNS(NS, "title");
+    title.textContent = doc.seed + " curriculum in the " + (model === "disk" ? "Poincaré disk" : "half-plane");
+    map.appendChild(title);
+    const viewport = document.createElementNS(NS, "g");
+    viewport.id = "viewport";
+    map.appendChild(viewport);
+    const byTitle = new Map(doc.nodes.map((node) => [node.title, node]));
+    const maxPpr = Math.max(...doc.nodes.map((node) => node.ppr || 0), 1e-12);
+    const top = new Set(doc.nodes.slice().sort((a, b) => b.ppr - a.ppr).slice(0, 25).map((node) => node.title));
+
+    if (model === "disk") {
+      const boundary = document.createElementNS(NS, "circle");
+      boundary.setAttribute("cx", "0");
+      boundary.setAttribute("cy", "0");
+      boundary.setAttribute("r", "1");
+      boundary.setAttribute("fill", "none");
+      boundary.setAttribute("stroke", "#24315f");
+      boundary.setAttribute("stroke-width", "0.008");
+      viewport.appendChild(boundary);
+    } else {
+      const parts = viewBox.split(/\s+/).map(Number);
+      const axis = document.createElementNS(NS, "line");
+      axis.setAttribute("x1", String(parts[0]));
+      axis.setAttribute("x2", String(parts[0] + parts[2]));
+      axis.setAttribute("y1", "0");
+      axis.setAttribute("y2", "0");
+      axis.setAttribute("stroke", "#24315f");
+      axis.setAttribute("stroke-width", String(parts[2] * 0.004));
+      viewport.appendChild(axis);
+    }
+
+    for (const edge of doc.edges) {
+      const source = byTitle.get(edge.source);
+      const target = byTitle.get(edge.target);
+      if (!source || !target) continue;
+      const [x1, y1] = pointOf(source);
+      const [x2, y2] = pointOf(target);
+      let points;
+      if (model === "disk") {
+        points = KGC.diskGeodesic(source.x, -source.y, target.x, -target.y);
+      } else {
+        points = halfGeodesic(x1, y1, x2, y2);
+      }
+      const path = document.createElementNS(NS, "polyline");
+      path.setAttribute("points", points.map((p) => p[0] + "," + p[1]).join(" "));
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke", edge.tree ? "#9ecbff" : "#66709a");
+      path.setAttribute("stroke-width", model === "disk" ? (edge.tree ? "0.006" : "0.0035") : String(viewBox.split(/\s+/).map(Number)[2] * (edge.tree ? 0.0025 : 0.0014)));
+      path.setAttribute("stroke-linecap", "round");
+      path.dataset.levels = source.level + " " + target.level;
+      path.classList.add("edge");
+      viewport.appendChild(path);
+    }
+
+    const size = labelSize();
+    const labeled = [];
+    const ranked = doc.nodes.slice().sort((a, b) => {
+      if (a.title === doc.seed) return -1;
+      if (b.title === doc.seed) return 1;
+      return b.ppr - a.ppr;
     });
-  });
-}
+    for (const node of ranked) {
+      if (labeled.length >= (model === "disk" ? 14 : 8) && node.title !== doc.seed) continue;
+      if (!top.has(node.title) && node.title !== doc.seed) continue;
+      const [x, y] = pointOf(node);
+      const box = { title: node.title, x, y, w: node.title.length * size * 0.55, h: size * 1.4 };
+      const crowded = labeled.some((item) => Math.abs(item.x - box.x) < (item.w + box.w) / 2 && Math.abs(item.y - box.y) < (item.h + box.h) / 2);
+      if (!crowded || node.title === doc.seed) labeled.push(box);
+    }
+    const showLabel = new Set(labeled.map((item) => item.title));
+    for (const node of doc.nodes) {
+      const [x, y] = pointOf(node);
+      const group = document.createElementNS(NS, "g");
+      group.dataset.title = node.title;
+      group.dataset.level = String(node.level);
+      const circle = document.createElementNS(NS, "circle");
+      circle.setAttribute("cx", String(x));
+      circle.setAttribute("cy", String(y));
+      circle.setAttribute("r", String(radiusOf(node, maxPpr)));
+      circle.setAttribute("fill", color(node.level));
+      circle.setAttribute("stroke", "#0a0e27");
+      circle.setAttribute("stroke-width", model === "disk" ? "0.004" : String(viewBox.split(/\s+/).map(Number)[2] * 0.0015));
+      circle.classList.add("node");
+      const text = document.createElementNS(NS, "text");
+      text.setAttribute("x", String(x));
+      text.setAttribute("y", String(y - radiusOf(node, maxPpr) * 1.8));
+      text.setAttribute("text-anchor", "middle");
+      text.setAttribute("fill", "#e6ecff");
+      text.setAttribute("stroke", "#070b20");
+      text.setAttribute("stroke-width", String(size * 0.18));
+      text.setAttribute("paint-order", "stroke");
+      text.setAttribute("font-size", String(size));
+      text.setAttribute("font-family", "system-ui, sans-serif");
+      text.textContent = node.title;
+      text.classList.add("label");
+      if (showLabel.has(node.title)) text.classList.add("label-on");
+      else text.setAttribute("display", "none");
+      group.append(circle, text);
+      group.addEventListener("click", (event) => {
+        event.stopPropagation();
+        selectTitle(node.title);
+      });
+      viewport.appendChild(group);
+    }
+    applyHidden();
+    applyView();
+    caption.textContent = model === "disk"
+      ? "Sarkar embedding of the crawl tree in the Poincaré disk. The seed is at the center. Color is topological level, not a separate legend of topics. Drag to pan and scroll to zoom. The reading order beside the map is the same curriculum."
+      : "The same embedding mapped to the half-plane. The boundary is the horizontal line. Drag to pan and scroll to zoom.";
+  }
 
-function attachHandlers() {
-  document.querySelectorAll('.kg-node').forEach(node => {
-    node.addEventListener('mouseenter', () => showInfo(node));
-    node.addEventListener('mouseleave', hideInfo);
-  });
-}
+  function halfGeodesic(x1, y1, x2, y2) {
+    if (Math.abs(x1 - x2) < 1e-6) return [[x1, y1], [x2, y2]];
+    const c = ((x1 * x1 + y1 * y1) - (x2 * x2 + y2 * y2)) / (2 * (x1 - x2));
+    const radius = Math.hypot(x1 - c, y1);
+    const a1 = Math.atan2(y1, x1 - c);
+    let delta = Math.atan2(y2, x2 - c) - a1;
+    while (delta <= -Math.PI) delta += 2 * Math.PI;
+    while (delta > Math.PI) delta -= 2 * Math.PI;
+    if (Math.sin(a1 + delta / 2) > 0) delta += delta > 0 ? -2 * Math.PI : 2 * Math.PI;
+    const points = [];
+    for (let i = 0; i <= 12; i += 1) {
+      const angle = a1 + delta * (i / 12);
+      points.push([c + radius * Math.cos(angle), radius * Math.sin(angle)]);
+    }
+    return points;
+  }
 
-function showInfo(node) {
-  const name = node.getAttribute('data-name') || '?';
-  const domain = node.getAttribute('data-domain') || '?';
-  const ppr = parseFloat(node.getAttribute('data-ppr') || 0);
-  const degree = node.getAttribute('data-degree') || '?';
-  const palette = DOMAIN_COLORS[state.topic] || {};
-  const color = palette[domain] || '#888';
-  document.getElementById('info-panel').innerHTML = `
-    <div class="concept">${name}</div>
-    <div class="domain-badge" style="background:${color};color:#000;">${domain.replace(/_/g,' ')}</div>
-    <div class="stat-row"><span class="key">Personalized PageRank</span><span class="val">${ppr.toFixed(6)}</span></div>
-    <div class="stat-row"><span class="key">Degree</span><span class="val">${degree}</span></div>
-  `;
-}
-function hideInfo() {
-  document.getElementById('info-panel').innerHTML =
-    '<div class="placeholder">Hover over a node to see concept metadata.</div>';
-}
+  function applyView() {
+    const viewport = document.getElementById("viewport");
+    if (viewport) viewport.setAttribute("transform", "translate(" + view.x + " " + view.y + ") scale(" + view.k + ")");
+  }
 
-function applyFilter() {
-  const dimmedDomains = new Set(
-    [...document.querySelectorAll('.legend-item.dimmed')].map(el => el.getAttribute('data-domain'))
-  );
-  const pprThreshold = state.minPpr;
-  document.querySelectorAll('.kg-node').forEach(node => {
-    const d = node.getAttribute('data-domain');
-    const p = parseFloat(node.getAttribute('data-ppr') || 0);
-    const hide = dimmedDomains.has(d) || p < pprThreshold;
-    node.classList.toggle('dimmed', hide);
-  });
-}
+  function applyHidden() {
+    for (const edge of map.querySelectorAll(".edge")) {
+      const levels = edge.dataset.levels.split(" ").map(Number);
+      const hide = levels.some((level) => hidden.has(level));
+      edge.setAttribute("opacity", hide ? "0.04" : "0.8");
+    }
+    for (const group of map.querySelectorAll("g[data-level]")) {
+      const hide = hidden.has(Number(group.dataset.level));
+      group.setAttribute("opacity", hide ? "0.08" : "1");
+    }
+  }
 
-document.querySelectorAll('[data-topic]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('[data-topic]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    state.topic = btn.getAttribute('data-topic');
-    loadGraphData().then(loadSVG);
-  });
-});
-document.querySelectorAll('[data-model]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('[data-model]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    state.model = btn.getAttribute('data-model');
-    loadSVG();
-  });
-});
-document.getElementById('ppr-filter').addEventListener('input', (e) => {
-  const v = parseInt(e.target.value);
-  if (!state.graphData) return;
-  const maxPpr = Math.max(...state.graphData.nodes.map(n => n.ppr || 0));
-  state.minPpr = (v / 100) * maxPpr;
-  document.getElementById('ppr-value').textContent = state.minPpr.toFixed(4);
-  applyFilter();
-});
+  function clientToViewBox(event) {
+    const rect = map.getBoundingClientRect();
+    const parts = viewBox.split(/\s+/).map(Number);
+    const x = parts[0] + ((event.clientX - rect.left) / rect.width) * parts[2];
+    const y = parts[1] + ((event.clientY - rect.top) / rect.height) * parts[3];
+    return { x, y };
+  }
 
-loadGraphData().then(loadSVG);
+  function zoomBy(factor, anchor) {
+    const next = Math.min(14, Math.max(0.35, view.k * factor));
+    if (anchor) {
+      const localX = (anchor.x - view.x) / view.k;
+      const localY = (anchor.y - view.y) / view.k;
+      view.k = next;
+      view.x = anchor.x - next * localX;
+      view.y = anchor.y - next * localY;
+    } else {
+      view.k = next;
+    }
+    applyView();
+  }
+
+  function renderOrder() {
+    const stats = document.getElementById("stats");
+    const order = document.getElementById("order");
+    const choices = document.getElementById("level-choices");
+    stats.replaceChildren();
+    order.replaceChildren();
+    choices.replaceChildren();
+    if (!doc) return;
+    const rows = [
+      ["Articles", doc.stats.nodes],
+      ["Links", doc.stats.edges],
+      ["SCCs", doc.stats.scc_count],
+      ["Multi-article SCCs", doc.stats.multi_sccs],
+      ["Largest SCC", doc.stats.largest_scc],
+      ["Deepest level", doc.stats.max_level],
+      ["Gateways", doc.stats.gateways],
+      ["Condensation edges", doc.stats.dag_edges],
+    ];
+    for (const [name, value] of rows) {
+      const dt = document.createElement("dt");
+      dt.textContent = name;
+      const dd = document.createElement("dd");
+      dd.textContent = String(value);
+      stats.append(dt, dd);
+    }
+    const levels = [...new Set(doc.nodes.map((node) => node.level))].sort((a, b) => a - b);
+    for (const level of levels) {
+      const label = document.createElement("label");
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.checked = !hidden.has(level);
+      input.addEventListener("change", () => {
+        if (input.checked) hidden.delete(level);
+        else hidden.add(level);
+        applyHidden();
+      });
+      const swatch = document.createElement("span");
+      swatch.className = "swatch";
+      swatch.style.background = color(level);
+      label.append(input, swatch, document.createTextNode(" Level " + level + " (" + doc.stats.level_counts[String(level)] + ")"));
+      choices.appendChild(label);
+    }
+    for (const level of levels) {
+      const section = document.createElement("section");
+      const heading = document.createElement("h3");
+      heading.textContent = "Level " + level;
+      const list = document.createElement("ol");
+      list.className = "level-list";
+      const members = doc.nodes.filter((node) => node.level === level)
+        .slice()
+        .sort((a, b) => b.score - a.score || (a.title < b.title ? -1 : 1));
+      for (const node of members) {
+        const item = document.createElement("li");
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "concept-btn";
+        button.dataset.title = node.title;
+        if (selected === node.title) button.setAttribute("aria-current", "true");
+        const swatch = document.createElement("span");
+        swatch.className = "swatch";
+        swatch.style.background = color(node.level);
+        const name = document.createElement("span");
+        name.textContent = node.title + (node.scc_size > 1 ? "  ⟲SCC(" + node.scc_size + ")" : "");
+        const meta = document.createElement("span");
+        meta.className = "meta";
+        meta.textContent = node.score.toFixed(4);
+        button.append(swatch, name, meta);
+        button.addEventListener("click", () => selectTitle(node.title));
+        item.appendChild(button);
+        list.appendChild(item);
+      }
+      section.append(heading, list);
+      order.appendChild(section);
+    }
+  }
+
+  function selectTitle(title) {
+    selected = title;
+    const node = doc.nodes.find((item) => item.title === title);
+    const detail = document.getElementById("detail");
+    detail.replaceChildren();
+    const kicker = document.createElement("h2");
+    kicker.textContent = "Article";
+    const heading = document.createElement("h3");
+    heading.textContent = node.title;
+    const facts = document.createElement("dl");
+    facts.className = "stats";
+    const factRows = [
+      ["Level", node.level],
+      ["Curriculum score", node.score.toFixed(6)],
+      ["Personalized PageRank", node.ppr.toFixed(6)],
+      ["SCC size", node.scc_size],
+      ["Crawl depth", node.bfs_depth],
+      ["Out-links kept", node.out_degree],
+      ["In-links in crawl", node.in_degree],
+      ["Gateway", node.gateway ? "yes" : "no"],
+    ];
+    for (const [name, value] of factRows) {
+      const dt = document.createElement("dt");
+      dt.textContent = name;
+      const dd = document.createElement("dd");
+      dd.textContent = String(value);
+      facts.append(dt, dd);
+    }
+    const link = document.createElement("a");
+    link.href = node.wikipedia;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "Open on Wikipedia";
+    const rebuild = document.createElement("button");
+    rebuild.type = "button";
+    rebuild.textContent = "Build from this article";
+    rebuild.addEventListener("click", () => {
+      document.getElementById("seed").value = node.title;
+      updateCli();
+      form.requestSubmit();
+    });
+    detail.append(kicker, heading, facts, link, document.createElement("br"), rebuild);
+    for (const button of document.querySelectorAll(".concept-btn")) {
+      if (button.dataset.title === title) button.setAttribute("aria-current", "true");
+      else button.removeAttribute("aria-current");
+    }
+    for (const group of map.querySelectorAll("g[data-title]")) {
+      const text = group.querySelector("text");
+      if (group.dataset.title === title) text.removeAttribute("display");
+      else if (!text.classList.contains("label-on")) text.setAttribute("display", "none");
+      group.querySelector("circle").setAttribute("stroke", group.dataset.title === title ? "#ffffff" : "#0a0e27");
+    }
+  }
+
+  function showDocument(next, message) {
+    doc = next;
+    selected = null;
+    hidden = new Set();
+    view = { x: 0, y: 0, k: 1 };
+    document.getElementById("detail").replaceChildren();
+    const emptyHeading = document.createElement("h2");
+    emptyHeading.textContent = "Article";
+    const empty = document.createElement("p");
+    empty.id = "detail-empty";
+    empty.textContent = "Choose an article from the map or the reading order.";
+    document.getElementById("detail").append(emptyHeading, empty);
+    statusEl.textContent = message;
+    setError("");
+    renderOrder();
+    renderMap();
+  }
+
+  async function loadSaved() {
+    statusEl.textContent = "Loading the saved Optics crawl.";
+    setError("");
+    const response = await fetch("./data/optics_graph.json");
+    if (!response.ok) throw new Error("Saved Optics crawl is missing (HTTP " + response.status + ").");
+    const next = await response.json();
+    fillForm(next.params, next.seed);
+    const when = next.generated_at ? " Captured " + next.generated_at + "." : "";
+    showDocument(next, "Saved crawl of " + next.seed + ": " + next.stats.nodes + " articles, " +
+      next.stats.scc_count + " components, deepest level " + next.stats.max_level + "." + when);
+    announce.textContent = statusEl.textContent;
+  }
+
+  async function buildLive(pushUrl) {
+    const params = paramsFromForm();
+    if (!form.reportValidity()) return;
+    const button = document.getElementById("build-btn");
+    button.disabled = true;
+    progress.hidden = false;
+    progress.max = params.maxNodes;
+    progress.value = 0;
+    setError("");
+    statusEl.textContent = "Reading Wikipedia.";
+    try {
+      const crawled = await KGC.crawlWikipedia(params.seed, params, {
+        onProgress: (message, done, total) => {
+          statusEl.textContent = message;
+          progress.max = total;
+          progress.value = done;
+        },
+      });
+      const next = KGC.assembleCurriculum(crawled, { nWalks: 9000, walkLen: 20, alpha: 0.15 });
+      if (pushUrl) {
+        const url = new URL(window.location.href);
+        url.searchParams.set("seed", next.seed);
+        url.searchParams.set("depth", String(params.depth));
+        url.searchParams.set("fanout", String(params.fanout));
+        url.searchParams.set("max", String(params.maxNodes));
+        history.replaceState(null, "", url);
+      }
+      fillForm(next.params, next.seed);
+      showDocument(next, "Live crawl of " + next.seed + ": " + next.stats.nodes + " articles, " +
+        next.stats.scc_count + " components, deepest level " + next.stats.max_level + ".");
+      announce.textContent = statusEl.textContent;
+    } catch (error) {
+      setError(error.message || String(error));
+      statusEl.textContent = "";
+    } finally {
+      button.disabled = false;
+      progress.hidden = true;
+    }
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    buildLive(true);
+  });
+  form.addEventListener("input", updateCli);
+  document.getElementById("load-example").addEventListener("click", () => {
+    const url = new URL(window.location.href);
+    url.search = "";
+    history.replaceState(null, "", url);
+    loadSaved().catch((error) => setError(error.message || String(error)));
+  });
+  for (const input of document.querySelectorAll('input[name="model"]')) {
+    input.addEventListener("change", () => {
+      if (!input.checked) return;
+      model = input.value;
+      view = { x: 0, y: 0, k: 1 };
+      renderMap();
+    });
+  }
+  document.getElementById("zoom-in").addEventListener("click", () => zoomBy(1.25));
+  document.getElementById("zoom-out").addEventListener("click", () => zoomBy(0.8));
+  document.getElementById("zoom-reset").addEventListener("click", () => {
+    view = { x: 0, y: 0, k: 1 };
+    applyView();
+  });
+  map.addEventListener("pointerdown", (event) => {
+    if (event.target.classList.contains("node") || event.target.tagName === "text") return;
+    dragging = { x: event.clientX, y: event.clientY, vx: view.x, vy: view.y };
+    map.setPointerCapture(event.pointerId);
+  });
+  map.addEventListener("pointermove", (event) => {
+    if (!dragging) return;
+    const rect = map.getBoundingClientRect();
+    const parts = viewBox.split(/\s+/).map(Number);
+    view.x = dragging.vx + ((event.clientX - dragging.x) / rect.width) * parts[2];
+    view.y = dragging.vy + ((event.clientY - dragging.y) / rect.height) * parts[3];
+    applyView();
+  });
+  map.addEventListener("pointerup", () => { dragging = null; });
+  map.addEventListener("pointercancel", () => { dragging = null; });
+  map.addEventListener("wheel", (event) => {
+    event.preventDefault();
+    const factor = event.deltaY < 0 ? 1.12 : 0.89;
+    zoomBy(factor, clientToViewBox(event));
+  }, { passive: false });
+
+  updateCli();
+  const url = new URL(window.location.href);
+  if (url.searchParams.has("seed")) {
+    document.getElementById("seed").value = url.searchParams.get("seed");
+    const depth = url.searchParams.get("depth");
+    const depthInput = depth && form.querySelector('input[name="depth"][value="' + depth + '"]');
+    if (depthInput) depthInput.checked = true;
+    if (url.searchParams.get("fanout")) document.getElementById("fanout").value = url.searchParams.get("fanout");
+    if (url.searchParams.get("max")) document.getElementById("max-nodes").value = url.searchParams.get("max");
+    updateCli();
+    buildLive(false);
+  } else {
+    loadSaved().catch((error) => setError(error.message || String(error)));
+  }
+})();
 </script>
 </body>
 </html>

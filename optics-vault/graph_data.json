@@ -1,0 +1,5450 @@
+{
+  "seed": "Optics",
+  "requested_seed": "Optics",
+  "generated_at": "2026-11-06T12:14:04+00:00",
+  "params": {
+    "depth": 2,
+    "fanout": 15,
+    "max_nodes": 150,
+    "walks": 9000,
+    "walk_len": 20,
+    "alpha": 0.15,
+    "sparsify_k": 0,
+    "tau": 1.0,
+    "rng_seed": 0,
+    "source": "en.wikipedia.org mainspace outlinks in prose order",
+    "edge_meaning": "u → v means Wikipedia page u links to v",
+    "score": "PPR / (1 + topological level)"
+  },
+  "stats": {
+    "nodes": 150,
+    "edges": 229,
+    "scc_count": 139,
+    "singleton_sccs": 137,
+    "multi_sccs": 2,
+    "largest_scc": 9,
+    "max_level": 3,
+    "level_counts": {
+      "0": 4,
+      "1": 17,
+      "2": 47,
+      "3": 82
+    },
+    "dag_edges": 149,
+    "compression": 0.073333,
+    "gateways": 14,
+    "ppr_mass_to_level_3": 1.0,
+    "avg_out_degree": 1.526667
+  },
+  "nodes": [
+    {
+      "id": "Optics",
+      "title": "Optics",
+      "level": 0,
+      "bfs_depth": 0,
+      "ppr": 0.38821693,
+      "score": 0.38821693,
+      "scc_id": 1,
+      "scc_size": 4,
+      "out_degree": 15,
+      "in_degree": 3,
+      "gateway": false,
+      "x": 0.0,
+      "y": 0.0,
+      "wikipedia": "https://en.wikipedia.org/wiki/Optics"
+    },
+    {
+      "id": "Physical optics",
+      "title": "Physical optics",
+      "level": 0,
+      "bfs_depth": 1,
+      "ppr": 0.0235291,
+      "score": 0.0235291,
+      "scc_id": 1,
+      "scc_size": 4,
+      "out_degree": 4,
+      "in_degree": 3,
+      "gateway": false,
+      "x": 0.22824,
+      "y": 0.401819,
+      "wikipedia": "https://en.wikipedia.org/wiki/Physical_optics"
+    },
+    {
+      "id": "Ray (optics)",
+      "title": "Ray (optics)",
+      "level": 0,
+      "bfs_depth": 1,
+      "ppr": 0.0225291,
+      "score": 0.0225291,
+      "scc_id": 1,
+      "scc_size": 4,
+      "out_degree": 15,
+      "in_degree": 2,
+      "gateway": true,
+      "x": -0.284849,
+      "y": 0.363887,
+      "wikipedia": "https://en.wikipedia.org/wiki/Ray_(optics)"
+    },
+    {
+      "id": "Geometrical optics",
+      "title": "Geometrical optics",
+      "level": 0,
+      "bfs_depth": 1,
+      "ppr": 0.0221164,
+      "score": 0.0221164,
+      "scc_id": 1,
+      "scc_size": 4,
+      "out_degree": 15,
+      "in_degree": 2,
+      "gateway": true,
+      "x": -0.184691,
+      "y": -0.423606,
+      "wikipedia": "https://en.wikipedia.org/wiki/Geometrical_optics"
+    },
+    {
+      "id": "Photodetector",
+      "title": "Photodetector",
+      "level": 1,
+      "bfs_depth": 1,
+      "ppr": 0.02104762,
+      "score": 0.01052381,
+      "scc_id": 87,
+      "scc_size": 1,
+      "out_degree": 15,
+      "in_degree": 1,
+      "gateway": true,
+      "x": 0.348373,
+      "y": 0.303625,
+      "wikipedia": "https://en.wikipedia.org/wiki/Photodetector"
+    },
+    {
+      "id": "Classical electromagnetism",
+      "title": "Classical electromagnetism",
+      "level": 1,
+      "bfs_depth": 1,
+      "ppr": 0.02087302,
+      "score": 0.01043651,
+      "scc_id": 22,
+      "scc_size": 1,
+      "out_degree": 15,
+      "in_degree": 1,
+      "gateway": true,
+      "x": -0.44213,
+      "y": -0.134437,
+      "wikipedia": "https://en.wikipedia.org/wiki/Classical_electromagnetism"
+    },
+    {
+      "id": "Optical instrument",
+      "title": "Optical instrument",
+      "level": 1,
+      "bfs_depth": 1,
+      "ppr": 0.0208254,
+      "score": 0.0104127,
+      "scc_id": 80,
+      "scc_size": 1,
+      "out_degree": 15,
+      "in_degree": 1,
+      "gateway": true,
+      "x": 0.458424,
+      "y": 0.058305,
+      "wikipedia": "https://en.wikipedia.org/wiki/Optical_instrument"
+    },
+    {
+      "id": "Diffraction",
+      "title": "Diffraction",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00707407,
+      "score": 0.00353704,
+      "scc_id": 26,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 3,
+      "gateway": false,
+      "x": -0.487689,
+      "y": -0.529193,
+      "wikipedia": "https://en.wikipedia.org/wiki/Diffraction"
+    },
+    {
+      "id": "Wavefront",
+      "title": "Wavefront",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.0013545,
+      "score": 0.00067725,
+      "scc_id": 135,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.61547,
+      "y": 0.29365,
+      "wikipedia": "https://en.wikipedia.org/wiki/Wavefront"
+    },
+    {
+      "id": "Interface (matter)",
+      "title": "Interface (matter)",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00130159,
+      "score": 0.00065079,
+      "scc_id": 56,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.258766,
+      "y": -0.714641,
+      "wikipedia": "https://en.wikipedia.org/wiki/Interface_(matter)"
+    },
+    {
+      "id": "Maxwell's equations",
+      "title": "Maxwell's equations",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00130159,
+      "score": 0.00065079,
+      "scc_id": 69,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.51685,
+      "y": 0.555608,
+      "wikipedia": "https://en.wikipedia.org/wiki/Maxwell's_equations"
+    },
+    {
+      "id": "Homogeneity (physics)",
+      "title": "Homogeneity (physics)",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00127513,
+      "score": 0.00063757,
+      "scc_id": 51,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.425189,
+      "y": -0.614539,
+      "wikipedia": "https://en.wikipedia.org/wiki/Homogeneity_(physics)"
+    },
+    {
+      "id": "Image",
+      "title": "Image",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00125397,
+      "score": 0.00062698,
+      "scc_id": 53,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.347524,
+      "y": -0.675943,
+      "wikipedia": "https://en.wikipedia.org/wiki/Image"
+    },
+    {
+      "id": "Line (geometry)",
+      "title": "Line (geometry)",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00124868,
+      "score": 0.00062434,
+      "scc_id": 62,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.16092,
+      "y": -0.729759,
+      "wikipedia": "https://en.wikipedia.org/wiki/Line_(geometry)"
+    },
+    {
+      "id": "Abstract and concrete",
+      "title": "Abstract and concrete",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.0012328,
+      "score": 0.0006164,
+      "scc_id": 2,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.526694,
+      "y": -0.418006,
+      "wikipedia": "https://en.wikipedia.org/wiki/Abstract_and_concrete"
+    },
+    {
+      "id": "Light field",
+      "title": "Light field",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00121164,
+      "score": 0.00060582,
+      "scc_id": 60,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.415258,
+      "y": 0.635134,
+      "wikipedia": "https://en.wikipedia.org/wiki/Light_field"
+    },
+    {
+      "id": "Geometry",
+      "title": "Geometry",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00120106,
+      "score": 0.00060053,
+      "scc_id": 45,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.287733,
+      "y": 0.676942,
+      "wikipedia": "https://en.wikipedia.org/wiki/Geometry"
+    },
+    {
+      "id": "Curve",
+      "title": "Curve",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00119048,
+      "score": 0.00059524,
+      "scc_id": 25,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.137284,
+      "y": 0.667972,
+      "wikipedia": "https://en.wikipedia.org/wiki/Curve"
+    },
+    {
+      "id": "Optical aberration",
+      "title": "Optical aberration",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00115873,
+      "score": 0.00057937,
+      "scc_id": 79,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.055853,
+      "y": -0.717472,
+      "wikipedia": "https://en.wikipedia.org/wiki/Optical_aberration"
+    },
+    {
+      "id": "Optical medium",
+      "title": "Optical medium",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00112169,
+      "score": 0.00056085,
+      "scc_id": 81,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.05216,
+      "y": -0.670384,
+      "wikipedia": "https://en.wikipedia.org/wiki/Optical_medium"
+    },
+    {
+      "id": "Phase (waves)",
+      "title": "Phase (waves)",
+      "level": 1,
+      "bfs_depth": 2,
+      "ppr": 0.00109524,
+      "score": 0.00054762,
+      "scc_id": 85,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.588054,
+      "y": 0.441852,
+      "wikipedia": "https://en.wikipedia.org/wiki/Phase_(waves)"
+    },
+    {
+      "id": "Electromagnetic radiation",
+      "title": "Electromagnetic radiation",
+      "level": 2,
+      "bfs_depth": 1,
+      "ppr": 0.03322751,
+      "score": 0.01107584,
+      "scc_id": 0,
+      "scc_size": 9,
+      "out_degree": 15,
+      "in_degree": 10,
+      "gateway": true,
+      "x": -0.328484,
+      "y": -0.325039,
+      "wikipedia": "https://en.wikipedia.org/wiki/Electromagnetic_radiation"
+    },
+    {
+      "id": "Physics",
+      "title": "Physics",
+      "level": 2,
+      "bfs_depth": 1,
+      "ppr": 0.03029101,
+      "score": 0.010097,
+      "scc_id": 0,
+      "scc_size": 9,
+      "out_degree": 15,
+      "in_degree": 5,
+      "gateway": true,
+      "x": 0.082377,
+      "y": 0.454716,
+      "wikipedia": "https://en.wikipedia.org/wiki/Physics"
+    },
+    {
+      "id": "Light",
+      "title": "Light",
+      "level": 2,
+      "bfs_depth": 1,
+      "ppr": 0.02983069,
+      "score": 0.00994356,
+      "scc_id": 0,
+      "scc_size": 9,
+      "out_degree": 15,
+      "in_degree": 8,
+      "gateway": true,
+      "x": 0.101473,
+      "y": -0.450839,
+      "wikipedia": "https://en.wikipedia.org/wiki/Light"
+    },
+    {
+      "id": "Microwave",
+      "title": "Microwave",
+      "level": 2,
+      "bfs_depth": 1,
+      "ppr": 0.0270582,
+      "score": 0.0090194,
+      "scc_id": 0,
+      "scc_size": 9,
+      "out_degree": 15,
+      "in_degree": 5,
+      "gateway": true,
+      "x": 0.432748,
+      "y": -0.162116,
+      "wikipedia": "https://en.wikipedia.org/wiki/Microwave"
+    },
+    {
+      "id": "Infrared",
+      "title": "Infrared",
+      "level": 2,
+      "bfs_depth": 1,
+      "ppr": 0.02653968,
+      "score": 0.00884656,
+      "scc_id": 0,
+      "scc_size": 9,
+      "out_degree": 15,
+      "in_degree": 4,
+      "gateway": true,
+      "x": -0.034071,
+      "y": -0.460859,
+      "wikipedia": "https://en.wikipedia.org/wiki/Infrared"
+    },
+    {
+      "id": "X-ray",
+      "title": "X-ray",
+      "level": 2,
+      "bfs_depth": 1,
+      "ppr": 0.02614286,
+      "score": 0.00871429,
+      "scc_id": 0,
+      "scc_size": 9,
+      "out_degree": 15,
+      "in_degree": 4,
+      "gateway": true,
+      "x": -0.455559,
+      "y": 0.077579,
+      "wikipedia": "https://en.wikipedia.org/wiki/X-ray"
+    },
+    {
+      "id": "Ultraviolet",
+      "title": "Ultraviolet",
+      "level": 2,
+      "bfs_depth": 1,
+      "ppr": 0.0252963,
+      "score": 0.0084321,
+      "scc_id": 0,
+      "scc_size": 9,
+      "out_degree": 15,
+      "in_degree": 4,
+      "gateway": true,
+      "x": -0.394401,
+      "y": 0.240832,
+      "wikipedia": "https://en.wikipedia.org/wiki/Ultraviolet"
+    },
+    {
+      "id": "Radio wave",
+      "title": "Radio wave",
+      "level": 2,
+      "bfs_depth": 1,
+      "ppr": 0.02365608,
+      "score": 0.00788536,
+      "scc_id": 0,
+      "scc_size": 9,
+      "out_degree": 15,
+      "in_degree": 3,
+      "gateway": true,
+      "x": -0.14835,
+      "y": 0.437658,
+      "wikipedia": "https://en.wikipedia.org/wiki/Radio_wave"
+    },
+    {
+      "id": "Matter",
+      "title": "Matter",
+      "level": 2,
+      "bfs_depth": 1,
+      "ppr": 0.02309524,
+      "score": 0.00769841,
+      "scc_id": 0,
+      "scc_size": 9,
+      "out_degree": 15,
+      "in_degree": 2,
+      "gateway": true,
+      "x": 0.292457,
+      "y": -0.3578,
+      "wikipedia": "https://en.wikipedia.org/wiki/Matter"
+    },
+    {
+      "id": "Wave interference",
+      "title": "Wave interference",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00846032,
+      "score": 0.00282011,
+      "scc_id": 134,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 4,
+      "gateway": false,
+      "x": 0.52978,
+      "y": 0.397179,
+      "wikipedia": "https://en.wikipedia.org/wiki/Wave_interference"
+    },
+    {
+      "id": "Refractive index",
+      "title": "Refractive index",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00204233,
+      "score": 0.00068078,
+      "scc_id": 109,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 2,
+      "gateway": false,
+      "x": 0.410255,
+      "y": 0.610517,
+      "wikipedia": "https://en.wikipedia.org/wiki/Refractive_index"
+    },
+    {
+      "id": "Golay cell",
+      "title": "Golay cell",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00127513,
+      "score": 0.00042504,
+      "scc_id": 46,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.663864,
+      "y": 0.195134,
+      "wikipedia": "https://en.wikipedia.org/wiki/Golay_cell"
+    },
+    {
+      "id": "History of optics",
+      "title": "History of optics",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00124339,
+      "score": 0.00041446,
+      "scc_id": 50,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.728654,
+      "y": -0.221559,
+      "wikipedia": "https://en.wikipedia.org/wiki/History_of_optics"
+    },
+    {
+      "id": "Binoculars",
+      "title": "Binoculars",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00121164,
+      "score": 0.00040388,
+      "scc_id": 10,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.671254,
+      "y": -0.194574,
+      "wikipedia": "https://en.wikipedia.org/wiki/Binoculars"
+    },
+    {
+      "id": "Quantum mechanics",
+      "title": "Quantum mechanics",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00121164,
+      "score": 0.00040388,
+      "scc_id": 100,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.452348,
+      "y": -0.481264,
+      "wikipedia": "https://en.wikipedia.org/wiki/Quantum_mechanics"
+    },
+    {
+      "id": "Telescope",
+      "title": "Telescope",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00121164,
+      "score": 0.00040388,
+      "scc_id": 125,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.601177,
+      "y": 0.35641,
+      "wikipedia": "https://en.wikipedia.org/wiki/Telescope"
+    },
+    {
+      "id": "Nanotechnology",
+      "title": "Nanotechnology",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00120106,
+      "score": 0.00040035,
+      "scc_id": 77,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.635795,
+      "y": -0.377822,
+      "wikipedia": "https://en.wikipedia.org/wiki/Nanotechnology"
+    },
+    {
+      "id": "Photoelectric effect",
+      "title": "Photoelectric effect",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00119577,
+      "score": 0.00039859,
+      "scc_id": 89,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.591566,
+      "y": 0.478861,
+      "wikipedia": "https://en.wikipedia.org/wiki/Photoelectric_effect"
+    },
+    {
+      "id": "Camera",
+      "title": "Camera",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00118519,
+      "score": 0.00039506,
+      "scc_id": 16,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.713358,
+      "y": -0.131888,
+      "wikipedia": "https://en.wikipedia.org/wiki/Camera"
+    },
+    {
+      "id": "Solar cell",
+      "title": "Solar cell",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00118519,
+      "score": 0.00039506,
+      "scc_id": 115,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.284001,
+      "y": 0.63098,
+      "wikipedia": "https://en.wikipedia.org/wiki/Solar_cell"
+    },
+    {
+      "id": "Phonon",
+      "title": "Phonon",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00117989,
+      "score": 0.0003933,
+      "scc_id": 86,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.645076,
+      "y": 0.379954,
+      "wikipedia": "https://en.wikipedia.org/wiki/Phonon"
+    },
+    {
+      "id": "Interferometry",
+      "title": "Interferometry",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.0011746,
+      "score": 0.00039153,
+      "scc_id": 57,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.750073,
+      "y": 0.12795,
+      "wikipedia": "https://en.wikipedia.org/wiki/Interferometry"
+    },
+    {
+      "id": "Albert Einstein",
+      "title": "Albert Einstein",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00116402,
+      "score": 0.00038801,
+      "scc_id": 5,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.646947,
+      "y": 0.12572,
+      "wikipedia": "https://en.wikipedia.org/wiki/Albert_Einstein"
+    },
+    {
+      "id": "Rotating line camera",
+      "title": "Rotating line camera",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00116402,
+      "score": 0.00038801,
+      "scc_id": 111,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.350014,
+      "y": 0.625754,
+      "wikipedia": "https://en.wikipedia.org/wiki/Rotating_line_camera"
+    },
+    {
+      "id": "Valence and conduction bands",
+      "title": "Valence and conduction bands",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00114815,
+      "score": 0.00038272,
+      "scc_id": 130,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.212928,
+      "y": 0.623705,
+      "wikipedia": "https://en.wikipedia.org/wiki/Valence_and_conduction_bands"
+    },
+    {
+      "id": "Periscope",
+      "title": "Periscope",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00113757,
+      "score": 0.00037919,
+      "scc_id": 84,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.700471,
+      "y": 0.250183,
+      "wikipedia": "https://en.wikipedia.org/wiki/Periscope"
+    },
+    {
+      "id": "Quantum field theory",
+      "title": "Quantum field theory",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00113228,
+      "score": 0.00037743,
+      "scc_id": 99,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.524581,
+      "y": -0.456214,
+      "wikipedia": "https://en.wikipedia.org/wiki/Quantum_field_theory"
+    },
+    {
+      "id": "Pinhole camera",
+      "title": "Pinhole camera",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00112698,
+      "score": 0.00037566,
+      "scc_id": 94,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.657632,
+      "y": 0.30626,
+      "wikipedia": "https://en.wikipedia.org/wiki/Pinhole_camera"
+    },
+    {
+      "id": "Classical mechanics",
+      "title": "Classical mechanics",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00112169,
+      "score": 0.0003739,
+      "scc_id": 24,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.689747,
+      "y": 0.086978,
+      "wikipedia": "https://en.wikipedia.org/wiki/Classical_mechanics"
+    },
+    {
+      "id": "Photomultiplier tube",
+      "title": "Photomultiplier tube",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.0011164,
+      "score": 0.00037213,
+      "scc_id": 90,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.555192,
+      "y": 0.520597,
+      "wikipedia": "https://en.wikipedia.org/wiki/Photomultiplier_tube"
+    },
+    {
+      "id": "Classical field theory",
+      "title": "Classical field theory",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00111111,
+      "score": 0.00037037,
+      "scc_id": 23,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.643685,
+      "y": 0.147997,
+      "wikipedia": "https://en.wikipedia.org/wiki/Classical_field_theory"
+    },
+    {
+      "id": "Michael Faraday",
+      "title": "Michael Faraday",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00111111,
+      "score": 0.00037037,
+      "scc_id": 72,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.676017,
+      "y": -0.32954,
+      "wikipedia": "https://en.wikipedia.org/wiki/Michael_Faraday"
+    },
+    {
+      "id": "Camera obscura",
+      "title": "Camera obscura",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00110582,
+      "score": 0.00036861,
+      "scc_id": 17,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.740797,
+      "y": -0.066874,
+      "wikipedia": "https://en.wikipedia.org/wiki/Camera_obscura"
+    },
+    {
+      "id": "Quantum electrodynamics",
+      "title": "Quantum electrodynamics",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00110582,
+      "score": 0.00036861,
+      "scc_id": 97,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.585556,
+      "y": -0.420722,
+      "wikipedia": "https://en.wikipedia.org/wiki/Quantum_electrodynamics"
+    },
+    {
+      "id": "Field (physics)",
+      "title": "Field (physics)",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00110053,
+      "score": 0.00036684,
+      "scc_id": 38,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.745035,
+      "y": -0.102554,
+      "wikipedia": "https://en.wikipedia.org/wiki/Field_(physics)"
+    },
+    {
+      "id": "Electromagnetism",
+      "title": "Electromagnetism",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00109524,
+      "score": 0.00036508,
+      "scc_id": 32,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.738499,
+      "y": -0.040055,
+      "wikipedia": "https://en.wikipedia.org/wiki/Electromagnetism"
+    },
+    {
+      "id": "Field strength",
+      "title": "Field strength",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00107937,
+      "score": 0.00035979,
+      "scc_id": 39,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.741497,
+      "y": -0.163212,
+      "wikipedia": "https://en.wikipedia.org/wiki/Field_strength"
+    },
+    {
+      "id": "Image sensor",
+      "title": "Image sensor",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00107937,
+      "score": 0.00035979,
+      "scc_id": 54,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.660842,
+      "y": 0.322999,
+      "wikipedia": "https://en.wikipedia.org/wiki/Image_sensor"
+    },
+    {
+      "id": "Antonie van Leeuwenhoek",
+      "title": "Antonie van Leeuwenhoek",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00107407,
+      "score": 0.00035802,
+      "scc_id": 7,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.612336,
+      "y": -0.251918,
+      "wikipedia": "https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek"
+    },
+    {
+      "id": "Electric charge",
+      "title": "Electric charge",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00107407,
+      "score": 0.00035802,
+      "scc_id": 28,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.720644,
+      "y": 0.02355,
+      "wikipedia": "https://en.wikipedia.org/wiki/Electric_charge"
+    },
+    {
+      "id": "Photodiode",
+      "title": "Photodiode",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00107407,
+      "score": 0.00035802,
+      "scc_id": 88,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.621698,
+      "y": 0.431936,
+      "wikipedia": "https://en.wikipedia.org/wiki/Photodiode"
+    },
+    {
+      "id": "Heinrich Hertz",
+      "title": "Heinrich Hertz",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00104762,
+      "score": 0.00034921,
+      "scc_id": 48,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.667706,
+      "y": 0.261241,
+      "wikipedia": "https://en.wikipedia.org/wiki/Heinrich_Hertz"
+    },
+    {
+      "id": "Polarization (waves)",
+      "title": "Polarization (waves)",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00104762,
+      "score": 0.00034921,
+      "scc_id": 95,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.512823,
+      "y": 0.556857,
+      "wikipedia": "https://en.wikipedia.org/wiki/Polarization_(waves)"
+    },
+    {
+      "id": "Length scale",
+      "title": "Length scale",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00104233,
+      "score": 0.00034744,
+      "scc_id": 59,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.706844,
+      "y": -0.277179,
+      "wikipedia": "https://en.wikipedia.org/wiki/Length_scale"
+    },
+    {
+      "id": "Quantum engineering",
+      "title": "Quantum engineering",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00104233,
+      "score": 0.00034744,
+      "scc_id": 98,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.464523,
+      "y": 0.587118,
+      "wikipedia": "https://en.wikipedia.org/wiki/Quantum_engineering"
+    },
+    {
+      "id": "Microscope",
+      "title": "Microscope",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00102646,
+      "score": 0.00034215,
+      "scc_id": 73,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.730975,
+      "y": 0.190317,
+      "wikipedia": "https://en.wikipedia.org/wiki/Microscope"
+    },
+    {
+      "id": "Galileo Galilei",
+      "title": "Galileo Galilei",
+      "level": 2,
+      "bfs_depth": 2,
+      "ppr": 0.00093651,
+      "score": 0.00031217,
+      "scc_id": 42,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.758222,
+      "y": 0.063884,
+      "wikipedia": "https://en.wikipedia.org/wiki/Galileo_Galilei"
+    },
+    {
+      "id": "Wavelength",
+      "title": "Wavelength",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.01114286,
+      "score": 0.00278571,
+      "scc_id": 136,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 8,
+      "gateway": false,
+      "x": -0.317685,
+      "y": -0.645726,
+      "wikipedia": "https://en.wikipedia.org/wiki/Wavelength"
+    },
+    {
+      "id": "Frequency",
+      "title": "Frequency",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00762963,
+      "score": 0.00190741,
+      "scc_id": 41,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 5,
+      "gateway": false,
+      "x": -0.649039,
+      "y": -0.31086,
+      "wikipedia": "https://en.wikipedia.org/wiki/Frequency"
+    },
+    {
+      "id": "Gamma ray",
+      "title": "Gamma ray",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00497884,
+      "score": 0.00124471,
+      "scc_id": 43,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 3,
+      "gateway": false,
+      "x": -0.622606,
+      "y": -0.413287,
+      "wikipedia": "https://en.wikipedia.org/wiki/Gamma_ray"
+    },
+    {
+      "id": "Wave",
+      "title": "Wave",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00456085,
+      "score": 0.00114021,
+      "scc_id": 133,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 3,
+      "gateway": false,
+      "x": -0.419828,
+      "y": -0.618214,
+      "wikipedia": "https://en.wikipedia.org/wiki/Wave"
+    },
+    {
+      "id": "Hertz",
+      "title": "Hertz",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00431746,
+      "score": 0.00107937,
+      "scc_id": 49,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 3,
+      "gateway": false,
+      "x": -0.162146,
+      "y": -0.662376,
+      "wikipedia": "https://en.wikipedia.org/wiki/Hertz"
+    },
+    {
+      "id": "Energy",
+      "title": "Energy",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00431217,
+      "score": 0.00107804,
+      "scc_id": 35,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 3,
+      "gateway": false,
+      "x": 0.26639,
+      "y": 0.699661,
+      "wikipedia": "https://en.wikipedia.org/wiki/Energy"
+    },
+    {
+      "id": "Nanometre",
+      "title": "Nanometre",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00410053,
+      "score": 0.00102513,
+      "scc_id": 76,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 3,
+      "gateway": false,
+      "x": 0.228959,
+      "y": -0.723472,
+      "wikipedia": "https://en.wikipedia.org/wiki/Nanometre"
+    },
+    {
+      "id": "Photon",
+      "title": "Photon",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00339683,
+      "score": 0.00084921,
+      "scc_id": 91,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 3,
+      "gateway": false,
+      "x": 0.572135,
+      "y": -0.482856,
+      "wikipedia": "https://en.wikipedia.org/wiki/Photon"
+    },
+    {
+      "id": "Momentum",
+      "title": "Momentum",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.0032328,
+      "score": 0.0008082,
+      "scc_id": 74,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 2,
+      "gateway": false,
+      "x": -0.573216,
+      "y": -0.499095,
+      "wikipedia": "https://en.wikipedia.org/wiki/Momentum"
+    },
+    {
+      "id": "Wave–particle duality",
+      "title": "Wave–particle duality",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00312698,
+      "score": 0.00078175,
+      "scc_id": 137,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 2,
+      "gateway": false,
+      "x": -0.199913,
+      "y": -0.642005,
+      "wikipedia": "https://en.wikipedia.org/wiki/Wave%E2%80%93particle_duality"
+    },
+    {
+      "id": "Terahertz radiation",
+      "title": "Terahertz radiation",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00295238,
+      "score": 0.0007381,
+      "scc_id": 126,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 2,
+      "gateway": false,
+      "x": 0.25779,
+      "y": -0.63133,
+      "wikipedia": "https://en.wikipedia.org/wiki/Terahertz_radiation"
+    },
+    {
+      "id": "Electronvolt",
+      "title": "Electronvolt",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.0028254,
+      "score": 0.00070635,
+      "scc_id": 33,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 2,
+      "gateway": false,
+      "x": -0.596847,
+      "y": 0.465106,
+      "wikipedia": "https://en.wikipedia.org/wiki/Electronvolt"
+    },
+    {
+      "id": "Sunlight",
+      "title": "Sunlight",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00274074,
+      "score": 0.00068519,
+      "scc_id": 122,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 2,
+      "gateway": false,
+      "x": -0.700442,
+      "y": 0.134831,
+      "wikipedia": "https://en.wikipedia.org/wiki/Sunlight"
+    },
+    {
+      "id": "Electromagnetic spectrum",
+      "title": "Electromagnetic spectrum",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.0026455,
+      "score": 0.00066138,
+      "scc_id": 31,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 2,
+      "gateway": false,
+      "x": 0.755343,
+      "y": -0.001278,
+      "wikipedia": "https://en.wikipedia.org/wiki/Electromagnetic_spectrum"
+    },
+    {
+      "id": "Black-body radiation",
+      "title": "Black-body radiation",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00264021,
+      "score": 0.00066005,
+      "scc_id": 12,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 2,
+      "gateway": false,
+      "x": -0.347828,
+      "y": -0.586557,
+      "wikipedia": "https://en.wikipedia.org/wiki/Black-body_radiation"
+    },
+    {
+      "id": "Electric current",
+      "title": "Electric current",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00228571,
+      "score": 0.00057143,
+      "scc_id": 29,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 2,
+      "gateway": false,
+      "x": -0.289349,
+      "y": 0.702815,
+      "wikipedia": "https://en.wikipedia.org/wiki/Electric_current"
+    },
+    {
+      "id": "Electromagnetic field",
+      "title": "Electromagnetic field",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00193651,
+      "score": 0.00048413,
+      "scc_id": 30,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.644077,
+      "y": -0.193134,
+      "wikipedia": "https://en.wikipedia.org/wiki/Electromagnetic_field"
+    },
+    {
+      "id": "Radiation pressure",
+      "title": "Radiation pressure",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00175661,
+      "score": 0.00043915,
+      "scc_id": 103,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.242554,
+      "y": -0.694412,
+      "wikipedia": "https://en.wikipedia.org/wiki/Radiation_pressure"
+    },
+    {
+      "id": "Science",
+      "title": "Science",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00174603,
+      "score": 0.00043651,
+      "scc_id": 113,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.061005,
+      "y": 0.73302,
+      "wikipedia": "https://en.wikipedia.org/wiki/Science"
+    },
+    {
+      "id": "Chemistry",
+      "title": "Chemistry",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00173016,
+      "score": 0.00043254,
+      "scc_id": 20,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.358218,
+      "y": 0.621094,
+      "wikipedia": "https://en.wikipedia.org/wiki/Chemistry"
+    },
+    {
+      "id": "Radiant energy",
+      "title": "Radiant energy",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00173016,
+      "score": 0.00043254,
+      "scc_id": 101,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.50511,
+      "y": -0.567922,
+      "wikipedia": "https://en.wikipedia.org/wiki/Radiant_energy"
+    },
+    {
+      "id": "Elementary particle",
+      "title": "Elementary particle",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00166667,
+      "score": 0.00041667,
+      "scc_id": 34,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.314279,
+      "y": 0.665033,
+      "wikipedia": "https://en.wikipedia.org/wiki/Elementary_particle"
+    },
+    {
+      "id": "Intensity (physics)",
+      "title": "Intensity (physics)",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00166138,
+      "score": 0.00041534,
+      "scc_id": 55,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.103091,
+      "y": -0.751802,
+      "wikipedia": "https://en.wikipedia.org/wiki/Intensity_(physics)"
+    },
+    {
+      "id": "Human eye",
+      "title": "Human eye",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.0016455,
+      "score": 0.00041138,
+      "scc_id": 52,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.030049,
+      "y": -0.73494,
+      "wikipedia": "https://en.wikipedia.org/wiki/Human_eye"
+    },
+    {
+      "id": "Natural philosophy",
+      "title": "Natural philosophy",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00162963,
+      "score": 0.00040741,
+      "scc_id": 78,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.052609,
+      "y": 0.755189,
+      "wikipedia": "https://en.wikipedia.org/wiki/Natural_philosophy"
+    },
+    {
+      "id": "Physicist",
+      "title": "Physicist",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00162963,
+      "score": 0.00040741,
+      "scc_id": 92,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.004011,
+      "y": 0.748647,
+      "wikipedia": "https://en.wikipedia.org/wiki/Physicist"
+    },
+    {
+      "id": "Biology",
+      "title": "Biology",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00162434,
+      "score": 0.00040608,
+      "scc_id": 11,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.396513,
+      "y": 0.567072,
+      "wikipedia": "https://en.wikipedia.org/wiki/Biology"
+    },
+    {
+      "id": "Space",
+      "title": "Space",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00160317,
+      "score": 0.00040079,
+      "scc_id": 117,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.172378,
+      "y": 0.670133,
+      "wikipedia": "https://en.wikipedia.org/wiki/Space"
+    },
+    {
+      "id": "Time",
+      "title": "Time",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00159788,
+      "score": 0.00039947,
+      "scc_id": 127,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.223334,
+      "y": 0.620055,
+      "wikipedia": "https://en.wikipedia.org/wiki/Time"
+    },
+    {
+      "id": "Scientific Revolution",
+      "title": "Scientific Revolution",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00158201,
+      "score": 0.0003955,
+      "scc_id": 114,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.117565,
+      "y": 0.707288,
+      "wikipedia": "https://en.wikipedia.org/wiki/Scientific_Revolution"
+    },
+    {
+      "id": "Academic discipline",
+      "title": "Academic discipline",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00154497,
+      "score": 0.00038624,
+      "scc_id": 3,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.426663,
+      "y": 0.5023,
+      "wikipedia": "https://en.wikipedia.org/wiki/Academic_discipline"
+    },
+    {
+      "id": "Wilhelm Röntgen",
+      "title": "Wilhelm Röntgen",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00151852,
+      "score": 0.00037963,
+      "scc_id": 138,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.644676,
+      "y": -0.205318,
+      "wikipedia": "https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen"
+    },
+    {
+      "id": "Mathematics",
+      "title": "Mathematics",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00150794,
+      "score": 0.00037698,
+      "scc_id": 68,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.16282,
+      "y": 0.74347,
+      "wikipedia": "https://en.wikipedia.org/wiki/Mathematics"
+    },
+    {
+      "id": "Radio spectrum",
+      "title": "Radio spectrum",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00150794,
+      "score": 0.00037698,
+      "scc_id": 105,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.713192,
+      "y": -0.267175,
+      "wikipedia": "https://en.wikipedia.org/wiki/Radio_spectrum"
+    },
+    {
+      "id": "Force",
+      "title": "Force",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00150265,
+      "score": 0.00037566,
+      "scc_id": 40,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.215663,
+      "y": 0.72565,
+      "wikipedia": "https://en.wikipedia.org/wiki/Force"
+    },
+    {
+      "id": "Motion",
+      "title": "Motion",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00150265,
+      "score": 0.00037566,
+      "scc_id": 75,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.108345,
+      "y": 0.753339,
+      "wikipedia": "https://en.wikipedia.org/wiki/Motion"
+    },
+    {
+      "id": "Radio",
+      "title": "Radio",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00149206,
+      "score": 0.00037302,
+      "scc_id": 104,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.673863,
+      "y": -0.344177,
+      "wikipedia": "https://en.wikipedia.org/wiki/Radio"
+    },
+    {
+      "id": "Medical diagnosis",
+      "title": "Medical diagnosis",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00148677,
+      "score": 0.00037169,
+      "scc_id": 70,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.750786,
+      "y": 0.127854,
+      "wikipedia": "https://en.wikipedia.org/wiki/Medical_diagnosis"
+    },
+    {
+      "id": "Optical radiation",
+      "title": "Optical radiation",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00148677,
+      "score": 0.00037169,
+      "scc_id": 82,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.342035,
+      "y": -0.651193,
+      "wikipedia": "https://en.wikipedia.org/wiki/Optical_radiation"
+    },
+    {
+      "id": "Far infrared",
+      "title": "Far infrared",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00147619,
+      "score": 0.00036905,
+      "scc_id": 37,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.537923,
+      "y": -0.468442,
+      "wikipedia": "https://en.wikipedia.org/wiki/Far_infrared"
+    },
+    {
+      "id": "Radiography",
+      "title": "Radiography",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.0014709,
+      "score": 0.00036772,
+      "scc_id": 107,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.720511,
+      "y": -0.097007,
+      "wikipedia": "https://en.wikipedia.org/wiki/Radiography"
+    },
+    {
+      "id": "C band (IEEE)",
+      "title": "C band (IEEE)",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00146561,
+      "score": 0.0003664,
+      "scc_id": 15,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.438302,
+      "y": -0.505516,
+      "wikipedia": "https://en.wikipedia.org/wiki/C_band_(IEEE)"
+    },
+    {
+      "id": "Visual perception",
+      "title": "Visual perception",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00146561,
+      "score": 0.0003664,
+      "scc_id": 131,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.430304,
+      "y": -0.52903,
+      "wikipedia": "https://en.wikipedia.org/wiki/Visual_perception"
+    },
+    {
+      "id": "Mercury-vapor lamp",
+      "title": "Mercury-vapor lamp",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00145503,
+      "score": 0.00036376,
+      "scc_id": 71,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.686386,
+      "y": 0.318472,
+      "wikipedia": "https://en.wikipedia.org/wiki/Mercury-vapor_lamp"
+    },
+    {
+      "id": "Extreme ultraviolet",
+      "title": "Extreme ultraviolet",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00144974,
+      "score": 0.00036243,
+      "scc_id": 36,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.649994,
+      "y": 0.396904,
+      "wikipedia": "https://en.wikipedia.org/wiki/Extreme_ultraviolet"
+    },
+    {
+      "id": "Radio-frequency engineering",
+      "title": "Radio-frequency engineering",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00144974,
+      "score": 0.00036243,
+      "scc_id": 106,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.734136,
+      "y": -0.183286,
+      "wikipedia": "https://en.wikipedia.org/wiki/Radio-frequency_engineering"
+    },
+    {
+      "id": "S band",
+      "title": "S band",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00144444,
+      "score": 0.00036111,
+      "scc_id": 112,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.735302,
+      "y": -0.093738,
+      "wikipedia": "https://en.wikipedia.org/wiki/S_band"
+    },
+    {
+      "id": "Red",
+      "title": "Red",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00143386,
+      "score": 0.00035847,
+      "scc_id": 108,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.120078,
+      "y": -0.749277,
+      "wikipedia": "https://en.wikipedia.org/wiki/Red"
+    },
+    {
+      "id": "Astronomical radio source",
+      "title": "Astronomical radio source",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00142857,
+      "score": 0.00035714,
+      "scc_id": 8,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.098875,
+      "y": 0.740721,
+      "wikipedia": "https://en.wikipedia.org/wiki/Astronomical_radio_source"
+    },
+    {
+      "id": "Prefix",
+      "title": "Prefix",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00142857,
+      "score": 0.00035714,
+      "scc_id": 96,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.615906,
+      "y": -0.412451,
+      "wikipedia": "https://en.wikipedia.org/wiki/Prefix"
+    },
+    {
+      "id": "Chemical element",
+      "title": "Chemical element",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00142328,
+      "score": 0.00035582,
+      "scc_id": 19,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.64779,
+      "y": 0.330021,
+      "wikipedia": "https://en.wikipedia.org/wiki/Chemical_element"
+    },
+    {
+      "id": "Bone fracture",
+      "title": "Bone fracture",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00140212,
+      "score": 0.00035053,
+      "scc_id": 14,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.54038,
+      "y": 0.407126,
+      "wikipedia": "https://en.wikipedia.org/wiki/Bone_fracture"
+    },
+    {
+      "id": "Liquid",
+      "title": "Liquid",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00140212,
+      "score": 0.00035053,
+      "scc_id": 63,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.359366,
+      "y": -0.656768,
+      "wikipedia": "https://en.wikipedia.org/wiki/Liquid"
+    },
+    {
+      "id": "Spectral band",
+      "title": "Spectral band",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00138624,
+      "score": 0.00034656,
+      "scc_id": 118,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.1378,
+      "y": -0.722531,
+      "wikipedia": "https://en.wikipedia.org/wiki/Spectral_band"
+    },
+    {
+      "id": "Picometre",
+      "title": "Picometre",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00135979,
+      "score": 0.00033995,
+      "scc_id": 93,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.753218,
+      "y": 0.016443,
+      "wikipedia": "https://en.wikipedia.org/wiki/Picometre"
+    },
+    {
+      "id": "Room temperature",
+      "title": "Room temperature",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00135979,
+      "score": 0.00033995,
+      "scc_id": 110,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.008587,
+      "y": -0.758789,
+      "wikipedia": "https://en.wikipedia.org/wiki/Room_temperature"
+    },
+    {
+      "id": "Transmitter",
+      "title": "Transmitter",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.0013545,
+      "score": 0.00033862,
+      "scc_id": 128,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.48961,
+      "y": 0.460888,
+      "wikipedia": "https://en.wikipedia.org/wiki/Transmitter"
+    },
+    {
+      "id": "Ultra high frequency",
+      "title": "Ultra high frequency",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.0013545,
+      "score": 0.00033862,
+      "scc_id": 129,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.662559,
+      "y": 0.093112,
+      "wikipedia": "https://en.wikipedia.org/wiki/Ultra_high_frequency"
+    },
+    {
+      "id": "Cherenkov radiation",
+      "title": "Cherenkov radiation",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00134921,
+      "score": 0.0003373,
+      "scc_id": 21,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.439907,
+      "y": 0.561498,
+      "wikipedia": "https://en.wikipedia.org/wiki/Cherenkov_radiation"
+    },
+    {
+      "id": "Super high frequency",
+      "title": "Super high frequency",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00134921,
+      "score": 0.0003373,
+      "scc_id": 123,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.713301,
+      "y": -0.000291,
+      "wikipedia": "https://en.wikipedia.org/wiki/Super_high_frequency"
+    },
+    {
+      "id": "Charged particle",
+      "title": "Charged particle",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00133862,
+      "score": 0.00033466,
+      "scc_id": 18,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.197646,
+      "y": 0.733899,
+      "wikipedia": "https://en.wikipedia.org/wiki/Charged_particle"
+    },
+    {
+      "id": "Electric arc",
+      "title": "Electric arc",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00133862,
+      "score": 0.00033466,
+      "scc_id": 27,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.527052,
+      "y": 0.521222,
+      "wikipedia": "https://en.wikipedia.org/wiki/Electric_arc"
+    },
+    {
+      "id": "Blacklight",
+      "title": "Blacklight",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00133333,
+      "score": 0.00033333,
+      "scc_id": 13,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.335081,
+      "y": 0.579116,
+      "wikipedia": "https://en.wikipedia.org/wiki/Blacklight"
+    },
+    {
+      "id": "Materials science",
+      "title": "Materials science",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00133333,
+      "score": 0.00033333,
+      "scc_id": 67,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.716204,
+      "y": 0.233791,
+      "wikipedia": "https://en.wikipedia.org/wiki/Materials_science"
+    },
+    {
+      "id": "Outline of physical science",
+      "title": "Outline of physical science",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00133333,
+      "score": 0.00033333,
+      "scc_id": 83,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.540363,
+      "y": -0.530175,
+      "wikipedia": "https://en.wikipedia.org/wiki/Outline_of_physical_science"
+    },
+    {
+      "id": "Speed of light",
+      "title": "Speed of light",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00132804,
+      "score": 0.00033201,
+      "scc_id": 119,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.441377,
+      "y": 0.568394,
+      "wikipedia": "https://en.wikipedia.org/wiki/Speed_of_light"
+    },
+    {
+      "id": "Gas",
+      "title": "Gas",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00132275,
+      "score": 0.00033069,
+      "scc_id": 44,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.174044,
+      "y": -0.669703,
+      "wikipedia": "https://en.wikipedia.org/wiki/Gas"
+    },
+    {
+      "id": "Tanning lamp",
+      "title": "Tanning lamp",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00132275,
+      "score": 0.00033069,
+      "scc_id": 124,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.668229,
+      "y": 0.033533,
+      "wikipedia": "https://en.wikipedia.org/wiki/Tanning_lamp"
+    },
+    {
+      "id": "Radiation",
+      "title": "Radiation",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00131746,
+      "score": 0.00032937,
+      "scc_id": 102,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.704422,
+      "y": 0.230751,
+      "wikipedia": "https://en.wikipedia.org/wiki/Radiation"
+    },
+    {
+      "id": "List of particles",
+      "title": "List of particles",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00131217,
+      "score": 0.00032804,
+      "scc_id": 64,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.412061,
+      "y": -0.635046,
+      "wikipedia": "https://en.wikipedia.org/wiki/List_of_particles"
+    },
+    {
+      "id": "Mass",
+      "title": "Mass",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00129101,
+      "score": 0.00032275,
+      "scc_id": 65,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.459916,
+      "y": -0.606412,
+      "wikipedia": "https://en.wikipedia.org/wiki/Mass"
+    },
+    {
+      "id": "Massless particle",
+      "title": "Massless particle",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00129101,
+      "score": 0.00032275,
+      "scc_id": 66,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.50278,
+      "y": -0.571376,
+      "wikipedia": "https://en.wikipedia.org/wiki/Massless_particle"
+    },
+    {
+      "id": "Atom",
+      "title": "Atom",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00124339,
+      "score": 0.00031085,
+      "scc_id": 9,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.1052,
+      "y": -0.650599,
+      "wikipedia": "https://en.wikipedia.org/wiki/Atom"
+    },
+    {
+      "id": "Lightning",
+      "title": "Lightning",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00124339,
+      "score": 0.00031085,
+      "scc_id": 61,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": -0.371911,
+      "y": 0.648172,
+      "wikipedia": "https://en.wikipedia.org/wiki/Lightning"
+    },
+    {
+      "id": "Acceleration",
+      "title": "Acceleration",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.0012328,
+      "score": 0.0003082,
+      "scc_id": 4,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.108446,
+      "y": 0.663607,
+      "wikipedia": "https://en.wikipedia.org/wiki/Acceleration"
+    },
+    {
+      "id": "Antenna (radio)",
+      "title": "Antenna (radio)",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00121693,
+      "score": 0.00030423,
+      "scc_id": 6,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.004784,
+      "y": 0.719627,
+      "wikipedia": "https://en.wikipedia.org/wiki/Antenna_(radio)"
+    },
+    {
+      "id": "Invariant mass",
+      "title": "Invariant mass",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00121693,
+      "score": 0.00030423,
+      "scc_id": 58,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.301941,
+      "y": -0.670725,
+      "wikipedia": "https://en.wikipedia.org/wiki/Invariant_mass"
+    },
+    {
+      "id": "Solid",
+      "title": "Solid",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00121164,
+      "score": 0.00030291,
+      "scc_id": 116,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.597239,
+      "y": -0.429356,
+      "wikipedia": "https://en.wikipedia.org/wiki/Solid"
+    },
+    {
+      "id": "Volume",
+      "title": "Volume",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00119577,
+      "score": 0.00029894,
+      "scc_id": 132,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.61666,
+      "y": -0.232544,
+      "wikipedia": "https://en.wikipedia.org/wiki/Volume"
+    },
+    {
+      "id": "Subatomic particle",
+      "title": "Subatomic particle",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00119048,
+      "score": 0.00029762,
+      "scc_id": 121,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.621684,
+      "y": -0.303812,
+      "wikipedia": "https://en.wikipedia.org/wiki/Subatomic_particle"
+    },
+    {
+      "id": "State of matter",
+      "title": "State of matter",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.00118519,
+      "score": 0.0002963,
+      "scc_id": 120,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.614373,
+      "y": -0.369626,
+      "wikipedia": "https://en.wikipedia.org/wiki/State_of_matter"
+    },
+    {
+      "id": "Heat",
+      "title": "Heat",
+      "level": 3,
+      "bfs_depth": 2,
+      "ppr": 0.0011746,
+      "score": 0.00029365,
+      "scc_id": 47,
+      "scc_size": 1,
+      "out_degree": 0,
+      "in_degree": 1,
+      "gateway": false,
+      "x": 0.239996,
+      "y": -0.675633,
+      "wikipedia": "https://en.wikipedia.org/wiki/Heat"
+    }
+  ],
+  "edges": [
+    {
+      "source": "Optics",
+      "target": "Physics",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Electromagnetic radiation",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Matter",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Optical instrument",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Photodetector",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Light",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Ultraviolet",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Infrared",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Radio wave",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Microwave",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "X-ray",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Classical electromagnetism",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Geometrical optics",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Ray (optics)",
+      "tree": true
+    },
+    {
+      "source": "Optics",
+      "target": "Physical optics",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Science",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Matter",
+      "tree": false
+    },
+    {
+      "source": "Physics",
+      "target": "Elementary particle",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Motion",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Space",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Time",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Energy",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Force",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Physicist",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Academic discipline",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Chemistry",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Biology",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Mathematics",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Natural philosophy",
+      "tree": true
+    },
+    {
+      "source": "Physics",
+      "target": "Scientific Revolution",
+      "tree": true
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Physics",
+      "tree": false
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Wave",
+      "tree": true
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Electromagnetic field",
+      "tree": true
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Momentum",
+      "tree": true
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Radiant energy",
+      "tree": true
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Frequency",
+      "tree": true
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Wavelength",
+      "tree": true
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Radio wave",
+      "tree": false
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Microwave",
+      "tree": false
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Infrared",
+      "tree": false
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Light",
+      "tree": false
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Ultraviolet",
+      "tree": false
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "X-ray",
+      "tree": false
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Gamma ray",
+      "tree": true
+    },
+    {
+      "source": "Electromagnetic radiation",
+      "target": "Wave–particle duality",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Outline of physical science",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Mass",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Volume",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Atom",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Subatomic particle",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "List of particles",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Invariant mass",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Massless particle",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Photon",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Light",
+      "tree": false
+    },
+    {
+      "source": "Matter",
+      "target": "Heat",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "State of matter",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Solid",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Liquid",
+      "tree": true
+    },
+    {
+      "source": "Matter",
+      "target": "Gas",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Electromagnetic radiation",
+      "tree": false
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Photon",
+      "tree": false
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Periscope",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Microscope",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Telescope",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Camera",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Galileo Galilei",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Antonie van Leeuwenhoek",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Electromagnetic spectrum",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Binoculars",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Pinhole camera",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Camera obscura",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Light",
+      "tree": false
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Interferometry",
+      "tree": true
+    },
+    {
+      "source": "Optical instrument",
+      "target": "Wave interference",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Electromagnetic radiation",
+      "tree": false
+    },
+    {
+      "source": "Photodetector",
+      "target": "Photoelectric effect",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Photodiode",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Photomultiplier tube",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Solar cell",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Heinrich Hertz",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Albert Einstein",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Quantum engineering",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Valence and conduction bands",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Phonon",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Polarization (waves)",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Refractive index",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Golay cell",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Rotating line camera",
+      "tree": true
+    },
+    {
+      "source": "Photodetector",
+      "target": "Image sensor",
+      "tree": true
+    },
+    {
+      "source": "Light",
+      "target": "Electromagnetic radiation",
+      "tree": false
+    },
+    {
+      "source": "Light",
+      "target": "Visual perception",
+      "tree": true
+    },
+    {
+      "source": "Light",
+      "target": "Human eye",
+      "tree": true
+    },
+    {
+      "source": "Light",
+      "target": "Wavelength",
+      "tree": false
+    },
+    {
+      "source": "Light",
+      "target": "Nanometre",
+      "tree": true
+    },
+    {
+      "source": "Light",
+      "target": "Frequency",
+      "tree": false
+    },
+    {
+      "source": "Light",
+      "target": "Hertz",
+      "tree": true
+    },
+    {
+      "source": "Light",
+      "target": "Infrared",
+      "tree": false
+    },
+    {
+      "source": "Light",
+      "target": "Ultraviolet",
+      "tree": false
+    },
+    {
+      "source": "Light",
+      "target": "Optical radiation",
+      "tree": true
+    },
+    {
+      "source": "Light",
+      "target": "Physics",
+      "tree": false
+    },
+    {
+      "source": "Light",
+      "target": "Gamma ray",
+      "tree": false
+    },
+    {
+      "source": "Light",
+      "target": "X-ray",
+      "tree": false
+    },
+    {
+      "source": "Light",
+      "target": "Microwave",
+      "tree": false
+    },
+    {
+      "source": "Light",
+      "target": "Intensity (physics)",
+      "tree": true
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Electromagnetic radiation",
+      "tree": false
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Wavelength",
+      "tree": false
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Nanometre",
+      "tree": false
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Light",
+      "tree": false
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Extreme ultraviolet",
+      "tree": true
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "X-ray",
+      "tree": false
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Radiation",
+      "tree": true
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Sunlight",
+      "tree": true
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Electric arc",
+      "tree": true
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Cherenkov radiation",
+      "tree": true
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Mercury-vapor lamp",
+      "tree": true
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Tanning lamp",
+      "tree": true
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Blacklight",
+      "tree": true
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Photon",
+      "tree": false
+    },
+    {
+      "source": "Ultraviolet",
+      "target": "Electronvolt",
+      "tree": true
+    },
+    {
+      "source": "Infrared",
+      "target": "Electromagnetic radiation",
+      "tree": false
+    },
+    {
+      "source": "Infrared",
+      "target": "Wavelength",
+      "tree": false
+    },
+    {
+      "source": "Infrared",
+      "target": "Light",
+      "tree": false
+    },
+    {
+      "source": "Infrared",
+      "target": "Microwave",
+      "tree": false
+    },
+    {
+      "source": "Infrared",
+      "target": "Spectral band",
+      "tree": true
+    },
+    {
+      "source": "Infrared",
+      "target": "Red",
+      "tree": true
+    },
+    {
+      "source": "Infrared",
+      "target": "Sunlight",
+      "tree": false
+    },
+    {
+      "source": "Infrared",
+      "target": "Terahertz radiation",
+      "tree": true
+    },
+    {
+      "source": "Infrared",
+      "target": "Black-body radiation",
+      "tree": true
+    },
+    {
+      "source": "Infrared",
+      "target": "Room temperature",
+      "tree": true
+    },
+    {
+      "source": "Infrared",
+      "target": "Energy",
+      "tree": false
+    },
+    {
+      "source": "Infrared",
+      "target": "Momentum",
+      "tree": false
+    },
+    {
+      "source": "Infrared",
+      "target": "Radiation pressure",
+      "tree": true
+    },
+    {
+      "source": "Infrared",
+      "target": "Wave–particle duality",
+      "tree": false
+    },
+    {
+      "source": "Infrared",
+      "target": "Wave",
+      "tree": false
+    },
+    {
+      "source": "Radio wave",
+      "target": "Electromagnetic radiation",
+      "tree": false
+    },
+    {
+      "source": "Radio wave",
+      "target": "Frequency",
+      "tree": false
+    },
+    {
+      "source": "Radio wave",
+      "target": "Wavelength",
+      "tree": false
+    },
+    {
+      "source": "Radio wave",
+      "target": "Electromagnetic spectrum",
+      "tree": false
+    },
+    {
+      "source": "Radio wave",
+      "target": "Hertz",
+      "tree": false
+    },
+    {
+      "source": "Radio wave",
+      "target": "Microwave",
+      "tree": false
+    },
+    {
+      "source": "Radio wave",
+      "target": "Speed of light",
+      "tree": true
+    },
+    {
+      "source": "Radio wave",
+      "target": "Charged particle",
+      "tree": true
+    },
+    {
+      "source": "Radio wave",
+      "target": "Acceleration",
+      "tree": true
+    },
+    {
+      "source": "Radio wave",
+      "target": "Electric current",
+      "tree": true
+    },
+    {
+      "source": "Radio wave",
+      "target": "Lightning",
+      "tree": true
+    },
+    {
+      "source": "Radio wave",
+      "target": "Astronomical radio source",
+      "tree": true
+    },
+    {
+      "source": "Radio wave",
+      "target": "Black-body radiation",
+      "tree": false
+    },
+    {
+      "source": "Radio wave",
+      "target": "Transmitter",
+      "tree": true
+    },
+    {
+      "source": "Radio wave",
+      "target": "Antenna (radio)",
+      "tree": true
+    },
+    {
+      "source": "Microwave",
+      "target": "Electromagnetic radiation",
+      "tree": false
+    },
+    {
+      "source": "Microwave",
+      "target": "Wavelength",
+      "tree": false
+    },
+    {
+      "source": "Microwave",
+      "target": "Radio wave",
+      "tree": false
+    },
+    {
+      "source": "Microwave",
+      "target": "Infrared",
+      "tree": false
+    },
+    {
+      "source": "Microwave",
+      "target": "Frequency",
+      "tree": false
+    },
+    {
+      "source": "Microwave",
+      "target": "Radio-frequency engineering",
+      "tree": true
+    },
+    {
+      "source": "Microwave",
+      "target": "Super high frequency",
+      "tree": true
+    },
+    {
+      "source": "Microwave",
+      "target": "Far infrared",
+      "tree": true
+    },
+    {
+      "source": "Microwave",
+      "target": "Terahertz radiation",
+      "tree": false
+    },
+    {
+      "source": "Microwave",
+      "target": "Ultra high frequency",
+      "tree": true
+    },
+    {
+      "source": "Microwave",
+      "target": "Prefix",
+      "tree": true
+    },
+    {
+      "source": "Microwave",
+      "target": "Radio",
+      "tree": true
+    },
+    {
+      "source": "Microwave",
+      "target": "Radio spectrum",
+      "tree": true
+    },
+    {
+      "source": "Microwave",
+      "target": "S band",
+      "tree": true
+    },
+    {
+      "source": "Microwave",
+      "target": "C band (IEEE)",
+      "tree": true
+    },
+    {
+      "source": "X-ray",
+      "target": "Electromagnetic radiation",
+      "tree": false
+    },
+    {
+      "source": "X-ray",
+      "target": "Wavelength",
+      "tree": false
+    },
+    {
+      "source": "X-ray",
+      "target": "Ultraviolet",
+      "tree": false
+    },
+    {
+      "source": "X-ray",
+      "target": "Gamma ray",
+      "tree": false
+    },
+    {
+      "source": "X-ray",
+      "target": "Nanometre",
+      "tree": false
+    },
+    {
+      "source": "X-ray",
+      "target": "Picometre",
+      "tree": true
+    },
+    {
+      "source": "X-ray",
+      "target": "Frequency",
+      "tree": false
+    },
+    {
+      "source": "X-ray",
+      "target": "Hertz",
+      "tree": false
+    },
+    {
+      "source": "X-ray",
+      "target": "Electronvolt",
+      "tree": false
+    },
+    {
+      "source": "X-ray",
+      "target": "Wilhelm Röntgen",
+      "tree": true
+    },
+    {
+      "source": "X-ray",
+      "target": "Radiography",
+      "tree": true
+    },
+    {
+      "source": "X-ray",
+      "target": "Medical diagnosis",
+      "tree": true
+    },
+    {
+      "source": "X-ray",
+      "target": "Bone fracture",
+      "tree": true
+    },
+    {
+      "source": "X-ray",
+      "target": "Materials science",
+      "tree": true
+    },
+    {
+      "source": "X-ray",
+      "target": "Chemical element",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Physics",
+      "tree": false
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Electric charge",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Electric current",
+      "tree": false
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Classical mechanics",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Classical field theory",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Length scale",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Field strength",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Quantum mechanics",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Field (physics)",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Quantum electrodynamics",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Quantum field theory",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Nanotechnology",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "History of optics",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Electromagnetism",
+      "tree": true
+    },
+    {
+      "source": "Classical electromagnetism",
+      "target": "Michael Faraday",
+      "tree": true
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Optics",
+      "tree": false
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Light",
+      "tree": false
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Wave",
+      "tree": false
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Ray (optics)",
+      "tree": false
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Abstract and concrete",
+      "tree": true
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Homogeneity (physics)",
+      "tree": true
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Interface (matter)",
+      "tree": true
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Optical medium",
+      "tree": true
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Refractive index",
+      "tree": false
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Diffraction",
+      "tree": true
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Wave interference",
+      "tree": false
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Physical optics",
+      "tree": false
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Image",
+      "tree": true
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Optical aberration",
+      "tree": true
+    },
+    {
+      "source": "Geometrical optics",
+      "target": "Line (geometry)",
+      "tree": true
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Optics",
+      "tree": false
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Geometry",
+      "tree": true
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Light",
+      "tree": false
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Electromagnetic radiation",
+      "tree": false
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Curve",
+      "tree": true
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Wavefront",
+      "tree": true
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Energy",
+      "tree": false
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Light field",
+      "tree": true
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Maxwell's equations",
+      "tree": true
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Wavelength",
+      "tree": false
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Geometrical optics",
+      "tree": false
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Diffraction",
+      "tree": false
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Physical optics",
+      "tree": false
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Wave interference",
+      "tree": false
+    },
+    {
+      "source": "Ray (optics)",
+      "target": "Phase (waves)",
+      "tree": true
+    },
+    {
+      "source": "Physical optics",
+      "target": "Physics",
+      "tree": false
+    },
+    {
+      "source": "Physical optics",
+      "target": "Optics",
+      "tree": false
+    },
+    {
+      "source": "Physical optics",
+      "target": "Wave interference",
+      "tree": false
+    },
+    {
+      "source": "Physical optics",
+      "target": "Diffraction",
+      "tree": false
+    }
+  ],
+  "sccs": [
+    {
+      "id": 0,
+      "size": 9,
+      "level": 2,
+      "members": [
+        "Electromagnetic radiation",
+        "Physics",
+        "Light",
+        "Microwave",
+        "Infrared",
+        "X-ray",
+        "Ultraviolet",
+        "Radio wave",
+        "Matter"
+      ],
+      "ppr": 0.24513757
+    },
+    {
+      "id": 1,
+      "size": 4,
+      "level": 0,
+      "members": [
+        "Optics",
+        "Physical optics",
+        "Ray (optics)",
+        "Geometrical optics"
+      ],
+      "ppr": 0.45639153
+    },
+    {
+      "id": 2,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Abstract and concrete"
+      ],
+      "ppr": 0.0012328
+    },
+    {
+      "id": 3,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Academic discipline"
+      ],
+      "ppr": 0.00154497
+    },
+    {
+      "id": 4,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Acceleration"
+      ],
+      "ppr": 0.0012328
+    },
+    {
+      "id": 5,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Albert Einstein"
+      ],
+      "ppr": 0.00116402
+    },
+    {
+      "id": 6,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Antenna (radio)"
+      ],
+      "ppr": 0.00121693
+    },
+    {
+      "id": 7,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Antonie van Leeuwenhoek"
+      ],
+      "ppr": 0.00107407
+    },
+    {
+      "id": 8,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Astronomical radio source"
+      ],
+      "ppr": 0.00142857
+    },
+    {
+      "id": 9,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Atom"
+      ],
+      "ppr": 0.00124339
+    },
+    {
+      "id": 10,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Binoculars"
+      ],
+      "ppr": 0.00121164
+    },
+    {
+      "id": 11,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Biology"
+      ],
+      "ppr": 0.00162434
+    },
+    {
+      "id": 12,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Black-body radiation"
+      ],
+      "ppr": 0.00264021
+    },
+    {
+      "id": 13,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Blacklight"
+      ],
+      "ppr": 0.00133333
+    },
+    {
+      "id": 14,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Bone fracture"
+      ],
+      "ppr": 0.00140212
+    },
+    {
+      "id": 15,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "C band (IEEE)"
+      ],
+      "ppr": 0.00146561
+    },
+    {
+      "id": 16,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Camera"
+      ],
+      "ppr": 0.00118519
+    },
+    {
+      "id": 17,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Camera obscura"
+      ],
+      "ppr": 0.00110582
+    },
+    {
+      "id": 18,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Charged particle"
+      ],
+      "ppr": 0.00133862
+    },
+    {
+      "id": 19,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Chemical element"
+      ],
+      "ppr": 0.00142328
+    },
+    {
+      "id": 20,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Chemistry"
+      ],
+      "ppr": 0.00173016
+    },
+    {
+      "id": 21,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Cherenkov radiation"
+      ],
+      "ppr": 0.00134921
+    },
+    {
+      "id": 22,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Classical electromagnetism"
+      ],
+      "ppr": 0.02087302
+    },
+    {
+      "id": 23,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Classical field theory"
+      ],
+      "ppr": 0.00111111
+    },
+    {
+      "id": 24,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Classical mechanics"
+      ],
+      "ppr": 0.00112169
+    },
+    {
+      "id": 25,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Curve"
+      ],
+      "ppr": 0.00119048
+    },
+    {
+      "id": 26,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Diffraction"
+      ],
+      "ppr": 0.00707407
+    },
+    {
+      "id": 27,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Electric arc"
+      ],
+      "ppr": 0.00133862
+    },
+    {
+      "id": 28,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Electric charge"
+      ],
+      "ppr": 0.00107407
+    },
+    {
+      "id": 29,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Electric current"
+      ],
+      "ppr": 0.00228571
+    },
+    {
+      "id": 30,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Electromagnetic field"
+      ],
+      "ppr": 0.00193651
+    },
+    {
+      "id": 31,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Electromagnetic spectrum"
+      ],
+      "ppr": 0.0026455
+    },
+    {
+      "id": 32,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Electromagnetism"
+      ],
+      "ppr": 0.00109524
+    },
+    {
+      "id": 33,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Electronvolt"
+      ],
+      "ppr": 0.0028254
+    },
+    {
+      "id": 34,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Elementary particle"
+      ],
+      "ppr": 0.00166667
+    },
+    {
+      "id": 35,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Energy"
+      ],
+      "ppr": 0.00431217
+    },
+    {
+      "id": 36,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Extreme ultraviolet"
+      ],
+      "ppr": 0.00144974
+    },
+    {
+      "id": 37,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Far infrared"
+      ],
+      "ppr": 0.00147619
+    },
+    {
+      "id": 38,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Field (physics)"
+      ],
+      "ppr": 0.00110053
+    },
+    {
+      "id": 39,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Field strength"
+      ],
+      "ppr": 0.00107937
+    },
+    {
+      "id": 40,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Force"
+      ],
+      "ppr": 0.00150265
+    },
+    {
+      "id": 41,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Frequency"
+      ],
+      "ppr": 0.00762963
+    },
+    {
+      "id": 42,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Galileo Galilei"
+      ],
+      "ppr": 0.00093651
+    },
+    {
+      "id": 43,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Gamma ray"
+      ],
+      "ppr": 0.00497884
+    },
+    {
+      "id": 44,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Gas"
+      ],
+      "ppr": 0.00132275
+    },
+    {
+      "id": 45,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Geometry"
+      ],
+      "ppr": 0.00120106
+    },
+    {
+      "id": 46,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Golay cell"
+      ],
+      "ppr": 0.00127513
+    },
+    {
+      "id": 47,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Heat"
+      ],
+      "ppr": 0.0011746
+    },
+    {
+      "id": 48,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Heinrich Hertz"
+      ],
+      "ppr": 0.00104762
+    },
+    {
+      "id": 49,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Hertz"
+      ],
+      "ppr": 0.00431746
+    },
+    {
+      "id": 50,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "History of optics"
+      ],
+      "ppr": 0.00124339
+    },
+    {
+      "id": 51,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Homogeneity (physics)"
+      ],
+      "ppr": 0.00127513
+    },
+    {
+      "id": 52,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Human eye"
+      ],
+      "ppr": 0.0016455
+    },
+    {
+      "id": 53,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Image"
+      ],
+      "ppr": 0.00125397
+    },
+    {
+      "id": 54,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Image sensor"
+      ],
+      "ppr": 0.00107937
+    },
+    {
+      "id": 55,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Intensity (physics)"
+      ],
+      "ppr": 0.00166138
+    },
+    {
+      "id": 56,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Interface (matter)"
+      ],
+      "ppr": 0.00130159
+    },
+    {
+      "id": 57,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Interferometry"
+      ],
+      "ppr": 0.0011746
+    },
+    {
+      "id": 58,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Invariant mass"
+      ],
+      "ppr": 0.00121693
+    },
+    {
+      "id": 59,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Length scale"
+      ],
+      "ppr": 0.00104233
+    },
+    {
+      "id": 60,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Light field"
+      ],
+      "ppr": 0.00121164
+    },
+    {
+      "id": 61,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Lightning"
+      ],
+      "ppr": 0.00124339
+    },
+    {
+      "id": 62,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Line (geometry)"
+      ],
+      "ppr": 0.00124868
+    },
+    {
+      "id": 63,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Liquid"
+      ],
+      "ppr": 0.00140212
+    },
+    {
+      "id": 64,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "List of particles"
+      ],
+      "ppr": 0.00131217
+    },
+    {
+      "id": 65,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Mass"
+      ],
+      "ppr": 0.00129101
+    },
+    {
+      "id": 66,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Massless particle"
+      ],
+      "ppr": 0.00129101
+    },
+    {
+      "id": 67,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Materials science"
+      ],
+      "ppr": 0.00133333
+    },
+    {
+      "id": 68,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Mathematics"
+      ],
+      "ppr": 0.00150794
+    },
+    {
+      "id": 69,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Maxwell's equations"
+      ],
+      "ppr": 0.00130159
+    },
+    {
+      "id": 70,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Medical diagnosis"
+      ],
+      "ppr": 0.00148677
+    },
+    {
+      "id": 71,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Mercury-vapor lamp"
+      ],
+      "ppr": 0.00145503
+    },
+    {
+      "id": 72,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Michael Faraday"
+      ],
+      "ppr": 0.00111111
+    },
+    {
+      "id": 73,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Microscope"
+      ],
+      "ppr": 0.00102646
+    },
+    {
+      "id": 74,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Momentum"
+      ],
+      "ppr": 0.0032328
+    },
+    {
+      "id": 75,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Motion"
+      ],
+      "ppr": 0.00150265
+    },
+    {
+      "id": 76,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Nanometre"
+      ],
+      "ppr": 0.00410053
+    },
+    {
+      "id": 77,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Nanotechnology"
+      ],
+      "ppr": 0.00120106
+    },
+    {
+      "id": 78,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Natural philosophy"
+      ],
+      "ppr": 0.00162963
+    },
+    {
+      "id": 79,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Optical aberration"
+      ],
+      "ppr": 0.00115873
+    },
+    {
+      "id": 80,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Optical instrument"
+      ],
+      "ppr": 0.0208254
+    },
+    {
+      "id": 81,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Optical medium"
+      ],
+      "ppr": 0.00112169
+    },
+    {
+      "id": 82,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Optical radiation"
+      ],
+      "ppr": 0.00148677
+    },
+    {
+      "id": 83,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Outline of physical science"
+      ],
+      "ppr": 0.00133333
+    },
+    {
+      "id": 84,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Periscope"
+      ],
+      "ppr": 0.00113757
+    },
+    {
+      "id": 85,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Phase (waves)"
+      ],
+      "ppr": 0.00109524
+    },
+    {
+      "id": 86,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Phonon"
+      ],
+      "ppr": 0.00117989
+    },
+    {
+      "id": 87,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Photodetector"
+      ],
+      "ppr": 0.02104762
+    },
+    {
+      "id": 88,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Photodiode"
+      ],
+      "ppr": 0.00107407
+    },
+    {
+      "id": 89,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Photoelectric effect"
+      ],
+      "ppr": 0.00119577
+    },
+    {
+      "id": 90,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Photomultiplier tube"
+      ],
+      "ppr": 0.0011164
+    },
+    {
+      "id": 91,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Photon"
+      ],
+      "ppr": 0.00339683
+    },
+    {
+      "id": 92,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Physicist"
+      ],
+      "ppr": 0.00162963
+    },
+    {
+      "id": 93,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Picometre"
+      ],
+      "ppr": 0.00135979
+    },
+    {
+      "id": 94,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Pinhole camera"
+      ],
+      "ppr": 0.00112698
+    },
+    {
+      "id": 95,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Polarization (waves)"
+      ],
+      "ppr": 0.00104762
+    },
+    {
+      "id": 96,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Prefix"
+      ],
+      "ppr": 0.00142857
+    },
+    {
+      "id": 97,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Quantum electrodynamics"
+      ],
+      "ppr": 0.00110582
+    },
+    {
+      "id": 98,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Quantum engineering"
+      ],
+      "ppr": 0.00104233
+    },
+    {
+      "id": 99,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Quantum field theory"
+      ],
+      "ppr": 0.00113228
+    },
+    {
+      "id": 100,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Quantum mechanics"
+      ],
+      "ppr": 0.00121164
+    },
+    {
+      "id": 101,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Radiant energy"
+      ],
+      "ppr": 0.00173016
+    },
+    {
+      "id": 102,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Radiation"
+      ],
+      "ppr": 0.00131746
+    },
+    {
+      "id": 103,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Radiation pressure"
+      ],
+      "ppr": 0.00175661
+    },
+    {
+      "id": 104,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Radio"
+      ],
+      "ppr": 0.00149206
+    },
+    {
+      "id": 105,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Radio spectrum"
+      ],
+      "ppr": 0.00150794
+    },
+    {
+      "id": 106,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Radio-frequency engineering"
+      ],
+      "ppr": 0.00144974
+    },
+    {
+      "id": 107,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Radiography"
+      ],
+      "ppr": 0.0014709
+    },
+    {
+      "id": 108,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Red"
+      ],
+      "ppr": 0.00143386
+    },
+    {
+      "id": 109,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Refractive index"
+      ],
+      "ppr": 0.00204233
+    },
+    {
+      "id": 110,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Room temperature"
+      ],
+      "ppr": 0.00135979
+    },
+    {
+      "id": 111,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Rotating line camera"
+      ],
+      "ppr": 0.00116402
+    },
+    {
+      "id": 112,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "S band"
+      ],
+      "ppr": 0.00144444
+    },
+    {
+      "id": 113,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Science"
+      ],
+      "ppr": 0.00174603
+    },
+    {
+      "id": 114,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Scientific Revolution"
+      ],
+      "ppr": 0.00158201
+    },
+    {
+      "id": 115,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Solar cell"
+      ],
+      "ppr": 0.00118519
+    },
+    {
+      "id": 116,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Solid"
+      ],
+      "ppr": 0.00121164
+    },
+    {
+      "id": 117,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Space"
+      ],
+      "ppr": 0.00160317
+    },
+    {
+      "id": 118,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Spectral band"
+      ],
+      "ppr": 0.00138624
+    },
+    {
+      "id": 119,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Speed of light"
+      ],
+      "ppr": 0.00132804
+    },
+    {
+      "id": 120,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "State of matter"
+      ],
+      "ppr": 0.00118519
+    },
+    {
+      "id": 121,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Subatomic particle"
+      ],
+      "ppr": 0.00119048
+    },
+    {
+      "id": 122,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Sunlight"
+      ],
+      "ppr": 0.00274074
+    },
+    {
+      "id": 123,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Super high frequency"
+      ],
+      "ppr": 0.00134921
+    },
+    {
+      "id": 124,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Tanning lamp"
+      ],
+      "ppr": 0.00132275
+    },
+    {
+      "id": 125,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Telescope"
+      ],
+      "ppr": 0.00121164
+    },
+    {
+      "id": 126,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Terahertz radiation"
+      ],
+      "ppr": 0.00295238
+    },
+    {
+      "id": 127,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Time"
+      ],
+      "ppr": 0.00159788
+    },
+    {
+      "id": 128,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Transmitter"
+      ],
+      "ppr": 0.0013545
+    },
+    {
+      "id": 129,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Ultra high frequency"
+      ],
+      "ppr": 0.0013545
+    },
+    {
+      "id": 130,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Valence and conduction bands"
+      ],
+      "ppr": 0.00114815
+    },
+    {
+      "id": 131,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Visual perception"
+      ],
+      "ppr": 0.00146561
+    },
+    {
+      "id": 132,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Volume"
+      ],
+      "ppr": 0.00119577
+    },
+    {
+      "id": 133,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Wave"
+      ],
+      "ppr": 0.00456085
+    },
+    {
+      "id": 134,
+      "size": 1,
+      "level": 2,
+      "members": [
+        "Wave interference"
+      ],
+      "ppr": 0.00846032
+    },
+    {
+      "id": 135,
+      "size": 1,
+      "level": 1,
+      "members": [
+        "Wavefront"
+      ],
+      "ppr": 0.0013545
+    },
+    {
+      "id": 136,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Wavelength"
+      ],
+      "ppr": 0.01114286
+    },
+    {
+      "id": 137,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Wave–particle duality"
+      ],
+      "ppr": 0.00312698
+    },
+    {
+      "id": 138,
+      "size": 1,
+      "level": 3,
+      "members": [
+        "Wilhelm Röntgen"
+      ],
+      "ppr": 0.00151852
+    }
+  ],
+  "dag_edges": [
+    {
+      "source": 0,
+      "target": 3
+    },
+    {
+      "source": 0,
+      "target": 4
+    },
+    {
+      "source": 0,
+      "target": 6
+    },
+    {
+      "source": 0,
+      "target": 8
+    },
+    {
+      "source": 0,
+      "target": 9
+    },
+    {
+      "source": 0,
+      "target": 11
+    },
+    {
+      "source": 0,
+      "target": 12
+    },
+    {
+      "source": 0,
+      "target": 13
+    },
+    {
+      "source": 0,
+      "target": 14
+    },
+    {
+      "source": 0,
+      "target": 15
+    },
+    {
+      "source": 0,
+      "target": 18
+    },
+    {
+      "source": 0,
+      "target": 19
+    },
+    {
+      "source": 0,
+      "target": 20
+    },
+    {
+      "source": 0,
+      "target": 21
+    },
+    {
+      "source": 0,
+      "target": 27
+    },
+    {
+      "source": 0,
+      "target": 29
+    },
+    {
+      "source": 0,
+      "target": 30
+    },
+    {
+      "source": 0,
+      "target": 31
+    },
+    {
+      "source": 0,
+      "target": 33
+    },
+    {
+      "source": 0,
+      "target": 34
+    },
+    {
+      "source": 0,
+      "target": 35
+    },
+    {
+      "source": 0,
+      "target": 36
+    },
+    {
+      "source": 0,
+      "target": 37
+    },
+    {
+      "source": 0,
+      "target": 40
+    },
+    {
+      "source": 0,
+      "target": 41
+    },
+    {
+      "source": 0,
+      "target": 43
+    },
+    {
+      "source": 0,
+      "target": 44
+    },
+    {
+      "source": 0,
+      "target": 47
+    },
+    {
+      "source": 0,
+      "target": 49
+    },
+    {
+      "source": 0,
+      "target": 52
+    },
+    {
+      "source": 0,
+      "target": 55
+    },
+    {
+      "source": 0,
+      "target": 58
+    },
+    {
+      "source": 0,
+      "target": 61
+    },
+    {
+      "source": 0,
+      "target": 63
+    },
+    {
+      "source": 0,
+      "target": 64
+    },
+    {
+      "source": 0,
+      "target": 65
+    },
+    {
+      "source": 0,
+      "target": 66
+    },
+    {
+      "source": 0,
+      "target": 67
+    },
+    {
+      "source": 0,
+      "target": 68
+    },
+    {
+      "source": 0,
+      "target": 70
+    },
+    {
+      "source": 0,
+      "target": 71
+    },
+    {
+      "source": 0,
+      "target": 74
+    },
+    {
+      "source": 0,
+      "target": 75
+    },
+    {
+      "source": 0,
+      "target": 76
+    },
+    {
+      "source": 0,
+      "target": 78
+    },
+    {
+      "source": 0,
+      "target": 82
+    },
+    {
+      "source": 0,
+      "target": 83
+    },
+    {
+      "source": 0,
+      "target": 91
+    },
+    {
+      "source": 0,
+      "target": 92
+    },
+    {
+      "source": 0,
+      "target": 93
+    },
+    {
+      "source": 0,
+      "target": 96
+    },
+    {
+      "source": 0,
+      "target": 101
+    },
+    {
+      "source": 0,
+      "target": 102
+    },
+    {
+      "source": 0,
+      "target": 103
+    },
+    {
+      "source": 0,
+      "target": 104
+    },
+    {
+      "source": 0,
+      "target": 105
+    },
+    {
+      "source": 0,
+      "target": 106
+    },
+    {
+      "source": 0,
+      "target": 107
+    },
+    {
+      "source": 0,
+      "target": 108
+    },
+    {
+      "source": 0,
+      "target": 110
+    },
+    {
+      "source": 0,
+      "target": 112
+    },
+    {
+      "source": 0,
+      "target": 113
+    },
+    {
+      "source": 0,
+      "target": 114
+    },
+    {
+      "source": 0,
+      "target": 116
+    },
+    {
+      "source": 0,
+      "target": 117
+    },
+    {
+      "source": 0,
+      "target": 118
+    },
+    {
+      "source": 0,
+      "target": 119
+    },
+    {
+      "source": 0,
+      "target": 120
+    },
+    {
+      "source": 0,
+      "target": 121
+    },
+    {
+      "source": 0,
+      "target": 122
+    },
+    {
+      "source": 0,
+      "target": 123
+    },
+    {
+      "source": 0,
+      "target": 124
+    },
+    {
+      "source": 0,
+      "target": 126
+    },
+    {
+      "source": 0,
+      "target": 127
+    },
+    {
+      "source": 0,
+      "target": 128
+    },
+    {
+      "source": 0,
+      "target": 129
+    },
+    {
+      "source": 0,
+      "target": 131
+    },
+    {
+      "source": 0,
+      "target": 132
+    },
+    {
+      "source": 0,
+      "target": 133
+    },
+    {
+      "source": 0,
+      "target": 136
+    },
+    {
+      "source": 0,
+      "target": 137
+    },
+    {
+      "source": 0,
+      "target": 138
+    },
+    {
+      "source": 1,
+      "target": 0
+    },
+    {
+      "source": 1,
+      "target": 2
+    },
+    {
+      "source": 1,
+      "target": 22
+    },
+    {
+      "source": 1,
+      "target": 25
+    },
+    {
+      "source": 1,
+      "target": 26
+    },
+    {
+      "source": 1,
+      "target": 35
+    },
+    {
+      "source": 1,
+      "target": 45
+    },
+    {
+      "source": 1,
+      "target": 51
+    },
+    {
+      "source": 1,
+      "target": 53
+    },
+    {
+      "source": 1,
+      "target": 56
+    },
+    {
+      "source": 1,
+      "target": 60
+    },
+    {
+      "source": 1,
+      "target": 62
+    },
+    {
+      "source": 1,
+      "target": 69
+    },
+    {
+      "source": 1,
+      "target": 79
+    },
+    {
+      "source": 1,
+      "target": 80
+    },
+    {
+      "source": 1,
+      "target": 81
+    },
+    {
+      "source": 1,
+      "target": 85
+    },
+    {
+      "source": 1,
+      "target": 87
+    },
+    {
+      "source": 1,
+      "target": 109
+    },
+    {
+      "source": 1,
+      "target": 133
+    },
+    {
+      "source": 1,
+      "target": 134
+    },
+    {
+      "source": 1,
+      "target": 135
+    },
+    {
+      "source": 1,
+      "target": 136
+    },
+    {
+      "source": 22,
+      "target": 0
+    },
+    {
+      "source": 22,
+      "target": 23
+    },
+    {
+      "source": 22,
+      "target": 24
+    },
+    {
+      "source": 22,
+      "target": 28
+    },
+    {
+      "source": 22,
+      "target": 29
+    },
+    {
+      "source": 22,
+      "target": 32
+    },
+    {
+      "source": 22,
+      "target": 38
+    },
+    {
+      "source": 22,
+      "target": 39
+    },
+    {
+      "source": 22,
+      "target": 50
+    },
+    {
+      "source": 22,
+      "target": 59
+    },
+    {
+      "source": 22,
+      "target": 72
+    },
+    {
+      "source": 22,
+      "target": 77
+    },
+    {
+      "source": 22,
+      "target": 97
+    },
+    {
+      "source": 22,
+      "target": 99
+    },
+    {
+      "source": 22,
+      "target": 100
+    },
+    {
+      "source": 80,
+      "target": 0
+    },
+    {
+      "source": 80,
+      "target": 7
+    },
+    {
+      "source": 80,
+      "target": 10
+    },
+    {
+      "source": 80,
+      "target": 16
+    },
+    {
+      "source": 80,
+      "target": 17
+    },
+    {
+      "source": 80,
+      "target": 31
+    },
+    {
+      "source": 80,
+      "target": 42
+    },
+    {
+      "source": 80,
+      "target": 57
+    },
+    {
+      "source": 80,
+      "target": 73
+    },
+    {
+      "source": 80,
+      "target": 84
+    },
+    {
+      "source": 80,
+      "target": 91
+    },
+    {
+      "source": 80,
+      "target": 94
+    },
+    {
+      "source": 80,
+      "target": 125
+    },
+    {
+      "source": 80,
+      "target": 134
+    },
+    {
+      "source": 87,
+      "target": 0
+    },
+    {
+      "source": 87,
+      "target": 5
+    },
+    {
+      "source": 87,
+      "target": 46
+    },
+    {
+      "source": 87,
+      "target": 48
+    },
+    {
+      "source": 87,
+      "target": 54
+    },
+    {
+      "source": 87,
+      "target": 86
+    },
+    {
+      "source": 87,
+      "target": 88
+    },
+    {
+      "source": 87,
+      "target": 89
+    },
+    {
+      "source": 87,
+      "target": 90
+    },
+    {
+      "source": 87,
+      "target": 95
+    },
+    {
+      "source": 87,
+      "target": 98
+    },
+    {
+      "source": 87,
+      "target": 109
+    },
+    {
+      "source": 87,
+      "target": 111
+    },
+    {
+      "source": 87,
+      "target": 115
+    },
+    {
+      "source": 87,
+      "target": 130
+    }
+  ]
+}
