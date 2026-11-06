@@ -4,9 +4,13 @@
 **Date:** April 2026  
 **Scope:** PhD-level analysis of graph construction, entity alignment, and retrieval for Wikipedia + SEP + arXiv knowledge graphs
 
+> **Repository status.** Section 9 (SCC condensation, topological levels, CurriculumScore) is what `src/kgc` and the web demo run on live Wikipedia outlinks. Sections 1–8 are research notes. Sections 10–19 (bandits, entropy, HMM/HHMM, SARSA, Dyna, counterfactuals) are not implemented in this repository. Section 20 is partial: the demo uses a Sarkar tree embedding, not the polar PageRank layout in §20.3.
+
 ---
 
 ## 1. The Exponential Explosion Problem in Reference Graphs
+
+> **Status: research note.** Not executed by this repository's pipeline.
 
 ### 1.1 Problem Formulation
 
@@ -59,6 +63,8 @@ This is fundamentally a **graph sparsification** problem: find H ⊆ G such that
 
 ## 2. Graph Sparsification via Spectral and Semantic Methods
 
+> **Status: research note.** Not executed by this repository's pipeline. Optional `--sparsify-k` on the crawler keeps the k outlinks with the highest target PageRank; that is a small piece of the idea in this section, not the spectral algorithm.
+
 ### 2.1 Spectral Sparsification Framework
 
 The Spielman-Teng framework for spectral sparsification (Spielman & Teng, 2011) seeks a subgraph **H ⊆ G** such that the Laplacians are "close" in a quadratic form sense:
@@ -106,6 +112,8 @@ The advantage over uniform sampling: PPR biases toward semantically-coherent edg
 ---
 
 ## 3. The Three-Source Graph Union Problem
+
+> **Status: research note.** Not executed by this repository's pipeline. The crawler reads English Wikipedia only.
 
 ### 3.1 Source Graph Characteristics
 
@@ -160,6 +168,8 @@ For example, if SEP article s contains the text "See [Cognitive_science](https:/
 
 ## 4. Citation Network Analysis for arXiv: Reconstruction and Authority
 
+> **Status: research note.** Not executed by this repository's pipeline.
+
 ### 4.1 The Missing Graph Problem
 
 arXiv is a preprint server without a native citation graph. To build one, three approaches:
@@ -211,6 +221,8 @@ For cognitive science, high-authority papers include Newell & Simon's "GPS" pape
 
 ## 5. Information-Theoretic Bounds on Knowledge Compression
 
+> **Status: research note.** Not executed by this repository's pipeline.
+
 ### 5.1 The Coalition Problem
 
 Suppose we crawl and collect N source documents (Wikipedia articles, SEP entries, arXiv papers) with overlapping information. The question: how much can we compress?
@@ -253,6 +265,8 @@ where I_overlap quantifies shared information. If sources are independent, I_ove
 ---
 
 ## 6. Existing Tools and Libraries: Honest Assessment
+
+> **Status: research note.** Not executed by this repository's pipeline. The live pipeline uses the Python standard library and the MediaWiki API.
 
 ### 6.1 Graph Processing
 
@@ -340,6 +354,8 @@ where I_overlap quantifies shared information. If sources are independent, I_ove
 
 ## 7. Recommended Mathematical Framework for the Unified System
 
+> **Status: research note.** Not executed by this repository's pipeline.
+
 ### 7.1 Formal Definitions
 
 Define the unified system as a tuple:
@@ -408,6 +424,8 @@ Evaluation metrics: Mean Reciprocal Rank (MRR) of relevant entities; normalized 
 
 ## 8. Synthesis and Implementation Roadmap
 
+> **Status: research note.** Not executed by this repository's pipeline. The roadmap below predates the Wikipedia crawler in `src/build_curriculum.py`.
+
 ### 8.1 System Architecture
 
 The practical system comprises:
@@ -452,6 +470,8 @@ For a system with ~50K entities (20K Wikipedia + 1.5K SEP + 30K arXiv), end-to-e
 ---
 
 ## 9. Topological Ordering via SCC Condensation: Finding Basis Articles
+
+> **Status: implemented.** Iterative Tarjan, the condensation DAG, longest-path levels, and CurriculumScore = PPR / (1 + level) run in `src/kgc` and in `docs/curriculum.js`. An edge follows the Wikipedia outlink: u → v means page u links to v. Level 0 components are condensation sources.
 
 ### 9.1 The Basis Article Problem
 
@@ -562,6 +582,8 @@ Nickel, M., & Kiela, D. (2017). Poincaré Embeddings for Learning Hierarchical R
 
 ## 10. Bandit-Guided Frontier Exploration
 
+> **Status: not in this repo.** The crawl expands a fixed fanout in prose order. There is no bandit, UCB, or Thompson sampler here.
+
 ### 10.1 The Explore-Exploit Tradeoff in Graph Crawling
 
 Standard BFS treats the frontier as a FIFO queue: all unexpanded nodes are equally worthy. This is clearly suboptimal — we'd prefer to expand topically relevant nodes first while still discovering unexpected connections.
@@ -661,6 +683,8 @@ This is a direct implementation of the successive elimination algorithm (Even-Da
 
 ## 11. Information-Theoretic Exploration and Entropy
 
+> **Status: not in this repo.** Information-directed sampling and Beta posteriors are not wired to the crawler.
+
 ### 11.1 Why Entropy Matters
 
 UCB's exploration bonus √(ln T / N(v)) is a *proxy* for uncertainty — it comes from Hoeffding's concentration inequality and makes no distributional assumptions. But we have a richer model: each frontier node v has a Beta(a_v, b_v) posterior whose entropy we can compute exactly.
@@ -720,6 +744,8 @@ decreases monotonically as the crawler learns. The rate of decrease dH_total/dt 
 ---
 
 ## 12. Hidden Markov Model for Topic Regimes
+
+> **Status: not in this repo.** No regime tracker runs on the crawl.
 
 ### 12.1 Non-Stationarity in Graph Crawling
 
@@ -804,6 +830,8 @@ This gives the Poincaré embedding physical meaning: angular position encodes to
 
 ## 13. Empirical Similarity Structure and Degree-Adaptive Thresholds
 
+> **Status: not in this repo.** The degree-adaptive threshold is not applied. The fanout cap is a fixed integer.
+
 ### 13.1 Similarity Dilution with Degree
 
 Analysis of the ref_counts.db knowledge graph (1,387 pages, 45,635 edges) reveals a systematic relationship between page out-degree and edge similarity:
@@ -849,6 +877,8 @@ This peak entropy band coincides with "integrative hub" pages (Statistics, Philo
 ---
 
 ## 14. Hierarchical Hidden Markov Model (HHMM)
+
+> **Status: not in this repo.** The demo does not classify articles into HHMM domains. Color on the map is topological level.
 
 ### 14.1 Motivation: Why Hierarchy?
 
@@ -933,6 +963,8 @@ This connects directly to three of the proposed research directions:
 
 ## 15. MDP Formulation and the Bellman Equation
 
+> **Status: not in this repo.** The crawler is not an MDP and does not solve a Bellman equation.
+
 ### 15.1 From Bandits to Sequential Decisions
 
 The bandit formulation (Sections 10-11) is myopic: it optimizes the *next* expansion independently of all future expansions. But crawling has sequential consequences — expanding a node changes the frontier, the HHMM belief, and the options available at the next step. The Markov Decision Process (MDP) formulation captures this.
@@ -1005,6 +1037,8 @@ The SARSA agent LEARNS this relationship, discovering that the UCB bonus is a *p
 
 ## 16. SARSA(λ) with Function Approximation
 
+> **Status: not in this repo.** There is no SARSA agent and no learned reward.
+
 ### 16.1 Why SARSA over Q-learning?
 
 SARSA learns the Q-function of the *policy it's actually following* (on-policy), while Q-learning learns the Q-function of the *optimal* policy (off-policy). For crawling, SARSA is preferred because:
@@ -1070,6 +1104,8 @@ This emergent schedule (exploit early → explore mid → exploit late) mirrors 
 
 ## 17. Online/Offline Planning Integration
 
+> **Status: not in this repo.** Value iteration and Dyna planning are not part of the pipeline.
+
 ### 17.1 Offline: Value Iteration on Known Graph
 
 Given a pre-crawled graph (ref_counts.db), we can run the Bellman backup directly:
@@ -1112,6 +1148,8 @@ This is the full AlphaGo pipeline (Silver et al., 2016) applied to knowledge gra
 ---
 
 ## 18. The Dyna Architecture: Simulated Planning on the Known Graph
+
+> **Status: not in this repo.** No simulated backups run after a page is fetched.
 
 ### 18.1 The Free Planning Insight
 
@@ -1163,6 +1201,8 @@ The optimal R_plan depends on model accuracy. Since our model is exact for expan
 ---
 
 ## 19. Counterfactual Analysis on the DAG
+
+> **Status: not in this repo.** The condensation is a DAG, and this section's do-calculus and Shapley audit are not computed.
 
 ### 19.1 Pearl's Causal Hierarchy and the Knowledge Graph
 
@@ -1262,6 +1302,8 @@ The counterfactual analysis identifies WHERE the policy went wrong (high-regret 
 ---
 
 ## 20. Hyperbolic Geometry of Knowledge Graphs
+
+> **Status: partial.** The disk metric, geodesics, and the half-plane map are used by the demo. Positions come from a Sarkar embedding of the BFS spanning tree (constant hyperbolic edge length). They are not the polar PageRank layout in §20.3. The static SVGs under `assets/` still use that older polar layout on synthetic graphs.
 
 ### 20.1 Why Hyperbolic Space?
 

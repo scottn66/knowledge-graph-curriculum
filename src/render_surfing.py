@@ -4,7 +4,9 @@ Render surfing knowledge graph as Poincaré disk + half-plane SVGs.
 Uses hyperbolic_engine.py with surfing-specific domain colors and sectors.
 """
 
-import json, math, random
+import json, math, os, random
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 from hyperbolic_engine import (
     Point, Ideal, Line, Hypercycle, Circle, Horocycle, Transform,
     SVGRenderer, _clamp_to_disk
@@ -54,7 +56,7 @@ def lighten(hex_color, factor=0.3):
 
 
 # ─── Load data ──────────────────────────────────────────────────────
-with open('/sessions/charming-exciting-cori/poincare_art_data_surfing.json') as f:
+with open(os.path.join(ROOT, "data", "poincare_art_data_surfing.json")) as f:
     data = json.load(f)
 
 nodes = data['nodes']
@@ -463,7 +465,7 @@ def render_halfplane():
 
 if __name__ == '__main__':
     import os
-    OUT = '/sessions/charming-exciting-cori/surfing_svgs'
+    OUT = os.path.join(ROOT, "assets")
     os.makedirs(OUT, exist_ok=True)
 
     print("Rendering Poincaré disk...")

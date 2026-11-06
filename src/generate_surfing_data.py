@@ -11,7 +11,9 @@ knowledge graph from domain knowledge:
   - Poincaré disk coordinates: r = f(PPR), θ = f(domain sector)
 """
 
-import json, math, random
+import json, math, os, random
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 random.seed(2026)
 
 # ═══════════════════════════════════════════════════════════════
@@ -444,7 +446,7 @@ for n in nodes:
 # ═══════════════════════════════════════════════════════════════
 
 output = {"nodes": nodes, "edges": edges}
-outpath = "/sessions/charming-exciting-cori/poincare_art_data_surfing.json"
+outpath = os.path.join(ROOT, "data", "poincare_art_data_surfing.json")
 with open(outpath, 'w') as f:
     json.dump(output, f, indent=2)
 

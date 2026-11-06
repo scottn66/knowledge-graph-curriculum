@@ -15,7 +15,9 @@ Renders two views:
   2. Poincaré Half-Plane via Transform.disk_to_half() (poincare_halfplane_hyp.svg)
 """
 
-import json, math, random, colorsys
+import json, math, os, random, colorsys
+
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 from hyperbolic_engine import (
     Point, Ideal, Line, Hypercycle, Circle, Horocycle, Transform,
     SVGRenderer, _clamp_to_disk
@@ -24,7 +26,7 @@ from hyperbolic_engine import (
 random.seed(42)
 
 # ─── Load graph data ──────────────────────────────────────────────────
-with open('/sessions/charming-exciting-cori/poincare_art_data.json') as f:
+with open(os.path.join(ROOT, "data", "poincare_art_data_cogsci.json")) as f:
     data = json.load(f)
 
 nodes = data['nodes']
@@ -514,14 +516,14 @@ def render_halfplane():
 if __name__ == '__main__':
     print("Rendering Poincaré disk...")
     disk_svg = render_disk()
-    disk_path = '/sessions/charming-exciting-cori/mnt/rag/poincare_disk_hyp.svg'
+    disk_path = os.path.join(ROOT, "assets", "poincare_disk_hyp.svg")
     with open(disk_path, 'w') as f:
         f.write(disk_svg)
     print(f"  → {disk_path} ({len(disk_svg):,} bytes)")
 
     print("Rendering Poincaré half-plane...")
     hp_svg = render_halfplane()
-    hp_path = '/sessions/charming-exciting-cori/mnt/rag/poincare_halfplane_hyp.svg'
+    hp_path = os.path.join(ROOT, "assets", "poincare_halfplane_hyp.svg")
     with open(hp_path, 'w') as f:
         f.write(hp_svg)
     print(f"  → {hp_path} ({len(hp_svg):,} bytes)")
